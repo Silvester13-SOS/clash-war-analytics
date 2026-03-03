@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clan War Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0d1117;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+
+        #bg-layer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('/static/battle-bg.png') center center / cover no-repeat;
+            opacity: 0.45;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .header, .container, .modal-overlay { position: relative; z-index: 1; }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #122412 30%, #1a3a1a 50%, #122412 70%, #0d1117 100%);
+            padding: 0;
+            border-bottom: 3px solid #22c55e;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(ellipse at center, rgba(34,197,94,0.08) 0%, transparent 60%);
+            animation: headerGlow 6s ease-in-out infinite alternate;
+        }
+        @keyframes headerGlow {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.1); opacity: 1; }
+        }
+        .header-inner {
+            display: flex; align-items: center; gap: 20px;
+            padding: 20px 32px; position: relative; z-index: 1;
+        }
+        .header-badge {
+            width: 72px; height: 72px; border-radius: 12px;
+            border: 2px solid #22c55e; background: #0d1117;
+            box-shadow: 0 0 20px rgba(34,197,94,0.25);
+            flex-shrink: 0; object-fit: contain;
+        }
+        .header-text { flex: 1; }
+        .header-text h1 {
+            font-size: 28px; color: #e0e0e0; letter-spacing: 1px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .header-text h1 .accent { color: #4ade80; }
+        .header-text .clan-name {
+            font-size: 20px; color: #4ade80; font-weight: 700;
+            margin-top: 2px; display: flex; align-items: center; gap: 10px;
+        }
+        .header-text .clan-name .level-badge {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #000; font-size: 12px; font-weight: 800;
+            padding: 2px 8px; border-radius: 4px; letter-spacing: 0.5px;
+        }
+        .header-stats {
+            display: flex; gap: 24px; align-items: center; flex-shrink: 0;
+        }
+        .header-stat {
+            text-align: center; padding: 8px 16px;
+            background: rgba(13,17,23,0.6); border-radius: 8px;
+            border: 1px solid #21262d;
+        }
+        .header-stat .hval { font-size: 24px; font-weight: 700; color: #4ade80; line-height: 1; }
+        .header-stat .hlbl { font-size: 10px; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+        @media (max-width: 700px) {
+            .header-inner { flex-wrap: wrap; padding: 16px; gap: 12px; }
+            .header-stats { width: 100%; justify-content: center; }
+            .header-badge { width: 56px; height: 56px; }
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+        /* War Type Tabs */
+        .tabs { display: inline-flex; gap: 4px; margin-bottom: 24px; background: #161b22; border-radius: 8px; padding: 4px; }
+        .tab-btn {
+            padding: 10px 24px; border: none; background: transparent;
+            color: #6b7280; font-size: 14px; font-weight: 600;
+            cursor: pointer; border-radius: 6px; transition: all 0.2s;
+        }
+        .tab-btn:hover { color: #e0e0e0; background: #21262d; }
+        .tab-btn.active { background: #1a3a1a; color: #4ade80; }
+
+        /* Summary Cards */
+        .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 32px; }
+        .card {
+            background: #161b22; border-radius: 10px; padding: 20px;
+            text-align: center; border: 1px solid #21262d;
+        }
+        .card .value { font-size: 32px; font-weight: 700; color: #4ade80; }
+        .card .label { font-size: 13px; color: #6b7280; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+        .card.win .value { color: #4ade80; }
+        .card.loss .value { color: #f87171; }
+
+        .section-title {
+            font-size: 20px; color: #4ade80; margin-bottom: 16px;
+            padding-bottom: 8px; border-bottom: 2px solid #21262d;
+        }
+        .section-title small { font-size: 13px; color: #484f58; }
+
+        /* Tables */
+        .table-wrapper { overflow-x: auto; margin-bottom: 40px; border-radius: 10px; border: 1px solid #21262d; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        thead th {
+            background: #161b22; color: #4ade80; padding: 12px 14px;
+            text-align: left; white-space: nowrap; cursor: pointer;
+            user-select: none; position: sticky; top: 0;
+        }
+        thead th:hover { background: #21262d; }
+        thead th .sort-arrow { margin-left: 4px; opacity: 0.4; }
+        thead th.sorted .sort-arrow { opacity: 1; }
+        tbody td { padding: 10px 14px; border-bottom: 1px solid #21262d; white-space: nowrap; }
+        tbody tr:hover { background: #161b22; }
+        tbody tr.clickable { cursor: pointer; }
+
+        /* Star distribution bar */
+        .star-bar { display: flex; height: 22px; border-radius: 4px; overflow: hidden; min-width: 160px; background: #21262d; }
+        .star-bar .seg-3 { background: #fbbf24; }
+        .star-bar .seg-2 { background: #6b7280; }
+        .star-bar .seg-1 { background: #b45309; }
+        .star-bar .seg-0 { background: #991b1b; }
+        .star-bar span { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #000; min-width: 0; overflow: hidden; }
+
+        .stars-3 { color: #fbbf24; font-weight: 600; }
+        .stars-2 { color: #6b7280; font-weight: 600; }
+        .stars-1 { color: #b45309; font-weight: 600; }
+        .stars-0 { color: #991b1b; font-weight: 600; }
+
+        .badge { padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+        .badge-win { background: #064e3b; color: #4ade80; }
+        .badge-loss { background: #7f1d1d; color: #f87171; }
+        .badge-tie { background: #78350f; color: #fbbf24; }
+        .badge-in_progress { background: #1e3a5f; color: #60a5fa; }
+
+        .war-row { cursor: pointer; }
+        .war-row:hover { background: #161b22; }
+
+        /* Charts */
+        .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
+        .chart-box { background: #161b22; border-radius: 10px; padding: 20px; border: 1px solid #21262d; }
+        .chart-box h3 { font-size: 15px; color: #6b7280; margin-bottom: 12px; }
+
+        /* Modal */
+        .modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.80); z-index: 1000; overflow-y: auto; padding: 40px 20px;
+        }
+        .modal-overlay.open { display: flex; justify-content: center; align-items: flex-start; }
+        .modal {
+            background: #161b22; border-radius: 12px; border: 2px solid #22c55e;
+            max-width: 950px; width: 100%; padding: 0; position: relative;
+        }
+        .modal-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 24px; border-bottom: 2px solid #21262d;
+        }
+        .modal-header h2 { color: #4ade80; font-size: 22px; }
+        .modal-header .th-badge { background: #1a3a1a; color: #4ade80; padding: 4px 12px; border-radius: 6px; font-size: 14px; font-weight: 600; }
+        .modal-close { background: none; border: none; color: #6b7280; font-size: 28px; cursor: pointer; padding: 0 8px; }
+        .modal-close:hover { color: #e0e0e0; }
+        .modal-body { padding: 24px; }
+        .modal-section { margin-bottom: 28px; }
+        .modal-section h3 { font-size: 16px; color: #4ade80; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #21262d; }
+
+        .stat-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+        .stat-box { background: #0d1117; border-radius: 8px; padding: 16px; border: 1px solid #21262d; }
+        .stat-box h4 { font-size: 13px; color: #6b7280; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .stat-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px; }
+        .stat-row .label { color: #6b7280; }
+        .stat-row .val { font-weight: 600; }
+
+        /* Hero & Equipment cards with thumbnails */
+        .hero-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+        .hero-card {
+            background: #0d1117; border-radius: 8px; padding: 10px 14px;
+            border: 1px solid #21262d; display: flex; align-items: center; gap: 12px;
+        }
+        .hero-card.maxed { border-color: #22c55e; }
+        .hero-thumb {
+            width: 40px; height: 40px; border-radius: 8px;
+            object-fit: cover; background: #21262d; flex-shrink: 0;
+        }
+        .hero-thumb-fallback {
+            width: 40px; height: 40px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 16px; flex-shrink: 0;
+        }
+        .hero-info { flex: 1; }
+        .hero-info .hero-name { font-weight: 600; font-size: 14px; }
+        .hero-info .hero-lvl { color: #4ade80; font-weight: 700; font-size: 13px; }
+        .hero-info .hero-max { color: #484f58; font-size: 12px; }
+        .hero-card.maxed .hero-lvl { color: #fbbf24; }
+
+        .equip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+        .equip-card {
+            background: #0d1117; border-radius: 8px; padding: 10px 14px;
+            border: 1px solid #21262d; display: flex; align-items: center; gap: 10px;
+        }
+        .equip-card.maxed { border-color: #22c55e; }
+        .equip-thumb {
+            width: 32px; height: 32px; border-radius: 6px;
+            object-fit: cover; background: #21262d; flex-shrink: 0;
+        }
+        .equip-thumb-fallback {
+            width: 32px; height: 32px; border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 13px; flex-shrink: 0;
+        }
+        .equip-info { flex: 1; }
+        .equip-info .equip-name { font-weight: 600; font-size: 13px; }
+        .equip-info .equip-hero { color: #484f58; font-size: 11px; }
+        .equip-info .equip-lvl { color: #4ade80; font-weight: 700; font-size: 13px; float: right; }
+        .equip-card.maxed .equip-lvl { color: #fbbf24; }
+
+        .modal .table-wrapper { margin-bottom: 0; }
+        .modal table { font-size: 13px; }
+        .modal thead th { background: #0d1117; color: #6b7280; font-size: 12px; position: static; }
+
+        .empty-msg { text-align: center; padding: 60px; color: #484f58; }
+        .empty-msg p { font-size: 18px; margin-bottom: 8px; }
+        .empty-msg small { color: #383d44; }
+
+        @media (max-width: 900px) {
+            .charts-grid { grid-template-columns: 1fr; }
+            .stat-compare { grid-template-columns: 1fr; }
+            .container { padding: 12px; }
+            .modal-overlay { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="bg-layer"></div>
+    <div class="header">
+        <div class="header-inner">
+            <img class="header-badge" id="header-badge" src="" alt="Clan Badge" style="display:none;">
+            <div class="header-text">
+                <h1><span class="accent">&#9876;</span> Clan War Analytics</h1>
+                <div class="clan-name" id="clan-name">Loading...</div>
+            </div>
+            <div class="header-stats" id="header-stats" style="display:none;">
+                <div class="header-stat">
+                    <div class="hval" id="h-war-wins">-</div>
+                    <div class="hlbl">War Wins</div>
+                </div>
+                <div class="header-stat">
+                    <div class="hval" id="h-win-streak">-</div>
+                    <div class="hlbl">Win Streak</div>
+                </div>
+                <div class="header-stat">
+                    <div class="hval" id="h-clan-level">-</div>
+                    <div class="hlbl">Clan Level</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" data-type="all">All Wars</button>
+            <button class="tab-btn" data-type="regular">Regular Wars</button>
+            <button class="tab-btn" data-type="cwl">CWL</button>
+        </div>
+
+        <div class="summary-cards">
+            <div class="card"><div class="value" id="s-wars">-</div><div class="label">Wars Tracked</div></div>
+            <div class="card win"><div class="value" id="s-wins">-</div><div class="label">Wins</div></div>
+            <div class="card loss"><div class="value" id="s-losses">-</div><div class="label">Losses</div></div>
+            <div class="card"><div class="value" id="s-attacks">-</div><div class="label">Total Attacks</div></div>
+            <div class="card"><div class="value" id="s-avg-stars">-</div><div class="label">Avg Stars/Attack</div></div>
+            <div class="card"><div class="value" id="s-avg-dest">-</div><div class="label">Avg Destruction</div></div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-box"><h3>Overall Star Distribution</h3><canvas id="starPieChart"></canvas></div>
+            <div class="chart-box"><h3>Top Attackers by Avg Stars</h3><canvas id="topAttackersChart"></canvas></div>
+        </div>
+
+        <h2 class="section-title">Player Performance <small>(click a player for details)</small></h2>
+        <div class="table-wrapper">
+            <table id="player-table">
+                <thead><tr>
+                    <th data-sort="name">Player <span class="sort-arrow">&#9650;</span></th>
+                    <th data-sort="th_level">TH <span class="sort-arrow">&#9650;</span></th>
+                    <th data-sort="total_attacks">Attacks <span class="sort-arrow">&#9650;</span></th>
+                    <th data-sort="wars_participated">Wars <span class="sort-arrow">&#9650;</span></th>
+                    <th data-sort="three_star_pct">3&#9733;% <span class="sort-arrow">&#9650;</span></th>
+                    <th data-sort="two_star_pct">2&#9733;% <span class="sort-arrow">&#9650;</span></th>
+                    <th data-sort="one_star_pct">1&#9733;% <span class="sort-arrow">&#9650;</span></th>
+                    <th data-sort="zero_star_pct">0&#9733;% <span class="sort-arrow">&#9650;</span></th>
+                    <th data-sort="avg_destruction">Avg Dest% <span class="sort-arrow">&#9650;</span></th>
+                    <th data-sort="avg_stars">Avg Stars <span class="sort-arrow">&#9650;</span></th>
+                    <th>Star Distribution</th>
+                </tr></thead>
+                <tbody id="player-tbody"></tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title">Defense Performance <small>(lower avg stars = stronger base)</small></h2>
+        <div class="table-wrapper">
+            <table id="defense-table">
+                <thead><tr>
+                    <th data-dsort="name">Player <span class="sort-arrow">&#9650;</span></th>
+                    <th data-dsort="th_level">TH <span class="sort-arrow">&#9650;</span></th>
+                    <th data-dsort="times_attacked">Defenses <span class="sort-arrow">&#9650;</span></th>
+                    <th data-dsort="defense_rating">Def Rating <span class="sort-arrow">&#9650;</span></th>
+                    <th data-dsort="avg_stars_given">Avg &#9733; Given <span class="sort-arrow">&#9650;</span></th>
+                    <th data-dsort="avg_dest_given">Avg Dest Given <span class="sort-arrow">&#9650;</span></th>
+                    <th data-dsort="three_starred_pct">3&#9733;'d % <span class="sort-arrow">&#9650;</span></th>
+                    <th data-dsort="zero_starred_pct">Held 0&#9733;% <span class="sort-arrow">&#9650;</span></th>
+                    <th>Stars Given Distribution</th>
+                </tr></thead>
+                <tbody id="defense-tbody"></tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title">War History</h2>
+        <div class="table-wrapper">
+            <table id="war-table">
+                <thead><tr>
+                    <th>Opponent</th><th>Result</th><th>Stars</th>
+                    <th>Destruction</th><th>Size</th><th>Type</th><th>Date</th>
+                </tr></thead>
+                <tbody id="war-tbody"></tbody>
+            </table>
+        </div>
+
+        <div id="attack-detail-section" style="display:none;">
+            <h2 class="section-title" id="attack-detail-title">Attacks</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead><tr><th>#</th><th>Attacker</th><th>TH</th><th>Defender</th><th>TH</th><th>Stars</th><th>Destruction</th><th>Duration</th></tr></thead>
+                    <tbody id="attack-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player Detail Modal -->
+    <div class="modal-overlay" id="player-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modal-player-name">Player</h2>
+                <div style="display:flex;gap:12px;align-items:center;">
+                    <span class="th-badge" id="modal-th-badge">TH 16</span>
+                    <button class="modal-close" onclick="closeModal()">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section"><h3>Performance Breakdown</h3><div class="stat-compare" id="modal-stats"></div></div>
+                <div class="modal-section"><h3>Defense Summary</h3><div id="modal-defense-stats" style="margin-bottom:16px;"></div>
+                    <div class="table-wrapper" id="modal-defense-log-wrapper" style="display:none;">
+                        <table><thead><tr><th>War vs</th><th>Type</th><th>Attacked By</th><th>TH</th><th>Stars Given</th><th>Dest Given</th><th>Date</th></tr></thead>
+                        <tbody id="modal-defense-log"></tbody></table>
+                    </div>
+                </div>
+                <div class="modal-section"><h3>Heroes</h3><div class="hero-grid" id="modal-heroes"></div></div>
+                <div class="modal-section"><h3>Equipment</h3><div class="equip-grid" id="modal-equipment"></div></div>
+                <div class="modal-section"><h3>Attack History</h3>
+                    <div class="table-wrapper">
+                        <table><thead><tr><th>War vs</th><th>Type</th><th>Result</th><th>Defender</th><th>TH</th><th>Stars</th><th>Dest%</th><th>Duration</th><th>Date</th></tr></thead>
+                        <tbody id="modal-attacks"></tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ---- Image URL helpers ----
+        const HERO_IMG = "https://coc.guide/static/imgs/hero/";
+        const EQUIP_IMG = "https://coc.guide/static/imgs/equipment/";
+
+        // Known working hero images on coc.guide
+        const HERO_HAS_IMG = new Set([
+            "Barbarian King", "Archer Queen", "Grand Warden",
+            "Royal Champion", "Battle Copter"
+        ]);
+
+        // Known working equipment images on coc.guide
+        const EQUIP_HAS_IMG = new Set([
+            "Earthquake Boots", "Giant Gauntlet", "Frozen Arrow",
+            "Hog Rider Puppet", "Magic Mirror", "Rage Gem",
+            "Life Gem", "Healing Tome", "Spiky Ball",
+            "Eternal Tome", "Royal Gem", "Seeking Shield",
+            "Haste Vial", "Rocket Spear"
+        ]);
+
+        // Color map for hero fallback icons
+        const HERO_COLORS = {
+            "Barbarian King": "#f59e0b",
+            "Archer Queen": "#a855f7",
+            "Grand Warden": "#3b82f6",
+            "Royal Champion": "#ef4444",
+            "Minion Prince": "#6366f1",
+            "Dragon Duke": "#f97316",
+            "Battle Machine": "#6b7280",
+            "Battle Copter": "#6b7280",
+        };
+
+        function slugify(name) {
+            return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        }
+
+        function heroThumb(name) {
+            if (HERO_HAS_IMG.has(name)) {
+                return `<img class="hero-thumb" src="${HERO_IMG}${slugify(name)}.png" alt="${esc(name)}" onerror="this.outerHTML=heroFallback('${esc(name)}')">`;
+            }
+            return heroFallback(name);
+        }
+
+        function heroFallback(name) {
+            const color = HERO_COLORS[name] || "#22c55e";
+            const initials = name.split(' ').map(w => w[0]).join('').slice(0, 2);
+            return `<div class="hero-thumb-fallback" style="background:${color}33;color:${color};">${initials}</div>`;
+        }
+
+        function equipThumb(name) {
+            if (EQUIP_HAS_IMG.has(name)) {
+                return `<img class="equip-thumb" src="${EQUIP_IMG}${slugify(name)}.png" alt="${esc(name)}" onerror="this.outerHTML=equipFallback('${esc(name)}')">`;
+            }
+            return equipFallback(name);
+        }
+
+        function equipFallback(name) {
+            const initials = name.split(' ').map(w => w[0]).join('').slice(0, 2);
+            return `<div class="equip-thumb-fallback" style="background:#22c55e22;color:#22c55e;">${initials}</div>`;
+        }
+
+        // ---- State ----
+        let playerData = [];
+        let defenseData = [];
+        let sortCol = "avg_stars";
+        let sortAsc = false;
+        let dSortCol = "defense_rating";
+        let dSortAsc = false;
+        let currentWarType = "all";
+        let pieChart = null;
+        let barChart = null;
+
+        // ---- Tabs ----
+        document.querySelectorAll(".tab-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                currentWarType = btn.dataset.type;
+                loadDashboard();
+            });
+        });
+
+        // ---- Load ----
+        async function loadDashboard() {
+            const q = currentWarType !== "all" ? `?war_type=${currentWarType}` : "";
+            try {
+                const [summaryRes, playersRes, warsRes, defenseRes] = await Promise.all([
+                    fetch(`/api/clan-summary${q}`), fetch(`/api/player-stats${q}`),
+                    fetch(`/api/war-history${q}`), fetch(`/api/defense-stats${q}`),
+                ]);
+                const summary = await summaryRes.json();
+                playerData = await playersRes.json();
+                const wars = await warsRes.json();
+                defenseData = await defenseRes.json();
+                renderSummary(summary);
+                renderPlayers(playerData);
+                renderDefense(defenseData);
+                renderWars(wars);
+                renderCharts(playerData);
+            } catch (err) { console.error("Failed:", err); }
+        }
+
+        function renderSummary(s) {
+            // Header clan info
+            const clanNameEl = document.getElementById("clan-name");
+            if (s.clan_level) {
+                clanNameEl.innerHTML = `${esc(s.clan_name)} <span class="level-badge">LVL ${s.clan_level}</span>`;
+            } else {
+                clanNameEl.textContent = s.clan_name;
+            }
+            if (s.badge_url) {
+                const badge = document.getElementById("header-badge");
+                badge.src = s.badge_url;
+                badge.style.display = "block";
+            }
+            if (s.war_wins !== undefined) {
+                document.getElementById("header-stats").style.display = "flex";
+                document.getElementById("h-war-wins").textContent = s.war_wins;
+                document.getElementById("h-win-streak").textContent = s.win_streak || 0;
+                document.getElementById("h-clan-level").textContent = s.clan_level || "-";
+            }
+            // Summary cards
+            document.getElementById("s-wars").textContent = s.total_wars;
+            document.getElementById("s-wins").textContent = s.wins;
+            document.getElementById("s-losses").textContent = s.losses;
+            document.getElementById("s-attacks").textContent = s.total_attacks;
+            document.getElementById("s-avg-stars").textContent = s.avg_stars;
+            document.getElementById("s-avg-dest").textContent = s.avg_destruction + "%";
+        }
+
+        // ---- Player Table ----
+        function renderPlayers(players) {
+            const tbody = document.getElementById("player-tbody");
+            if (!players.length) { tbody.innerHTML = '<tr><td colspan="11" class="empty-msg"><p>No attack data yet</p></td></tr>'; return; }
+            tbody.innerHTML = players.map(p => `
+                <tr class="clickable" onclick="openPlayerModal('${p.tag}', '${esc(p.name)}', ${p.th_level})">
+                    <td><strong>${esc(p.name)}</strong></td>
+                    <td>${p.th_level}</td><td>${p.total_attacks}</td><td>${p.wars_participated}</td>
+                    <td class="stars-3">${p.three_star_pct}%</td><td class="stars-2">${p.two_star_pct}%</td>
+                    <td class="stars-1">${p.one_star_pct}%</td><td class="stars-0">${p.zero_star_pct}%</td>
+                    <td>${p.avg_destruction}%</td><td><strong>${p.avg_stars}</strong></td>
+                    <td>${starBar(p)}</td>
+                </tr>`).join("");
+        }
+
+        function starBar(p) {
+            const t = p.total_attacks || 1;
+            const w3 = p.three_stars/t*100, w2 = p.two_stars/t*100, w1 = p.one_stars/t*100, w0 = p.zero_stars/t*100;
+            let h = '<div class="star-bar">';
+            if (w3>0) h+=`<span class="seg-3" style="width:${w3}%" title="3\u2605: ${p.three_stars}">${w3>=12?p.three_stars:''}</span>`;
+            if (w2>0) h+=`<span class="seg-2" style="width:${w2}%" title="2\u2605: ${p.two_stars}">${w2>=12?p.two_stars:''}</span>`;
+            if (w1>0) h+=`<span class="seg-1" style="width:${w1}%" title="1\u2605: ${p.one_stars}">${w1>=12?p.one_stars:''}</span>`;
+            if (w0>0) h+=`<span class="seg-0" style="width:${w0}%" title="0\u2605: ${p.zero_stars}">${w0>=12?p.zero_stars:''}</span>`;
+            return h+'</div>';
+        }
+
+        // ---- Sorting (player) ----
+        document.querySelectorAll("#player-table thead th[data-sort]").forEach(th => {
+            th.addEventListener("click", () => {
+                const col = th.dataset.sort;
+                if (sortCol===col) sortAsc=!sortAsc; else { sortCol=col; sortAsc=false; }
+                document.querySelectorAll("#player-table thead th").forEach(h=>h.classList.remove("sorted"));
+                th.classList.add("sorted");
+                th.querySelector(".sort-arrow").innerHTML = sortAsc?"&#9650;":"&#9660;";
+                playerData.sort((a,b)=>{let va=a[col],vb=b[col];if(typeof va==="string"){va=va.toLowerCase();vb=vb.toLowerCase();}return va<vb?(sortAsc?-1:1):va>vb?(sortAsc?1:-1):0;});
+                renderPlayers(playerData);
+            });
+        });
+
+        // ---- Defense Table ----
+        function renderDefense(players) {
+            const tbody = document.getElementById("defense-tbody");
+            if (!players.length) { tbody.innerHTML = '<tr><td colspan="9" class="empty-msg"><p>No defense data yet</p></td></tr>'; return; }
+            tbody.innerHTML = players.map(p => {
+                const rc = p.defense_rating>=1.5?'#4ade80':p.defense_rating>=0.8?'#fbbf24':'#f87171';
+                return `<tr>
+                    <td><strong>${esc(p.name)}</strong></td><td>${p.th_level}</td><td>${p.times_attacked}</td>
+                    <td><strong style="color:${rc}">${p.defense_rating}</strong></td>
+                    <td>${p.avg_stars_given}</td><td>${p.avg_dest_given}%</td>
+                    <td class="stars-0">${p.three_starred_pct}%</td><td class="stars-3">${p.zero_starred_pct}%</td>
+                    <td>${defBar(p)}</td>
+                </tr>`;
+            }).join("");
+        }
+
+        function defBar(p) {
+            const t=p.times_attacked||1;
+            const w0=p.zero_starred_pct,w1=p.one_starred_pct,w2=p.two_starred_pct,w3=p.three_starred_pct;
+            const c0=Math.round(w0*t/100),c1=Math.round(w1*t/100),c2=Math.round(w2*t/100),c3=Math.round(w3*t/100);
+            let h='<div class="star-bar">';
+            if(w0>0)h+=`<span class="seg-3" style="width:${w0}%" title="Held 0\u2605: ${c0}">${w0>=12?c0:''}</span>`;
+            if(w1>0)h+=`<span class="seg-2" style="width:${w1}%" title="Gave 1\u2605: ${c1}">${w1>=12?c1:''}</span>`;
+            if(w2>0)h+=`<span class="seg-1" style="width:${w2}%" title="Gave 2\u2605: ${c2}">${w2>=12?c2:''}</span>`;
+            if(w3>0)h+=`<span class="seg-0" style="width:${w3}%" title="Gave 3\u2605: ${c3}">${w3>=12?c3:''}</span>`;
+            return h+'</div>';
+        }
+
+        // Defense sorting
+        document.querySelectorAll("#defense-table thead th[data-dsort]").forEach(th => {
+            th.addEventListener("click", () => {
+                const col = th.dataset.dsort;
+                if (dSortCol===col) dSortAsc=!dSortAsc; else { dSortCol=col; dSortAsc=false; }
+                document.querySelectorAll("#defense-table thead th").forEach(h=>h.classList.remove("sorted"));
+                th.classList.add("sorted");
+                th.querySelector(".sort-arrow").innerHTML = dSortAsc?"&#9650;":"&#9660;";
+                defenseData.sort((a,b)=>{let va=a[col],vb=b[col];if(typeof va==="string"){va=va.toLowerCase();vb=vb.toLowerCase();}return va<vb?(dSortAsc?-1:1):va>vb?(dSortAsc?1:-1):0;});
+                renderDefense(defenseData);
+            });
+        });
+
+        // ---- War History ----
+        function renderWars(wars) {
+            const tbody = document.getElementById("war-tbody");
+            if (!wars.length) { tbody.innerHTML = '<tr><td colspan="7" class="empty-msg"><p>No wars yet</p></td></tr>'; return; }
+            tbody.innerHTML = wars.map(w=>`
+                <tr class="war-row" onclick="loadWarAttacks(${w.id},'${esc(w.opponent_name)}')">
+                    <td><strong>${esc(w.opponent_name)}</strong></td>
+                    <td><span class="badge badge-${w.result}">${w.result}</span></td>
+                    <td>${w.clan_stars} - ${w.opponent_stars}</td>
+                    <td>${w.clan_destruction}% - ${w.opponent_destruction}%</td>
+                    <td>${w.team_size}v${w.team_size}</td>
+                    <td><span class="badge badge-${w.war_type==='cwl'?'in_progress':'win'}" style="font-size:11px;">${w.war_type.toUpperCase()}</span></td>
+                    <td>${formatDate(w.end_time)}</td>
+                </tr>`).join("");
+        }
+
+        async function loadWarAttacks(warId, opp) {
+            const s=document.getElementById("attack-detail-section"),tbody=document.getElementById("attack-tbody");
+            s.style.display="block"; document.getElementById("attack-detail-title").textContent=`Attacks vs ${opp}`;
+            tbody.innerHTML='<tr><td colspan="8" style="text-align:center;padding:20px;color:#484f58;">Loading...</td></tr>';
+            s.scrollIntoView({behavior:"smooth"});
+            try {
+                const attacks = await (await fetch(`/api/war/${warId}/attacks`)).json();
+                tbody.innerHTML=attacks.map(a=>`<tr>
+                    <td>${a.order}</td><td>${esc(a.attacker_name)} (#${a.attacker_position})</td><td>${a.attacker_th}</td>
+                    <td>${esc(a.defender_name)} (#${a.defender_position})</td><td>${a.defender_th}</td>
+                    <td class="stars-${a.stars}">${'\u2605'.repeat(a.stars)}${'\u2606'.repeat(3-a.stars)}</td>
+                    <td>${a.destruction}%</td><td>${fmtDur(a.duration)}</td></tr>`).join("");
+            } catch(e) { tbody.innerHTML='<tr><td colspan="8" style="text-align:center;color:#f87171;">Failed</td></tr>'; }
+        }
+
+        // ---- Player Modal ----
+        async function openPlayerModal(tag, name, th) {
+            const o=document.getElementById("player-modal");
+            document.getElementById("modal-player-name").textContent=name;
+            document.getElementById("modal-th-badge").textContent=`TH ${th}`;
+            ["modal-stats","modal-heroes","modal-equipment","modal-attacks","modal-defense-stats","modal-defense-log"].forEach(id=>document.getElementById(id).innerHTML='');
+            document.getElementById("modal-defense-log-wrapper").style.display='none';
+            o.classList.add("open");
+            try {
+                const data = await (await fetch(`/api/player/${encodeURIComponent(tag)}/detail`)).json();
+                renderModalStats(data.stats_by_type);
+                renderModalDefense(data.defense, data.defense_log);
+                renderModalHeroes(data.heroes);
+                renderModalEquipment(data.equipment);
+                renderModalAttacks(data.attacks);
+            } catch(e) { document.getElementById("modal-stats").innerHTML='<div style="color:#f87171;">Failed to load</div>'; }
+        }
+
+        function renderModalStats(s) {
+            const el=document.getElementById("modal-stats");
+            let h='';
+            for (const t of [{key:"regular",label:"Regular Wars"},{key:"cwl",label:"CWL"}]) {
+                const d=s[t.key];
+                if(!d){h+=`<div class="stat-box"><h4>${t.label}</h4><div style="color:#484f58;">No data</div></div>`;continue;}
+                h+=`<div class="stat-box"><h4>${t.label}</h4>
+                    <div class="stat-row"><span class="label">Total Attacks</span><span class="val">${d.total}</span></div>
+                    <div class="stat-row"><span class="label">3\u2733 Rate</span><span class="val stars-3">${d.three_star_pct}%</span></div>
+                    <div class="stat-row"><span class="label">2\u2733 Rate</span><span class="val stars-2">${d.two_star_pct}%</span></div>
+                    <div class="stat-row"><span class="label">1\u2733 Rate</span><span class="val stars-1">${d.one_star_pct}%</span></div>
+                    <div class="stat-row"><span class="label">0\u2733 Rate</span><span class="val stars-0">${d.zero_star_pct}%</span></div>
+                    <div class="stat-row"><span class="label">Avg Stars</span><span class="val" style="color:#4ade80;">${d.avg_stars}</span></div>
+                    <div class="stat-row"><span class="label">Avg Destruction</span><span class="val">${d.avg_dest}%</span></div>
+                </div>`;
+            }
+            el.innerHTML=h;
+        }
+
+        function renderModalDefense(def, log) {
+            const el=document.getElementById("modal-defense-stats");
+            const wrap=document.getElementById("modal-defense-log-wrapper");
+            const tbody=document.getElementById("modal-defense-log");
+            if(!def){el.innerHTML='<div style="color:#484f58;">No defense data yet</div>';return;}
+            const rc=def.defense_rating>=1.5?'#4ade80':def.defense_rating>=0.8?'#fbbf24':'#f87171';
+            el.innerHTML=`<div class="stat-box" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                <div><div class="stat-row"><span class="label">Defense Rating</span></div>
+                    <div style="font-size:28px;font-weight:700;color:${rc};">${def.defense_rating}</div>
+                    <div style="font-size:11px;color:#484f58;">out of 3.0 (higher = better)</div></div>
+                <div><div class="stat-row"><span class="label">Times Attacked</span><span class="val">${def.times_attacked}</span></div>
+                    <div class="stat-row"><span class="label">Avg Stars Given</span><span class="val">${def.avg_stars_given}</span></div>
+                    <div class="stat-row"><span class="label">Avg Dest Given</span><span class="val">${def.avg_dest_given}%</span></div></div>
+                <div><div class="stat-row"><span class="label">3-Starred %</span><span class="val stars-0">${def.three_starred_pct}%</span></div>
+                    <div class="stat-row"><span class="label">Held to 1\u2605 or less</span><span class="val stars-3">${def.held_pct}%</span></div></div>
+            </div>`;
+            if(log&&log.length){
+                wrap.style.display='block';
+                tbody.innerHTML=log.map(d=>`<tr>
+                    <td>${esc(d.opponent)}</td>
+                    <td><span class="badge badge-${d.war_type==='cwl'?'in_progress':'win'}" style="font-size:10px;">${d.war_type.toUpperCase()}</span></td>
+                    <td>${esc(d.attacker_name)}</td><td>${d.attacker_th}</td>
+                    <td class="stars-${3-d.stars_received}">${'\u2605'.repeat(d.stars_received)}${'\u2606'.repeat(3-d.stars_received)}</td>
+                    <td>${d.destruction_received}%</td><td>${formatDate(d.war_date)}</td></tr>`).join("");
+            }
+        }
+
+        function renderModalHeroes(heroes) {
+            const el=document.getElementById("modal-heroes");
+            if(!heroes.length){el.innerHTML='<div style="color:#484f58;">No hero data \u2014 run war_collector.py to fetch profiles</div>';return;}
+            el.innerHTML=heroes.map(h=>{
+                const mx=h.level>=h.max_level;
+                return `<div class="hero-card ${mx?'maxed':''}">
+                    ${heroThumb(h.name)}
+                    <div class="hero-info">
+                        <div class="hero-name">${esc(h.name)}</div>
+                        <span class="hero-lvl">${h.level}</span> <span class="hero-max">/ ${h.max_level}</span>
+                    </div>
+                </div>`;
+            }).join("");
+        }
+
+        function renderModalEquipment(equip) {
+            const el=document.getElementById("modal-equipment");
+            if(!equip.length){el.innerHTML='<div style="color:#484f58;">No equipment data</div>';return;}
+            el.innerHTML=equip.map(e=>{
+                const mx=e.level>=e.max_level;
+                return `<div class="equip-card ${mx?'maxed':''}">
+                    ${equipThumb(e.name)}
+                    <div class="equip-info">
+                        <div class="equip-name">${esc(e.name)} <span class="equip-lvl">${e.level}/${e.max_level}</span></div>
+                        <div class="equip-hero">${esc(e.hero)}</div>
+                    </div>
+                </div>`;
+            }).join("");
+        }
+
+        function renderModalAttacks(attacks) {
+            const tbody=document.getElementById("modal-attacks");
+            if(!attacks.length){tbody.innerHTML='<tr><td colspan="9" style="text-align:center;padding:20px;color:#484f58;">No attacks</td></tr>';return;}
+            tbody.innerHTML=attacks.map(a=>`<tr>
+                <td>${esc(a.opponent)}</td>
+                <td><span class="badge badge-${a.war_type==='cwl'?'in_progress':'win'}" style="font-size:10px;">${a.war_type.toUpperCase()}</span></td>
+                <td><span class="badge badge-${a.war_result}" style="font-size:10px;">${a.war_result}</span></td>
+                <td>${esc(a.defender_name)} (#${a.defender_position})</td><td>${a.defender_th}</td>
+                <td class="stars-${a.stars}">${'\u2605'.repeat(a.stars)}${'\u2606'.repeat(3-a.stars)}</td>
+                <td>${a.destruction}%</td><td>${fmtDur(a.duration)}</td><td>${formatDate(a.war_date)}</td>
+            </tr>`).join("");
+        }
+
+        function closeModal(){document.getElementById("player-modal").classList.remove("open");}
+        document.getElementById("player-modal").addEventListener("click",e=>{if(e.target===e.currentTarget)closeModal();});
+        document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+
+        // ---- Charts ----
+        function renderCharts(players) {
+            if(pieChart){pieChart.destroy();pieChart=null;}
+            if(barChart){barChart.destroy();barChart=null;}
+            if(!players.length)return;
+            let t3=0,t2=0,t1=0,t0=0;
+            players.forEach(p=>{t3+=p.three_stars;t2+=p.two_stars;t1+=p.one_stars;t0+=p.zero_stars;});
+            pieChart=new Chart(document.getElementById("starPieChart"),{type:"doughnut",data:{labels:["3 Stars","2 Stars","1 Star","0 Stars"],datasets:[{data:[t3,t2,t1,t0],backgroundColor:["#fbbf24","#6b7280","#b45309","#991b1b"],borderColor:"#0d1117",borderWidth:2}]},options:{responsive:true,plugins:{legend:{labels:{color:"#e0e0e0",padding:16}}}}});
+            const top=[...players].sort((a,b)=>b.avg_stars-a.avg_stars).slice(0,10);
+            barChart=new Chart(document.getElementById("topAttackersChart"),{type:"bar",data:{labels:top.map(p=>p.name),datasets:[{label:"Avg Stars",data:top.map(p=>p.avg_stars),backgroundColor:"#22c55e",borderRadius:4},{label:"Avg Destruction %",data:top.map(p=>p.avg_destruction),backgroundColor:"#1a3a1a",borderRadius:4,yAxisID:"y2"}]},options:{responsive:true,plugins:{legend:{labels:{color:"#e0e0e0"}}},scales:{x:{ticks:{color:"#6b7280",maxRotation:45}},y:{beginAtZero:true,max:3,ticks:{color:"#4ade80"},title:{display:true,text:"Avg Stars",color:"#4ade80"}},y2:{beginAtZero:true,max:100,position:"right",grid:{drawOnChartArea:false},ticks:{color:"#22c55e"},title:{display:true,text:"Destruction %",color:"#22c55e"}}}}});
+        }
+
+        // ---- Helpers ----
+        function esc(s){if(!s)return'';const d=document.createElement("div");d.textContent=s;return d.innerHTML;}
+        function formatDate(s){if(!s)return"\u2014";try{if(s.includes("T")&&!s.includes("-")){return`${s.slice(4,6)}/${s.slice(6,8)}/${s.slice(0,4)}`;}return new Date(s).toLocaleDateString();}catch{return s;}}
+        function fmtDur(sec){if(!sec)return"\u2014";return`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`;}
+
+        loadDashboard();
+    </script>
+</body>
+</html>
