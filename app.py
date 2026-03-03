@@ -2,8 +2,10 @@
 Clash of Clans War Analytics Dashboard
 Flask web app that reads from the SQLite database and serves player stats.
 """
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, Response
 import sqlite3
+import csv
+import io
 import os
 
 app = Flask(__name__)
@@ -390,6 +392,216 @@ def defense_stats():
 
     conn.close()
     return jsonify(players)
+
+
+MONTH_NAMES = ["", "January", "February", "March", "April", "May", "June",
+               "July", "August", "September", "October", "November", "December"]
+
+
+def _cwl_war_filter(year, month):
+    """Return WHERE clause and params to filter CWL wars by year/month."""
+    prefix = f"{year}{str(month).zfill(2)}"
+    return ("WHERE w.war_type = 'cwl' AND w.war_end_time LIKE ?", (prefix + "%",))
+
+
+@app.route("/api/cwl-seasons")
+def cwl_seasons():
+    conn = get_db()
+    c = conn.cursor()
+    c.execute("""
+        SELECT DISTINCT
+            SUBSTR(war_end_time, 1, 4) as year,
+            SUBSTR(war_end_time, 5, 2) as month
+        FROM wars
+        WHERE war_type = 'cwl'
+        ORDER BY year DESC, month DESC
+    """)
+    seasons = []
+    for row in c.fetchall():
+        y, m = int(row["year"]), int(row["month"])
+        c2 = conn.cursor()
+        c2.execute("""
+            SELECT COUNT(*) as war_count,
+                SUM(CASE WHEN result = 'win' THEN 1 ELSE 0 END) as wins,
+                SUM(CASE WHEN result = 'loss' THEN 1 ELSE 0 END) as losses,
+                SUM(CASE WHEN result = 'tie' THEN 1 ELSE 0 END) as ties
+            FROM wars
+            WHERE war_type = 'cwl' AND war_end_time LIKE ?
+        """, (f"{y}{str(m).zfill(2)}%",))
+        s = c2.fetchone()
+        seasons.append({
+            "year": y, "month": m,
+            "label": f"{MONTH_NAMES[m]} {y}",
+            "war_count": s["war_count"],
+            "wins": s["wins"], "losses": s["losses"], "ties": s["ties"],
+        })
+    conn.close()
+    return jsonify(seasons)
+
+
+@app.route("/api/cwl-season/<int:year>/<int:month>")
+def cwl_season_detail(year, month):
+    conn = get_db()
+    c = conn.cursor()
+    where, params = _cwl_war_filter(year, month)
+
+    # Player stats
+    c.execute(f"""
+        SELECT a.attacker_name, a.attacker_tag,
+            COUNT(*) as total_attacks,
+            SUM(CASE WHEN a.stars = 3 THEN 1 ELSE 0 END) as three_stars,
+            SUM(CASE WHEN a.stars = 2 THEN 1 ELSE 0 END) as two_stars,
+            SUM(CASE WHEN a.stars = 1 THEN 1 ELSE 0 END) as one_stars,
+            SUM(CASE WHEN a.stars = 0 THEN 1 ELSE 0 END) as zero_stars,
+            ROUND(AVG(a.destruction_percentage), 1) as avg_destruction,
+            ROUND(AVG(a.stars), 2) as avg_stars,
+            MAX(a.attacker_th_level) as th_level,
+            COUNT(DISTINCT a.war_id) as wars_participated
+        FROM attacks a JOIN wars w ON a.war_id = w.id
+        {where}
+        GROUP BY a.attacker_tag
+        ORDER BY avg_stars DESC, avg_destruction DESC
+    """, params)
+    players = []
+    for row in c.fetchall():
+        t = row["total_attacks"]
+        players.append({
+            "name": row["attacker_name"], "tag": row["attacker_tag"],
+            "th_level": row["th_level"], "total_attacks": t,
+            "wars_participated": row["wars_participated"],
+            "three_star_pct": round(row["three_stars"] / t * 100, 1),
+            "two_star_pct": round(row["two_stars"] / t * 100, 1),
+            "one_star_pct": round(row["one_stars"] / t * 100, 1),
+            "zero_star_pct": round(row["zero_stars"] / t * 100, 1),
+            "three_stars": row["three_stars"], "two_stars": row["two_stars"],
+            "one_stars": row["one_stars"], "zero_stars": row["zero_stars"],
+            "avg_destruction": row["avg_destruction"], "avg_stars": row["avg_stars"],
+        })
+
+    # War results
+    c.execute(f"""
+        SELECT w.*,
+            (SELECT COUNT(*) FROM attacks a WHERE a.war_id = w.id) as attack_count
+        FROM wars w {where}
+        ORDER BY w.war_end_time ASC
+    """, params)
+    wars = []
+    for row in c.fetchall():
+        wars.append({
+            "id": row["id"], "end_time": row["war_end_time"],
+            "clan_name": row["clan_name"], "clan_stars": row["clan_stars"],
+            "clan_destruction": round(row["clan_destruction"], 1),
+            "opponent_name": row["opponent_name"],
+            "opponent_stars": row["opponent_stars"],
+            "opponent_destruction": round(row["opponent_destruction"], 1),
+            "team_size": row["team_size"], "result": row["result"],
+            "attack_count": row["attack_count"],
+        })
+
+    # Summary
+    total = len(wars)
+    wins = sum(1 for w in wars if w["result"] == "win")
+    losses = sum(1 for w in wars if w["result"] == "loss")
+    ties = sum(1 for w in wars if w["result"] == "tie")
+    total_attacks = sum(p["total_attacks"] for p in players)
+    avg_stars = round(sum(p["avg_stars"] * p["total_attacks"] for p in players) / total_attacks, 2) if total_attacks else 0
+    avg_dest = round(sum(p["avg_destruction"] * p["total_attacks"] for p in players) / total_attacks, 1) if total_attacks else 0
+
+    conn.close()
+    return jsonify({
+        "label": f"{MONTH_NAMES[month]} {year}",
+        "summary": {
+            "total_wars": total, "wins": wins, "losses": losses, "ties": ties,
+            "total_attacks": total_attacks, "avg_stars": avg_stars, "avg_destruction": avg_dest,
+        },
+        "players": players,
+        "wars": wars,
+    })
+
+
+@app.route("/api/cwl-season/<int:year>/<int:month>/download")
+def cwl_season_download(year, month):
+    conn = get_db()
+    c = conn.cursor()
+    where, params = _cwl_war_filter(year, month)
+    label = f"{MONTH_NAMES[month]} {year}"
+
+    buf = io.StringIO()
+    writer = csv.writer(buf)
+
+    # Section 1: Player Performance
+    writer.writerow([f"CWL Season: {label} - Player Performance"])
+    writer.writerow(["Player", "TH", "Attacks", "Wars", "3-Star%", "2-Star%",
+                      "1-Star%", "0-Star%", "Avg Stars", "Avg Destruction%"])
+    c.execute(f"""
+        SELECT a.attacker_name, MAX(a.attacker_th_level) as th,
+            COUNT(*) as total,
+            SUM(CASE WHEN a.stars = 3 THEN 1 ELSE 0 END) as s3,
+            SUM(CASE WHEN a.stars = 2 THEN 1 ELSE 0 END) as s2,
+            SUM(CASE WHEN a.stars = 1 THEN 1 ELSE 0 END) as s1,
+            SUM(CASE WHEN a.stars = 0 THEN 1 ELSE 0 END) as s0,
+            ROUND(AVG(a.stars), 2) as avg_stars,
+            ROUND(AVG(a.destruction_percentage), 1) as avg_dest,
+            COUNT(DISTINCT a.war_id) as wars
+        FROM attacks a JOIN wars w ON a.war_id = w.id
+        {where}
+        GROUP BY a.attacker_tag ORDER BY avg_stars DESC
+    """, params)
+    for r in c.fetchall():
+        t = r["total"]
+        writer.writerow([
+            r["attacker_name"], r["th"], t, r["wars"],
+            f"{round(r['s3']/t*100,1)}%", f"{round(r['s2']/t*100,1)}%",
+            f"{round(r['s1']/t*100,1)}%", f"{round(r['s0']/t*100,1)}%",
+            r["avg_stars"], f"{r['avg_dest']}%",
+        ])
+
+    # Section 2: War Results
+    writer.writerow([])
+    writer.writerow([f"CWL Season: {label} - War Results"])
+    writer.writerow(["Opponent", "Result", "Our Stars", "Their Stars",
+                      "Our Destruction%", "Their Destruction%", "Team Size", "Date"])
+    c.execute(f"""
+        SELECT * FROM wars w {where} ORDER BY w.war_end_time ASC
+    """, params)
+    for r in c.fetchall():
+        end = r["war_end_time"]
+        date_str = f"{end[4:6]}/{end[6:8]}/{end[0:4]}" if end else ""
+        writer.writerow([
+            r["opponent_name"], r["result"].upper(),
+            r["clan_stars"], r["opponent_stars"],
+            f"{round(r['clan_destruction'],1)}%", f"{round(r['opponent_destruction'],1)}%",
+            f"{r['team_size']}v{r['team_size']}", date_str,
+        ])
+
+    # Section 3: Individual Attacks
+    writer.writerow([])
+    writer.writerow([f"CWL Season: {label} - Individual Attacks"])
+    writer.writerow(["War Opponent", "Attacker", "Attacker TH", "Defender",
+                      "Defender TH", "Stars", "Destruction%", "Duration"])
+    c.execute(f"""
+        SELECT a.*, w.opponent_name, w.war_end_time
+        FROM attacks a JOIN wars w ON a.war_id = w.id
+        {where}
+        ORDER BY w.war_end_time ASC, a.attack_order
+    """, params)
+    for r in c.fetchall():
+        dur = r["duration"]
+        dur_str = f"{dur//60}:{str(dur%60).zfill(2)}" if dur else ""
+        writer.writerow([
+            r["opponent_name"], r["attacker_name"], r["attacker_th_level"],
+            r["defender_name"], r["defender_th_level"],
+            r["stars"], f"{r['destruction_percentage']}%", dur_str,
+        ])
+
+    conn.close()
+
+    filename = f"CWL_{label.replace(' ', '_')}.csv"
+    return Response(
+        buf.getvalue(),
+        mimetype="text/csv",
+        headers={"Content-Disposition": f"attachment; filename={filename}"},
+    )
 
 
 if __name__ == "__main__":

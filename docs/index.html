@@ -236,6 +236,30 @@
         .empty-msg p { font-size: 18px; margin-bottom: 8px; }
         .empty-msg small { color: #383d44; }
 
+        /* CWL Season Section */
+        .cwl-season-section { display: none; margin-bottom: 32px; }
+        .cwl-season-section.visible { display: block; }
+        .cwl-season-bar {
+            display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .cwl-season-bar label { color: #4ade80; font-weight: 600; font-size: 15px; }
+        .cwl-season-bar select {
+            background: #161b22; color: #e0e0e0; border: 1px solid #21262d;
+            padding: 8px 14px; border-radius: 6px; font-size: 14px;
+            cursor: pointer; min-width: 180px;
+        }
+        .cwl-season-bar select:hover { border-color: #22c55e; }
+        .cwl-season-bar select:focus { outline: none; border-color: #4ade80; }
+        .cwl-download-btn {
+            background: linear-gradient(135deg, #22c55e, #16a34a); color: #000;
+            border: none; padding: 8px 20px; border-radius: 6px;
+            font-size: 14px; font-weight: 700; cursor: pointer;
+            transition: all 0.2s; letter-spacing: 0.5px;
+        }
+        .cwl-download-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(34,197,94,0.3); }
+        .cwl-download-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
         @media (max-width: 900px) {
             .charts-grid { grid-template-columns: 1fr; }
             .stat-compare { grid-template-columns: 1fr; }
@@ -275,6 +299,34 @@
             <button class="tab-btn active" data-type="all">All Wars</button>
             <button class="tab-btn" data-type="regular">Regular Wars</button>
             <button class="tab-btn" data-type="cwl">CWL</button>
+        </div>
+
+        <!-- CWL Season Selector (visible only on CWL tab) -->
+        <div class="cwl-season-section" id="cwl-season-section">
+            <div class="cwl-season-bar">
+                <label for="cwl-season-select">CWL Season:</label>
+                <select id="cwl-season-select"><option value="">Loading...</option></select>
+                <button class="cwl-download-btn" id="cwl-download-btn" disabled>Download CSV</button>
+            </div>
+            <div class="summary-cards" id="cwl-season-summary" style="display:none;"></div>
+            <h2 class="section-title" id="cwl-season-player-title" style="display:none;">Season Player Performance <small>(click a player for details)</small></h2>
+            <div class="table-wrapper" id="cwl-season-player-table-wrap" style="display:none;">
+                <table id="cwl-season-player-table">
+                    <thead><tr>
+                        <th>Player</th><th>TH</th><th>Attacks</th><th>Wars</th>
+                        <th>3&#9733;%</th><th>2&#9733;%</th><th>1&#9733;%</th><th>0&#9733;%</th>
+                        <th>Avg Dest%</th><th>Avg Stars</th><th>Star Distribution</th>
+                    </tr></thead>
+                    <tbody id="cwl-season-player-tbody"></tbody>
+                </table>
+            </div>
+            <h2 class="section-title" id="cwl-season-war-title" style="display:none;">Season War Results</h2>
+            <div class="table-wrapper" id="cwl-season-war-table-wrap" style="display:none;">
+                <table>
+                    <thead><tr><th>Opponent</th><th>Result</th><th>Stars</th><th>Destruction</th><th>Size</th><th>Date</th></tr></thead>
+                    <tbody id="cwl-season-war-tbody"></tbody>
+                </table>
+            </div>
         </div>
 
         <div class="summary-cards">
@@ -470,6 +522,7 @@
                 btn.classList.add("active");
                 currentWarType = btn.dataset.type;
                 loadDashboard();
+                updateCwlSectionVisibility();
             });
         });
 
@@ -758,6 +811,111 @@
         function esc(s){if(!s)return'';const d=document.createElement("div");d.textContent=s;return d.innerHTML;}
         function formatDate(s){if(!s)return"\u2014";try{if(s.includes("T")&&!s.includes("-")){return`${s.slice(4,6)}/${s.slice(6,8)}/${s.slice(0,4)}`;}return new Date(s).toLocaleDateString();}catch{return s;}}
         function fmtDur(sec){if(!sec)return"\u2014";return`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`;}
+
+        // ---- CWL Season Feature ----
+        let cwlSeasons = [];
+        let cwlSeasonLoaded = false;
+
+        async function loadCwlSeasons() {
+            if (cwlSeasonLoaded) return;
+            try {
+                const res = await fetch(`${DATA}/cwl-seasons.json`);
+                cwlSeasons = await res.json();
+                const sel = document.getElementById('cwl-season-select');
+                if (!cwlSeasons.length) {
+                    sel.innerHTML = '<option value="">No CWL seasons found</option>';
+                    return;
+                }
+                sel.innerHTML = cwlSeasons.map(s =>
+                    `<option value="${s.year}-${s.month}">${s.label} (${s.war_count} wars: ${s.wins}W/${s.losses}L/${s.ties}T)</option>`
+                ).join('');
+                document.getElementById('cwl-download-btn').disabled = false;
+                cwlSeasonLoaded = true;
+                loadCwlSeasonDetail();
+            } catch (e) { console.error('Failed to load CWL seasons:', e); }
+        }
+
+        async function loadCwlSeasonDetail() {
+            const sel = document.getElementById('cwl-season-select');
+            const val = sel.value;
+            if (!val) return;
+            try {
+                const res = await fetch(`${DATA}/cwl-season/${val}.json`);
+                const data = await res.json();
+                renderCwlSeasonSummary(data.summary, data.label);
+                renderCwlSeasonPlayers(data.players);
+                renderCwlSeasonWars(data.wars);
+            } catch (e) { console.error('Failed to load CWL season detail:', e); }
+        }
+
+        function renderCwlSeasonSummary(s, label) {
+            const el = document.getElementById('cwl-season-summary');
+            el.style.display = 'grid';
+            el.innerHTML = `
+                <div class="card"><div class="value">${s.total_wars}</div><div class="label">Wars</div></div>
+                <div class="card win"><div class="value">${s.wins}</div><div class="label">Wins</div></div>
+                <div class="card loss"><div class="value">${s.losses}</div><div class="label">Losses</div></div>
+                <div class="card"><div class="value">${s.total_attacks}</div><div class="label">Attacks</div></div>
+                <div class="card"><div class="value">${s.avg_stars}</div><div class="label">Avg Stars</div></div>
+                <div class="card"><div class="value">${s.avg_destruction}%</div><div class="label">Avg Dest</div></div>
+            `;
+        }
+
+        function renderCwlSeasonPlayers(players) {
+            const title = document.getElementById('cwl-season-player-title');
+            const wrap = document.getElementById('cwl-season-player-table-wrap');
+            const tbody = document.getElementById('cwl-season-player-tbody');
+            if (!players.length) {
+                title.style.display = 'none'; wrap.style.display = 'none'; return;
+            }
+            title.style.display = 'block'; wrap.style.display = 'block';
+            tbody.innerHTML = players.map(p => `
+                <tr class="clickable" onclick="openPlayerModal('${p.tag}', '${esc(p.name)}', ${p.th_level})">
+                    <td><strong>${esc(p.name)}</strong></td>
+                    <td>${p.th_level}</td><td>${p.total_attacks}</td><td>${p.wars_participated}</td>
+                    <td class="stars-3">${p.three_star_pct}%</td><td class="stars-2">${p.two_star_pct}%</td>
+                    <td class="stars-1">${p.one_star_pct}%</td><td class="stars-0">${p.zero_star_pct}%</td>
+                    <td>${p.avg_destruction}%</td><td><strong>${p.avg_stars}</strong></td>
+                    <td>${starBar(p)}</td>
+                </tr>`).join('');
+        }
+
+        function renderCwlSeasonWars(wars) {
+            const title = document.getElementById('cwl-season-war-title');
+            const wrap = document.getElementById('cwl-season-war-table-wrap');
+            const tbody = document.getElementById('cwl-season-war-tbody');
+            if (!wars.length) {
+                title.style.display = 'none'; wrap.style.display = 'none'; return;
+            }
+            title.style.display = 'block'; wrap.style.display = 'block';
+            tbody.innerHTML = wars.map(w => `
+                <tr class="war-row" onclick="loadWarAttacks(${w.id},'${esc(w.opponent_name)}')">
+                    <td><strong>${esc(w.opponent_name)}</strong></td>
+                    <td><span class="badge badge-${w.result}">${w.result}</span></td>
+                    <td>${w.clan_stars} - ${w.opponent_stars}</td>
+                    <td>${w.clan_destruction}% - ${w.opponent_destruction}%</td>
+                    <td>${w.team_size}v${w.team_size}</td>
+                    <td>${formatDate(w.end_time)}</td>
+                </tr>`).join('');
+        }
+
+        document.getElementById('cwl-season-select').addEventListener('change', loadCwlSeasonDetail);
+
+        document.getElementById('cwl-download-btn').addEventListener('click', () => {
+            const val = document.getElementById('cwl-season-select').value;
+            if (!val) return;
+            window.location.href = `${DATA}/cwl-season/${val}.csv`;
+        });
+
+        function updateCwlSectionVisibility() {
+            const section = document.getElementById('cwl-season-section');
+            if (currentWarType === 'cwl') {
+                section.classList.add('visible');
+                loadCwlSeasons();
+            } else {
+                section.classList.remove('visible');
+            }
+        }
 
         loadDashboard();
     </script>
