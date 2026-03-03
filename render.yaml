@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: clash-war-analytics
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python war_collector.py && gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: COC_EMAIL
+        sync: false
+      - key: COC_PASSWORD
+        sync: false
+      - key: CLAN_TAG
+        sync: false

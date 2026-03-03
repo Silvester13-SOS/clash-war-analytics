@@ -1,3 +1,4 @@
 coc.py
 flask
 python-dotenv
+gunicorn
