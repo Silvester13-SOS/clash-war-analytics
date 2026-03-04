@@ -5,12 +5,12 @@ Trumpy,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 Brad,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 Little Roodie!,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 babyacorns,18,2,2,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
-patrick,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 brocaleb,18,2,2,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 YokoEno,18,2,2,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 Ryan,18,2,2,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 rackam,18,2,2,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 LLoh7,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,89.0%
+patrick,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,93.5%
 Juliet,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,80.0%
 !!Aristocrat!!,18,2,2,0.0%,100.0%,0.0%,0.0%,2.0,87.0%
 CRASH,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,91.0%
@@ -21,7 +21,7 @@ alphaster17,18,1,1,0.0%,0.0%,100.0%,0.0%,1.0,66.0%
 CWL Season: March 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 los insumos :v,LOSS,36,38,92.7%,94.0%,15v15,03/03/2026
-Half In The Bag,IN_PROGRESS,27,21,63.0%,52.3%,15v15,03/04/2026
+Half In The Bag,IN_PROGRESS,29,21,68.8%,52.3%,15v15,03/04/2026
 
 CWL Season: March 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -50,3 +50,4 @@ Half In The Bag,brocaleb,18,Trealist,18,3,100.0%,2:08
 Half In The Bag,YokoEno,18,SaWyeR,18,3,100.0%,2:39
 Half In The Bag,Trumpy,18,captsme,18,3,100.0%,2:59
 Half In The Bag,!!Aristocrat!!,18,Jackel,18,2,82.0%,2:50
+Half In The Bag,patrick,18,Jackel56,18,2,87.0%,2:23
