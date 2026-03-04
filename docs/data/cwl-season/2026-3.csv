@@ -11,9 +11,9 @@ LLoh7,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,89.0%
 Brad,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,98.0%
 Little Roodie!,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,99.0%
 patrick,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,93.5%
+CRASH,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,95.5%
 Juliet,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,80.0%
 !!Aristocrat!!,18,2,2,0.0%,100.0%,0.0%,0.0%,2.0,87.0%
-CRASH,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,91.0%
 MonseurMaiDra,18,2,2,0.0%,50.0%,50.0%,0.0%,1.5,89.0%
 ItsTwinkie,18,1,1,0.0%,0.0%,100.0%,0.0%,1.0,69.0%
 alphaster17,18,1,1,0.0%,0.0%,100.0%,0.0%,1.0,66.0%
@@ -21,7 +21,7 @@ alphaster17,18,1,1,0.0%,0.0%,100.0%,0.0%,1.0,66.0%
 CWL Season: March 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 los insumos :v,LOSS,36,38,92.7%,94.0%,15v15,03/03/2026
-Half In The Bag,IN_PROGRESS,36,33,88.4%,83.1%,15v15,03/04/2026
+Half In The Bag,IN_PROGRESS,39,35,95.1%,89.6%,15v15,03/04/2026
 
 CWL Season: March 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -54,3 +54,4 @@ Half In The Bag,patrick,18,Jackel56,18,2,87.0%,2:23
 Half In The Bag,Brad,18,CastraPraetoria,18,2,96.0%,3:00
 Half In The Bag,Roodies Raiders,18,Spartagus,18,3,100.0%,2:05
 Half In The Bag,Little Roodie!,18,jackhammer#78i,18,2,98.0%,3:00
+Half In The Bag,CRASH,18,HitTheSauce,18,3,100.0%,2:13
