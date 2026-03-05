@@ -14,15 +14,15 @@ patrick,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,93.5%
 LLoh7,18,3,3,33.3%,66.7%,0.0%,0.0%,2.33,89.0%
 Juliet,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,80.0%
 !!Aristocrat!!,18,2,2,0.0%,100.0%,0.0%,0.0%,2.0,87.0%
+MonseurMaiDra,18,3,3,0.0%,66.7%,33.3%,0.0%,1.67,88.7%
 alphaster17,18,2,2,0.0%,50.0%,50.0%,0.0%,1.5,77.5%
-MonseurMaiDra,18,2,2,0.0%,50.0%,50.0%,0.0%,1.5,89.0%
 ItsTwinkie,18,1,1,0.0%,0.0%,100.0%,0.0%,1.0,69.0%
 
 CWL Season: March 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 los insumos :v,LOSS,36,38,92.7%,94.0%,15v15,03/03/2026
 Half In The Bag,WIN,39,35,95.1%,89.6%,15v15,03/04/2026
-BROTHERS TEAM,IN_PROGRESS,18,13,45.0%,35.5%,15v15,03/05/2026
+BROTHERS TEAM,IN_PROGRESS,20,13,50.9%,35.5%,15v15,03/05/2026
 
 CWL Season: March 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -63,3 +63,4 @@ BROTHERS TEAM,CRASH,18,Henneth,18,3,100.0%,2:31
 BROTHERS TEAM,alphaster17,18,Billy Bruto,18,2,89.0%,2:56
 BROTHERS TEAM,brocaleb,18,"Herrera""",18,3,100.0%,1:50
 BROTHERS TEAM,YokoEno,18,~Wäkändä~,18,2,97.0%,3:00
+BROTHERS TEAM,MonseurMaiDra,18,Meliodas,18,2,88.0%,2:52
