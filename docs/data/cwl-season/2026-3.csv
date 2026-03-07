@@ -14,9 +14,9 @@ patrick,18,3,3,33.3%,66.7%,0.0%,0.0%,2.33,89.0%
 LLoh7,18,4,4,25.0%,75.0%,0.0%,0.0%,2.25,90.3%
 ItsTwinkie,18,3,3,33.3%,33.3%,33.3%,0.0%,2.0,89.0%
 Juliet,18,2,2,0.0%,100.0%,0.0%,0.0%,2.0,89.5%
+MonseurMaiDra,18,4,4,25.0%,50.0%,25.0%,0.0%,2.0,91.5%
 !!Aristocrat!!,18,3,3,0.0%,100.0%,0.0%,0.0%,2.0,91.0%
 alphaster17,18,3,3,0.0%,66.7%,33.3%,0.0%,1.67,81.3%
-MonseurMaiDra,18,3,3,0.0%,66.7%,33.3%,0.0%,1.67,88.7%
 
 CWL Season: March 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
@@ -24,7 +24,7 @@ los insumos :v,LOSS,36,38,92.7%,94.0%,15v15,03/03/2026
 Half In The Bag,WIN,39,35,95.1%,89.6%,15v15,03/04/2026
 BROTHERS TEAM,WIN,37,35,95.7%,91.2%,15v15,03/05/2026
 Majestic Flock,LOSS,40,42,98.4%,96.9%,15v15,03/06/2026
-Bangladesh,IN_PROGRESS,5,3,13.1%,6.7%,15v15,03/07/2026
+Bangladesh,IN_PROGRESS,8,3,19.8%,6.7%,15v15,03/07/2026
 
 CWL Season: March 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -90,3 +90,4 @@ Majestic Flock,Brad,18,Phoenix,18,3,100.0%,2:26
 Majestic Flock,Ryan,18,The King Son,18,3,100.0%,2:55
 Bangladesh,babyacorns,18,JOYNAL,18,2,97.0%,3:00
 Bangladesh,brocaleb,18,Prince Village,18,3,100.0%,1:43
+Bangladesh,MonseurMaiDra,18,Queen,18,3,100.0%,1:35
