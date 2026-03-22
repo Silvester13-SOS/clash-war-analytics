@@ -18,6 +18,15 @@ def get_db():
     return conn
 
 
+def _fix_stars(stars, destruction):
+    """Enforce Clash of Clans star rules: 100% = 3 stars, >=50% = at least 1 star."""
+    if destruction >= 100:
+        return 3
+    if destruction >= 50 and stars < 1:
+        return 1
+    return stars
+
+
 @app.route("/")
 def dashboard():
     return render_template("dashboard.html")
@@ -134,7 +143,7 @@ def war_attacks(war_id):
             "defender_name": row["defender_name"],
             "defender_th": row["defender_th_level"],
             "defender_position": row["defender_map_position"],
-            "stars": row["stars"],
+            "stars": _fix_stars(row["stars"], row["destruction_percentage"]),
             "destruction": row["destruction_percentage"],
             "order": row["attack_order"],
             "duration": row["duration"],
@@ -250,7 +259,7 @@ def player_detail(player_tag):
             "defender_name": r["defender_name"],
             "defender_th": r["defender_th_level"],
             "defender_position": r["defender_map_position"],
-            "stars": r["stars"],
+            "stars": _fix_stars(r["stars"], r["destruction_percentage"]),
             "destruction": r["destruction_percentage"],
             "order": r["attack_order"],
             "duration": r["duration"],
@@ -591,7 +600,7 @@ def cwl_season_download(year, month):
         writer.writerow([
             r["opponent_name"], r["attacker_name"], r["attacker_th_level"],
             r["defender_name"], r["defender_th_level"],
-            r["stars"], f"{r['destruction_percentage']}%", dur_str,
+            _fix_stars(r["stars"], r["destruction_percentage"]), f"{r['destruction_percentage']}%", dur_str,
         ])
 
     conn.close()

@@ -1,5 +1,5 @@
 .env
-war_data.db
 __pycache__/
 *.pyc
 .claude/
+war_collector.log

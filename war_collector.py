@@ -7,11 +7,27 @@ import asyncio
 import coc
 import sqlite3
 import os
+import logging
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 
 load_dotenv()
 
 DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "war_data.db")
+LOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "war_collector.log")
+
+# --- Logging setup ---
+logger = logging.getLogger("war_collector")
+logger.setLevel(logging.DEBUG)
+_fmt = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+_ch = logging.StreamHandler()
+_ch.setLevel(logging.INFO)
+_ch.setFormatter(_fmt)
+_fh = logging.FileHandler(LOG_PATH, encoding="utf-8")
+_fh.setLevel(logging.DEBUG)
+_fh.setFormatter(_fmt)
+logger.addHandler(_ch)
+logger.addHandler(_fh)
 
 
 def init_db():
@@ -31,7 +47,8 @@ def init_db():
         team_size INTEGER,
         attacks_per_member INTEGER DEFAULT 2,
         result TEXT,
-        war_type TEXT DEFAULT 'regular'
+        war_type TEXT DEFAULT 'regular',
+        collected_at TEXT
     )""")
     c.execute("""CREATE TABLE IF NOT EXISTS attacks (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -97,7 +114,7 @@ def init_db():
 def war_exists(end_time):
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    c.execute("SELECT id FROM wars WHERE war_end_time = ?", (end_time,))
+    c.execute("SELECT id, result FROM wars WHERE war_end_time = ?", (end_time,))
     result = c.fetchone()
     conn.close()
     return result
@@ -105,39 +122,52 @@ def war_exists(end_time):
 
 def delete_war(war_id):
     conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
-    c.execute("DELETE FROM attacks WHERE war_id = ?", (war_id,))
-    c.execute("DELETE FROM defenses WHERE war_id = ?", (war_id,))
-    c.execute("DELETE FROM wars WHERE id = ?", (war_id,))
-    conn.commit()
-    conn.close()
+    try:
+        conn.execute("BEGIN")
+        conn.execute("DELETE FROM attacks WHERE war_id = ?", (war_id,))
+        conn.execute("DELETE FROM defenses WHERE war_id = ?", (war_id,))
+        conn.execute("DELETE FROM wars WHERE id = ?", (war_id,))
+        conn.commit()
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
 
 
 def save_war(war_data, attacks_data, defenses_data=None):
+    collected_at = datetime.now(timezone.utc).isoformat()
     conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
-    c.execute("""INSERT INTO wars (war_end_time, clan_tag, clan_name, clan_stars,
-                clan_destruction, opponent_tag, opponent_name, opponent_stars,
-                opponent_destruction, team_size, attacks_per_member, result, war_type)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-              war_data)
-    war_id = c.lastrowid
-    for attack in attacks_data:
-        c.execute("""INSERT INTO attacks (war_id, attacker_tag, attacker_name,
-                    attacker_th_level, attacker_map_position, defender_tag,
-                    defender_name, defender_th_level, defender_map_position,
-                    stars, destruction_percentage, attack_order, duration)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-                  (war_id, *attack))
-    for defense in (defenses_data or []):
-        c.execute("""INSERT INTO defenses (war_id, defender_tag, defender_name,
-                    defender_th_level, defender_map_position, attacker_tag,
-                    attacker_name, attacker_th_level, stars_received,
-                    destruction_received, attack_order)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-                  (war_id, *defense))
-    conn.commit()
-    conn.close()
+    try:
+        conn.execute("BEGIN")
+        c = conn.cursor()
+        c.execute("""INSERT INTO wars (war_end_time, clan_tag, clan_name, clan_stars,
+                    clan_destruction, opponent_tag, opponent_name, opponent_stars,
+                    opponent_destruction, team_size, attacks_per_member, result, war_type,
+                    collected_at)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                  (*war_data, collected_at))
+        war_id = c.lastrowid
+        for attack in attacks_data:
+            c.execute("""INSERT INTO attacks (war_id, attacker_tag, attacker_name,
+                        attacker_th_level, attacker_map_position, defender_tag,
+                        defender_name, defender_th_level, defender_map_position,
+                        stars, destruction_percentage, attack_order, duration)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                      (war_id, *attack))
+        for defense in (defenses_data or []):
+            c.execute("""INSERT INTO defenses (war_id, defender_tag, defender_name,
+                        defender_th_level, defender_map_position, attacker_tag,
+                        attacker_name, attacker_th_level, stars_received,
+                        destruction_received, attack_order)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                      (war_id, *defense))
+        conn.commit()
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
     return war_id
 
 
@@ -171,14 +201,26 @@ def build_member_lookup(clan_members, opponent_members):
     return lookup
 
 
-def extract_attacks(members, member_lookup):
+def validate_stars(stars, destruction):
+    """Enforce Clash of Clans star rules based on destruction percentage.
+    - 100% destruction always = 3 stars
+    - >=50% destruction = at least 1 star
+    """
+    if destruction >= 100:
+        return 3
+    if destruction >= 50 and stars < 1:
+        return 1
+    return stars
+
+
+def extract_attacks(members, member_lookup, attacks_per_member=2):
     attacks_data = []
     for member in members:
-        if not member.attacks:
-            continue
-        for attack in member.attacks:
+        actual_attacks = member.attacks or []
+        for attack in actual_attacks:
             attacker = member_lookup.get(attack.attacker_tag, {})
             defender = member_lookup.get(attack.defender_tag, {})
+            stars = validate_stars(attack.stars, attack.destruction)
             attacks_data.append((
                 attack.attacker_tag,
                 attacker.get("name", "Unknown"),
@@ -188,10 +230,28 @@ def extract_attacks(members, member_lookup):
                 defender.get("name", "Unknown"),
                 defender.get("th_level", 0),
                 defender.get("map_position", 0),
-                attack.stars,
+                stars,
                 attack.destruction,
                 attack.order,
                 getattr(attack, "duration", 0),
+            ))
+        # Add 0-star records for each missed attack
+        missed = attacks_per_member - len(actual_attacks)
+        for _ in range(missed):
+            info = member_lookup.get(member.tag, {})
+            attacks_data.append((
+                member.tag,
+                info.get("name", member.name),
+                info.get("th_level", member.town_hall),
+                info.get("map_position", member.map_position),
+                "",       # no defender tag
+                "Missed", # defender name placeholder
+                0,        # defender th level
+                0,        # defender map position
+                0,        # 0 stars
+                0.0,      # 0% destruction
+                0,        # no attack order
+                0,        # no duration
             ))
     return attacks_data
 
@@ -209,6 +269,7 @@ def extract_defenses(our_members, opponent_members, member_lookup):
             # Check if the defender is one of our members
             our_tags = {m.tag for m in our_members}
             if attack.defender_tag in our_tags:
+                stars = validate_stars(attack.stars, attack.destruction)
                 defenses_data.append((
                     attack.defender_tag,
                     defender.get("name", "Unknown"),
@@ -217,41 +278,61 @@ def extract_defenses(our_members, opponent_members, member_lookup):
                     attack.attacker_tag,
                     attacker.get("name", "Unknown"),
                     attacker.get("th_level", 0),
-                    attack.stars,
+                    stars,
                     attack.destruction,
                     attack.order,
                 ))
     return defenses_data
 
 
+async def retry_async(coro_func, *args, retries=3, delay=2, label="API call"):
+    """Retry an async call up to `retries` times with exponential back-off."""
+    for attempt in range(1, retries + 1):
+        try:
+            return await coro_func(*args)
+        except (coc.PrivateWarLog, coc.NotFound, coc.InvalidCredentials):
+            raise  # don't retry non-transient errors
+        except Exception as e:
+            if attempt == retries:
+                logger.error("%s failed after %d attempts: %s", label, retries, e)
+                raise
+            logger.warning("%s attempt %d/%d failed: %s – retrying in %ds",
+                           label, attempt, retries, e, delay * attempt)
+            await asyncio.sleep(delay * attempt)
+
+
 async def collect_current_war(client, clan_tag):
     try:
-        war = await client.get_current_war(clan_tag)
+        war = await retry_async(client.get_current_war, clan_tag,
+                                label="get_current_war")
     except coc.PrivateWarLog:
-        print("War log is set to private. Cannot access war data.")
+        logger.warning("War log is set to private. Cannot access war data.")
         return
     except coc.NotFound:
-        print("Clan not found.")
+        logger.error("Clan not found.")
+        return
+    except Exception as e:
+        logger.error("Failed to fetch current war: %s", e)
         return
 
     if war is None or war.state == "notInWar":
-        print("Clan is not currently in a war.")
+        logger.info("Clan is not currently in a war.")
         return
 
     if war.state == "preparation":
-        print("War is in preparation phase. No attacks to collect yet.")
+        logger.info("War is in preparation phase. No attacks to collect yet.")
         return
 
     end_time = war.end_time.raw_time
     existing = war_exists(end_time)
 
-    if existing and war.state == "warEnded":
-        print(f"War ending {end_time} already fully recorded. Skipping.")
+    if existing and war.state == "warEnded" and existing[1] != "in_progress":
+        logger.info("War ending %s already fully recorded. Skipping.", end_time)
         return
 
-    # If war is in progress and we already have partial data, update it
+    # Delete existing partial/in-progress data to re-save with latest
     if existing:
-        print(f"Updating in-progress war data for {end_time}...")
+        logger.info("Updating war data for %s...", end_time)
         delete_war(existing[0])
 
     if war.state == "warEnded":
@@ -283,22 +364,24 @@ async def collect_current_war(client, clan_tag):
     )
 
     member_lookup = build_member_lookup(war.clan.members, war.opponent.members)
-    attacks_data = extract_attacks(war.clan.members, member_lookup)
+    attacks_data = extract_attacks(war.clan.members, member_lookup, attacks_per_member)
     defenses_data = extract_defenses(war.clan.members, war.opponent.members, member_lookup)
 
     war_id = save_war(war_data, attacks_data, defenses_data)
     label = "CWL" if war_type == "cwl" else "Regular War"
-    print(f"[{label}] Saved vs {war.opponent.name} | "
-          f"{len(attacks_data)} attacks | {len(defenses_data)} defenses | {result.upper()}")
-    print(f"  Stars: {war.clan.stars}-{war.opponent.stars} | "
-          f"Destruction: {war.clan.destruction:.1f}%-{war.opponent.destruction:.1f}%")
+    logger.info("[%s] Saved vs %s | %d attacks | %d defenses | %s",
+                label, war.opponent.name, len(attacks_data), len(defenses_data), result.upper())
+    logger.info("  Stars: %d-%d | Destruction: %.1f%%-%.1f%%",
+                war.clan.stars, war.opponent.stars,
+                war.clan.destruction, war.opponent.destruction)
 
 
 async def collect_cwl(client, clan_tag):
     try:
-        league_group = await client.get_league_group(clan_tag)
+        league_group = await retry_async(client.get_league_group, clan_tag,
+                                         label="get_league_group")
     except Exception as e:
-        print(f"No CWL data available: {e}")
+        logger.info("No CWL data available: %s", e)
         return
 
     saved_count = 0
@@ -310,9 +393,10 @@ async def collect_cwl(client, clan_tag):
             if str(war_tag) == "#0":
                 continue
             try:
-                war = await client.get_league_war(war_tag)
+                war = await retry_async(client.get_league_war, war_tag,
+                                        label=f"get_league_war({war_tag})")
             except Exception as e:
-                print(f"  Could not fetch CWL war {war_tag}: {e}")
+                logger.warning("  Could not fetch CWL war %s: %s", war_tag, e)
                 continue
 
             if war.state == "notInWar":
@@ -330,7 +414,7 @@ async def collect_cwl(client, clan_tag):
             end_time = war.end_time.raw_time
             existing = war_exists(end_time)
 
-            if existing and war.state == "warEnded":
+            if existing and war.state == "warEnded" and existing[1] != "in_progress":
                 continue
             if existing:
                 delete_war(existing[0])
@@ -354,16 +438,15 @@ async def collect_cwl(client, clan_tag):
             )
 
             member_lookup = build_member_lookup(war.clan.members, war.opponent.members)
-            attacks_data = extract_attacks(our_clan.members, member_lookup)
+            attacks_data = extract_attacks(our_clan.members, member_lookup, 1)
             defenses_data = extract_defenses(our_clan.members, their_clan.members, member_lookup)
 
-            if attacks_data or defenses_data:
-                save_war(war_data, attacks_data, defenses_data)
-                saved_count += 1
-                print(f"  [CWL] Saved vs {their_clan.name} | "
-                      f"{len(attacks_data)} attacks | {len(defenses_data)} defenses | {result.upper()}")
+            save_war(war_data, attacks_data, defenses_data)
+            saved_count += 1
+            logger.info("  [CWL] Saved vs %s | %d attacks | %d defenses | %s",
+                        their_clan.name, len(attacks_data), len(defenses_data), result.upper())
 
-    print(f"CWL collection done. {saved_count} wars saved.")
+    logger.info("CWL collection done. %d wars saved.", saved_count)
 
 
 async def collect_player_profiles(client):
@@ -375,17 +458,17 @@ async def collect_player_profiles(client):
     conn.close()
 
     if not tags:
-        print("No players to fetch profiles for.")
+        logger.info("No players to fetch profiles for.")
         return
 
-    print(f"Fetching profiles for {len(tags)} players...")
+    logger.info("Fetching profiles for %d players...", len(tags))
     fetched = 0
 
     for tag in tags:
         try:
             player = await client.get_player(tag)
         except Exception as e:
-            print(f"  Could not fetch {tag}: {e}")
+            logger.warning("  Could not fetch %s: %s", tag, e)
             continue
 
         conn = sqlite3.connect(DB_PATH)
@@ -415,7 +498,73 @@ async def collect_player_profiles(client):
         conn.close()
         fetched += 1
 
-    print(f"Fetched {fetched}/{len(tags)} player profiles.")
+    logger.info("Fetched %d/%d player profiles.", fetched, len(tags))
+
+
+def finalize_stale_wars():
+    """Auto-finalize wars stuck as 'in_progress' whose end_time has passed.
+
+    If the API no longer has the war data, we determine the result from whatever
+    attack data we collected while the war was live.
+    """
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    now = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.000Z")
+
+    c.execute("""SELECT id, war_end_time, clan_stars, clan_destruction,
+                        opponent_stars, opponent_destruction, opponent_name
+                 FROM wars WHERE result = 'in_progress'""")
+    stale = c.fetchall()
+
+    for row in stale:
+        war_id, end_time, clan_stars, clan_dest, opp_stars, opp_dest, opp_name = row
+        # Compare end_time with now (format: 20260303T233901.000Z)
+        if end_time and end_time < now:
+            result = determine_result(clan_stars, opp_stars, clan_dest, opp_dest)
+            c.execute("UPDATE wars SET result = ? WHERE id = ?", (result, war_id))
+            logger.info("Finalized stale war id=%d vs %s as %s (stars %d-%d)",
+                        war_id, opp_name, result.upper(), clan_stars, opp_stars)
+
+    conn.commit()
+    conn.close()
+
+
+def verify_data():
+    """Post-collection verification: log warnings for incomplete data."""
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+
+    c.execute("SELECT COUNT(*) FROM wars")
+    war_count = c.fetchone()[0]
+    c.execute("SELECT COUNT(*) FROM attacks")
+    attack_count = c.fetchone()[0]
+    c.execute("SELECT COUNT(DISTINCT player_tag) FROM player_heroes")
+    profile_count = c.fetchone()[0]
+
+    logger.info("=== Database: %d wars | %d attacks | %d player profiles ===",
+                war_count, attack_count, profile_count)
+
+    # Check for stale in-progress wars
+    c.execute("SELECT id, war_end_time, opponent_name, collected_at FROM wars WHERE result = 'in_progress'")
+    stale = c.fetchall()
+    for row in stale:
+        logger.warning("War id=%d vs %s (ends %s) still marked in_progress (collected %s)",
+                        row[0], row[2], row[1], row[3])
+
+    # Check for wars with fewer attacks than expected
+    c.execute("""SELECT w.id, w.opponent_name, w.team_size, w.attacks_per_member,
+                        COUNT(a.id) as attack_count
+                 FROM wars w
+                 LEFT JOIN attacks a ON a.war_id = w.id
+                 GROUP BY w.id""")
+    for row in c.fetchall():
+        war_id, opp_name, team_size, apm, actual = row
+        expected = team_size * apm
+        if actual < expected:
+            logger.warning("War id=%d vs %s has %d/%d expected attacks",
+                           war_id, opp_name, actual, expected)
+
+    conn.close()
 
 
 async def main():
@@ -424,7 +573,7 @@ async def main():
     password = os.getenv("COC_PASSWORD")
 
     if not email or not password:
-        print("Error: Set COC_EMAIL and COC_PASSWORD in your .env file")
+        logger.error("Set COC_EMAIL and COC_PASSWORD in your .env file")
         return
 
     init_db()
@@ -433,7 +582,7 @@ async def main():
 
     try:
         await client.login(email, password)
-        print(f"Logged in. Collecting war data for {clan_tag}...\n")
+        logger.info("Logged in. Collecting war data for %s...", clan_tag)
 
         # Cache clan metadata (badge, level, war wins)
         try:
@@ -448,38 +597,29 @@ async def main():
                       (clan_tag, clan.name, clan.badge.medium, clan.level, clan.war_wins, clan.war_win_streak))
             conn.commit()
             conn.close()
-            print(f"Clan: {clan.name} | Level {clan.level} | {clan.war_wins} war wins\n")
+            logger.info("Clan: %s | Level %d | %d war wins", clan.name, clan.level, clan.war_wins)
         except Exception as e:
-            print(f"Could not fetch clan info: {e}\n")
+            logger.warning("Could not fetch clan info: %s", e)
 
-        print("--- Current/Recent War ---")
+        logger.info("--- Current/Recent War ---")
         await collect_current_war(client, clan_tag)
 
-        print("\n--- Clan War League ---")
+        logger.info("--- Clan War League ---")
         await collect_cwl(client, clan_tag)
 
-        print("\n--- Player Profiles (Heroes & Equipment) ---")
+        logger.info("--- Player Profiles (Heroes & Equipment) ---")
         await collect_player_profiles(client)
 
-        # Print summary
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        c.execute("SELECT COUNT(*) FROM wars")
-        war_count = c.fetchone()[0]
-        c.execute("SELECT COUNT(*) FROM attacks")
-        attack_count = c.fetchone()[0]
-        c.execute("SELECT COUNT(DISTINCT player_tag) FROM player_heroes")
-        profile_count = c.fetchone()[0]
-        conn.close()
+        # Finalize any wars stuck as in_progress whose end time has passed
+        finalize_stale_wars()
 
-        print(f"\n=== Database: {war_count} wars | {attack_count} attacks | {profile_count} player profiles ===")
+        # Summary & verification
+        verify_data()
 
     except coc.InvalidCredentials:
-        print("Error: Invalid developer portal credentials. Check your .env file.")
+        logger.error("Invalid developer portal credentials. Check your .env file.")
     except Exception as e:
-        print(f"Error: {e}")
-        import traceback
-        traceback.print_exc()
+        logger.error("Error: %s", e, exc_info=True)
     finally:
         await client.close()
 

@@ -306,6 +306,8 @@
             <div class="cwl-season-bar">
                 <label for="cwl-season-select">CWL Season:</label>
                 <select id="cwl-season-select"><option value="">Loading...</option></select>
+                <label for="cwl-war-select" style="margin-left:8px;">War:</label>
+                <select id="cwl-war-select"><option value="all">All Wars (Season Overview)</option></select>
                 <button class="cwl-download-btn" id="cwl-download-btn" disabled>Download CSV</button>
             </div>
             <div class="summary-cards" id="cwl-season-summary" style="display:none;"></div>
@@ -676,11 +678,11 @@
             s.scrollIntoView({behavior:"smooth"});
             try {
                 const attacks = await (await fetch(`${DATA}/war/${warId}.json`)).json();
-                tbody.innerHTML=attacks.map(a=>`<tr>
+                tbody.innerHTML=attacks.map(a=>{const s=fixStars(a.stars,a.destruction);return`<tr>
                     <td>${a.order}</td><td>${esc(a.attacker_name)} (#${a.attacker_position})</td><td>${a.attacker_th}</td>
                     <td>${esc(a.defender_name)} (#${a.defender_position})</td><td>${a.defender_th}</td>
-                    <td class="stars-${a.stars}">${'\u2605'.repeat(a.stars)}${'\u2606'.repeat(3-a.stars)}</td>
-                    <td>${a.destruction}%</td><td>${fmtDur(a.duration)}</td></tr>`).join("");
+                    <td class="stars-${s}">${'\u2605'.repeat(s)}${'\u2606'.repeat(3-s)}</td>
+                    <td>${a.destruction}%</td><td>${fmtDur(a.duration)}</td></tr>`;}).join("");
             } catch(e) { tbody.innerHTML='<tr><td colspan="8" style="text-align:center;color:#f87171;">Failed</td></tr>'; }
         }
 
@@ -781,14 +783,14 @@
         function renderModalAttacks(attacks) {
             const tbody=document.getElementById("modal-attacks");
             if(!attacks.length){tbody.innerHTML='<tr><td colspan="9" style="text-align:center;padding:20px;color:#484f58;">No attacks</td></tr>';return;}
-            tbody.innerHTML=attacks.map(a=>`<tr>
+            tbody.innerHTML=attacks.map(a=>{const s=fixStars(a.stars,a.destruction);return`<tr>
                 <td>${esc(a.opponent)}</td>
                 <td><span class="badge badge-${a.war_type==='cwl'?'in_progress':'win'}" style="font-size:10px;">${a.war_type.toUpperCase()}</span></td>
                 <td><span class="badge badge-${a.war_result}" style="font-size:10px;">${a.war_result}</span></td>
                 <td>${esc(a.defender_name)} (#${a.defender_position})</td><td>${a.defender_th}</td>
-                <td class="stars-${a.stars}">${'\u2605'.repeat(a.stars)}${'\u2606'.repeat(3-a.stars)}</td>
+                <td class="stars-${s}">${'\u2605'.repeat(s)}${'\u2606'.repeat(3-s)}</td>
                 <td>${a.destruction}%</td><td>${fmtDur(a.duration)}</td><td>${formatDate(a.war_date)}</td>
-            </tr>`).join("");
+            </tr>`;}).join("");
         }
 
         function closeModal(){document.getElementById("player-modal").classList.remove("open");}
@@ -811,10 +813,12 @@
         function esc(s){if(!s)return'';const d=document.createElement("div");d.textContent=s;return d.innerHTML;}
         function formatDate(s){if(!s)return"\u2014";try{if(s.includes("T")&&!s.includes("-")){return`${s.slice(4,6)}/${s.slice(6,8)}/${s.slice(0,4)}`;}return new Date(s).toLocaleDateString();}catch{return s;}}
         function fmtDur(sec){if(!sec)return"\u2014";return`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`;}
+        function fixStars(stars, dest){if(dest>=100)return 3;if(dest>=50&&stars<1)return 1;return stars;}
 
         // ---- CWL Season Feature ----
         let cwlSeasons = [];
         let cwlSeasonLoaded = false;
+        let cwlCurrentSeasonData = null;
 
         async function loadCwlSeasons() {
             if (cwlSeasonLoaded) return;
@@ -835,17 +839,60 @@
             } catch (e) { console.error('Failed to load CWL seasons:', e); }
         }
 
+        function populateCwlWarDropdown(wars) {
+            const sel = document.getElementById('cwl-war-select');
+            let html = '<option value="all">All Wars (Season Overview)</option>';
+            wars.forEach((w, i) => {
+                const label = `War ${i + 1} vs ${w.opponent_name}`;
+                html += `<option value="${i}">${label}</option>`;
+            });
+            sel.innerHTML = html;
+        }
+
+        function filterSeasonDataByWar(data, warIndex) {
+            const war = data.wars[warIndex];
+            if (!war) return data;
+            const warId = war.id;
+            // Filter players to only those who attacked in this war
+            // We can't perfectly filter from aggregated stats, so we recalc from war attacks
+            // For now, show the single war summary and the war row
+            const summary = {
+                total_wars: 1,
+                wins: war.result === 'win' ? 1 : 0,
+                losses: war.result === 'loss' ? 1 : 0,
+                ties: war.result === 'tie' ? 1 : 0,
+                total_attacks: war.attack_count,
+                avg_stars: data.wars.length ? (war.clan_stars / (war.team_size || 1)).toFixed(2) : 0,
+                avg_destruction: war.clan_destruction
+            };
+            return { label: data.label, summary, players: data.players, wars: [war] };
+        }
+
         async function loadCwlSeasonDetail() {
             const sel = document.getElementById('cwl-season-select');
             const val = sel.value;
             if (!val) return;
             try {
                 const res = await fetch(`${DATA}/cwl-season/${val}.json`);
-                const data = await res.json();
-                renderCwlSeasonSummary(data.summary, data.label);
-                renderCwlSeasonPlayers(data.players);
-                renderCwlSeasonWars(data.wars);
+                cwlCurrentSeasonData = await res.json();
+                populateCwlWarDropdown(cwlCurrentSeasonData.wars);
+                applyCwlWarFilter();
             } catch (e) { console.error('Failed to load CWL season detail:', e); }
+        }
+
+        function applyCwlWarFilter() {
+            if (!cwlCurrentSeasonData) return;
+            const warSel = document.getElementById('cwl-war-select');
+            const warVal = warSel.value;
+            let data;
+            if (warVal === 'all') {
+                data = cwlCurrentSeasonData;
+            } else {
+                data = filterSeasonDataByWar(cwlCurrentSeasonData, parseInt(warVal));
+            }
+            renderCwlSeasonSummary(data.summary, data.label);
+            renderCwlSeasonPlayers(data.players);
+            renderCwlSeasonWars(data.wars);
         }
 
         function renderCwlSeasonSummary(s, label) {
@@ -900,6 +947,7 @@
         }
 
         document.getElementById('cwl-season-select').addEventListener('change', loadCwlSeasonDetail);
+        document.getElementById('cwl-war-select').addEventListener('change', applyCwlWarFilter);
 
         document.getElementById('cwl-download-btn').addEventListener('click', () => {
             const val = document.getElementById('cwl-season-select').value;

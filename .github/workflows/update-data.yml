@@ -2,9 +2,12 @@ name: Update War Data
 
 on:
   schedule:
-    # Run every 30 minutes
     - cron: '*/15 * * * *'
-  workflow_dispatch: # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+concurrency:
+  group: war-data-update
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -24,6 +27,15 @@ jobs:
       - name: Install dependencies
         run: pip install coc.py python-dotenv
 
+      - name: Verify DB exists before collection
+        run: |
+          if [ -f war_data.db ]; then
+            echo "DB found ($(wc -c < war_data.db) bytes)"
+            python -c "import sqlite3; c=sqlite3.connect('war_data.db'); print(f'Wars in DB: {c.execute(\"SELECT COUNT(*) FROM wars\").fetchone()[0]}'); c.close()"
+          else
+            echo "WARNING: No war_data.db found - starting fresh"
+          fi
+
       - name: Run war collector
         env:
           COC_EMAIL: ${{ secrets.COC_EMAIL }}
@@ -34,14 +46,29 @@ jobs:
       - name: Export data to JSON
         run: python export_data.py
 
+      - name: Verify DB after collection
+        run: |
+          python -c "
+          import sqlite3
+          c = sqlite3.connect('war_data.db')
+          wars = c.execute('SELECT COUNT(*) FROM wars').fetchone()[0]
+          attacks = c.execute('SELECT COUNT(*) FROM attacks').fetchone()[0]
+          print(f'DB contains: {wars} wars, {attacks} attacks')
+          if wars == 0:
+              print('WARNING: DB has no wars!')
+          c.close()
+          "
+
       - name: Commit and push updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f war_data.db
           git add docs/data/ docs/index.html
           if git diff --staged --quiet; then
             echo "No data changes to commit"
           else
             git commit -m "Auto-update war data $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase origin main || true
             git push
           fi

@@ -12,6 +12,15 @@ DOCS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs")
 DATA_DIR = os.path.join(DOCS_DIR, "data")
 
 
+def _fix_stars(stars, destruction):
+    """Enforce Clash of Clans star rules: 100% = 3 stars, >=50% = at least 1 star."""
+    if destruction >= 100:
+        return 3
+    if destruction >= 50 and stars < 1:
+        return 1
+    return stars
+
+
 def get_db():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
@@ -233,7 +242,7 @@ def export_war_attacks(conn, war_id):
             "defender_name": row["defender_name"],
             "defender_th": row["defender_th_level"],
             "defender_position": row["defender_map_position"],
-            "stars": row["stars"],
+            "stars": _fix_stars(row["stars"], row["destruction_percentage"]),
             "destruction": row["destruction_percentage"],
             "order": row["attack_order"],
             "duration": row["duration"],
@@ -268,7 +277,7 @@ def export_player_detail(conn, player_tag):
             "defender_name": r["defender_name"],
             "defender_th": r["defender_th_level"],
             "defender_position": r["defender_map_position"],
-            "stars": r["stars"],
+            "stars": _fix_stars(r["stars"], r["destruction_percentage"]),
             "destruction": r["destruction_percentage"],
             "order": r["attack_order"],
             "duration": r["duration"],
@@ -513,7 +522,7 @@ def export_cwl_season_csv(conn, year, month, filepath):
             dur = r["duration"]
             dur_str = f"{dur//60}:{str(dur%60).zfill(2)}" if dur else ""
             writer.writerow([r["opponent_name"], r["attacker_name"], r["attacker_th_level"],
-                r["defender_name"], r["defender_th_level"], r["stars"],
+                r["defender_name"], r["defender_th_level"], _fix_stars(r["stars"], r["destruction_percentage"]),
                 f"{r['destruction_percentage']}%", dur_str])
 
 
