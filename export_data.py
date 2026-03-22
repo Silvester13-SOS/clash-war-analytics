@@ -550,7 +550,7 @@ def main():
         write_json(os.path.join(DATA_DIR, "war", f"{war_id}.json"), export_war_attacks(conn, war_id))
 
     # Export per-player details
-    c.execute("SELECT DISTINCT attacker_tag FROM attacks")
+    c.execute("SELECT DISTINCT attacker_tag FROM attacks WHERE attacker_tag != ''")
     tags = [row[0] for row in c.fetchall()]
     for tag in tags:
         safe_name = tag.replace("#", "").replace("/", "")
