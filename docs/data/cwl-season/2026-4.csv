@@ -1,26 +1,27 @@
 CWL Season: April 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-LLoh7,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Little Roodie!,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-babyacorns,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-brocaleb,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-!!Aristocrat!!,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-CRASH,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-rackam,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Roodies Raiders,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,48.0%
-Trumpy,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,45.0%
-Brad,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,45.5%
-patrick,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,40.0%
-Juliet,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,45.5%
-YokoEno,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,48.5%
+babyacorns,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+rackam,18,3,3,33.3%,0.0%,33.3%,33.3%,1.33,64.7%
+LLoh7,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+Little Roodie!,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+brocaleb,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 MonseurMaiDra,18,1,1,0.0%,0.0%,100.0%,0.0%,1.0,89.0%
-Ryan,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,45.0%
-alphaster17,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+!!Aristocrat!!,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+CRASH,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+Roodies Raiders,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,32.0%
+Trumpy,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,30.0%
+Brad,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,30.3%
+patrick,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,26.7%
+Juliet,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,30.3%
+YokoEno,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,32.3%
+Ryan,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,30.0%
+alphaster17,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: April 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 FIRE DRAGON,LOSS,36,42,94.9%,98.9%,15v15,04/03/2026
-Ceifadores,IN_PROGRESS,0,0,0.0%,0.0%,15v15,04/04/2026
+Ceifadores,IN_PROGRESS,4,21,12.9%,52.0%,15v15,04/04/2026
+Clan Imperial,IN_PROGRESS,0,0,0.0%,0.0%,15v15,04/06/2026
 
 CWL Season: April 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -47,10 +48,25 @@ Ceifadores,Roodies Raiders,18,Missed,0,0,0.0%,
 Ceifadores,Little Roodie!,18,Missed,0,0,0.0%,
 Ceifadores,!!Aristocrat!!,18,Missed,0,0,0.0%,
 Ceifadores,patrick,18,Missed,0,0,0.0%,
-Ceifadores,babyacorns,18,Missed,0,0,0.0%,
 Ceifadores,CRASH,18,Missed,0,0,0.0%,
-Ceifadores,rackam,18,Missed,0,0,0.0%,
 Ceifadores,Trumpy,18,Missed,0,0,0.0%,
 Ceifadores,Brad,18,Missed,0,0,0.0%,
 Ceifadores,alphaster17,18,Missed,0,0,0.0%,
 Ceifadores,Juliet,18,Missed,0,0,0.0%,
+Ceifadores,rackam,18,Killer0014,18,1,94.0%,2:53
+Ceifadores,babyacorns,18,Ádone,18,3,100.0%,1:40
+Clan Imperial,Ryan,18,Missed,0,0,0.0%,
+Clan Imperial,brocaleb,18,Missed,0,0,0.0%,
+Clan Imperial,LLoh7,18,Missed,0,0,0.0%,
+Clan Imperial,YokoEno,18,Missed,0,0,0.0%,
+Clan Imperial,Roodies Raiders,18,Missed,0,0,0.0%,
+Clan Imperial,Little Roodie!,18,Missed,0,0,0.0%,
+Clan Imperial,!!Aristocrat!!,18,Missed,0,0,0.0%,
+Clan Imperial,patrick,18,Missed,0,0,0.0%,
+Clan Imperial,CRASH,18,Missed,0,0,0.0%,
+Clan Imperial,babyacorns,18,Missed,0,0,0.0%,
+Clan Imperial,rackam,18,Missed,0,0,0.0%,
+Clan Imperial,Trumpy,18,Missed,0,0,0.0%,
+Clan Imperial,Brad,18,Missed,0,0,0.0%,
+Clan Imperial,alphaster17,18,Missed,0,0,0.0%,
+Clan Imperial,Juliet,18,Missed,0,0,0.0%,
