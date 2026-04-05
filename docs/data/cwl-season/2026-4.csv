@@ -1,27 +1,28 @@
 CWL Season: April 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-Little Roodie!,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-babyacorns,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-brocaleb,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-!!Aristocrat!!,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-CRASH,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 rackam,18,2,2,50.0%,0.0%,50.0%,0.0%,2.0,97.0%
-Roodies Raiders,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,65.3%
-LLoh7,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,64.7%
-Brad,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,63.7%
-Juliet,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,63.7%
-Ryan,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,63.3%
-Trumpy,18,3,3,0.0%,66.7%,0.0%,33.3%,1.33,61.7%
-patrick,18,3,3,0.0%,66.7%,0.0%,33.3%,1.33,47.3%
-YokoEno,18,3,3,0.0%,66.7%,0.0%,33.3%,1.33,62.0%
-alphaster17,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,39.0%
-MonseurMaiDra,18,2,2,0.0%,0.0%,50.0%,50.0%,0.5,44.5%
+LLoh7,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,68.0%
+Little Roodie!,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+babyacorns,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+brocaleb,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+!!Aristocrat!!,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+CRASH,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+Roodies Raiders,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,49.0%
+Brad,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,47.8%
+Juliet,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,47.8%
+Ryan,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,47.5%
+Trumpy,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,46.3%
+patrick,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,35.5%
+YokoEno,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,46.5%
+alphaster17,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,26.0%
+MonseurMaiDra,18,3,3,0.0%,0.0%,33.3%,66.7%,0.33,29.7%
 
 CWL Season: April 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 FIRE DRAGON,LOSS,36,42,94.9%,98.9%,15v15,04/03/2026
-Ceifadores,IN_PROGRESS,38,39,94.1%,97.5%,15v15,04/04/2026
-Clan Imperial,IN_PROGRESS,0,0,0.0%,0.0%,15v15,04/06/2026
+Ceifadores,LOSS,38,39,94.1%,97.5%,15v15,04/04/2026
+Clan Imperial,IN_PROGRESS,2,8,5.2%,19.9%,15v15,04/06/2026
+Die Recrewten,IN_PROGRESS,0,0,0.0%,0.0%,15v15,04/07/2026
 
 CWL Season: April 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -57,7 +58,6 @@ Ceifadores,Brad,18,Batisteleo,18,3,100.0%,1:46
 Ceifadores,Juliet,18,SANDAUMM,18,3,100.0%,2:52
 Clan Imperial,Ryan,18,Missed,0,0,0.0%,
 Clan Imperial,brocaleb,18,Missed,0,0,0.0%,
-Clan Imperial,LLoh7,18,Missed,0,0,0.0%,
 Clan Imperial,YokoEno,18,Missed,0,0,0.0%,
 Clan Imperial,Roodies Raiders,18,Missed,0,0,0.0%,
 Clan Imperial,Little Roodie!,18,Missed,0,0,0.0%,
@@ -70,3 +70,19 @@ Clan Imperial,Trumpy,18,Missed,0,0,0.0%,
 Clan Imperial,Brad,18,Missed,0,0,0.0%,
 Clan Imperial,alphaster17,18,Missed,0,0,0.0%,
 Clan Imperial,Juliet,18,Missed,0,0,0.0%,
+Clan Imperial,LLoh7,18,Zz,18,2,78.0%,2:05
+Die Recrewten,Ryan,18,Missed,0,0,0.0%,
+Die Recrewten,LLoh7,18,Missed,0,0,0.0%,
+Die Recrewten,brocaleb,18,Missed,0,0,0.0%,
+Die Recrewten,YokoEno,18,Missed,0,0,0.0%,
+Die Recrewten,Little Roodie!,18,Missed,0,0,0.0%,
+Die Recrewten,Roodies Raiders,18,Missed,0,0,0.0%,
+Die Recrewten,!!Aristocrat!!,18,Missed,0,0,0.0%,
+Die Recrewten,CRASH,18,Missed,0,0,0.0%,
+Die Recrewten,MonseurMaiDra,18,Missed,0,0,0.0%,
+Die Recrewten,patrick,18,Missed,0,0,0.0%,
+Die Recrewten,babyacorns,18,Missed,0,0,0.0%,
+Die Recrewten,Trumpy,18,Missed,0,0,0.0%,
+Die Recrewten,Brad,18,Missed,0,0,0.0%,
+Die Recrewten,alphaster17,18,Missed,0,0,0.0%,
+Die Recrewten,Juliet,18,Missed,0,0,0.0%,
