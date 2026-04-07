@@ -1,17 +1,17 @@
 CWL Season: April 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
+!!Aristocrat!!,18,5,5,60.0%,40.0%,0.0%,0.0%,2.6,90.8%
 brocaleb,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
 Roodies Raiders,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,82.7%
 Brad,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,81.8%
 Little Roodie!,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,82.7%
 babyacorns,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,81.8%
 CRASH,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,81.5%
-Trumpy,18,4,4,25.0%,75.0%,0.0%,0.0%,2.25,89.0%
-!!Aristocrat!!,18,6,6,50.0%,33.3%,0.0%,16.7%,2.17,75.7%
 LLoh7,18,6,6,33.3%,50.0%,0.0%,16.7%,2.0,77.8%
 YokoEno,18,6,6,33.3%,50.0%,0.0%,16.7%,2.0,78.7%
 rackam,18,5,5,60.0%,0.0%,20.0%,20.0%,2.0,78.8%
 Juliet,18,6,6,50.0%,16.7%,0.0%,33.3%,1.83,65.2%
+Trumpy,18,5,5,20.0%,60.0%,0.0%,20.0%,1.8,71.2%
 MonseurMaiDra,18,5,5,40.0%,20.0%,20.0%,20.0%,1.8,77.6%
 patrick,18,6,6,0.0%,83.3%,0.0%,16.7%,1.67,67.7%
 Ryan,18,6,6,33.3%,33.3%,0.0%,33.3%,1.67,63.2%
@@ -23,7 +23,7 @@ FIRE DRAGON,LOSS,36,42,94.9%,98.9%,15v15,04/03/2026
 Ceifadores,LOSS,38,39,94.1%,97.5%,15v15,04/04/2026
 Clan Imperial,LOSS,37,39,93.4%,93.1%,15v15,04/06/2026
 Die Recrewten,WIN,41,40,96.7%,95.9%,15v15,04/07/2026
-BABA YORGUN,IN_PROGRESS,35,35,81.8%,85.3%,15v15,04/08/2026
+BABA YORGUN,IN_PROGRESS,35,38,81.8%,91.9%,15v15,04/08/2026
 ROCKET KILLERZ,IN_PROGRESS,0,0,0.0%,0.0%,15v15,04/09/2026
 
 CWL Season: April 2026 - Individual Attacks
@@ -109,12 +109,12 @@ ROCKET KILLERZ,Little Roodie!,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,YokoEno,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,brocaleb,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,LLoh7,18,Missed,0,0,0.0%,
-ROCKET KILLERZ,!!Aristocrat!!,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,CRASH,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,rackam,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,patrick,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,MonseurMaiDra,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,babyacorns,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,Trumpy,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,Brad,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,alphaster17,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,Juliet,18,Missed,0,0,0.0%,
