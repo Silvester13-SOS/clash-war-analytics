@@ -1,29 +1,30 @@
 CWL Season: April 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-babyacorns,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
-brocaleb,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
+babyacorns,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,81.8%
+CRASH,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,81.5%
 Trumpy,18,4,4,25.0%,75.0%,0.0%,0.0%,2.25,89.0%
-Roodies Raiders,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,79.2%
-Brad,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,78.2%
-Little Roodie!,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,79.2%
-Juliet,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,78.2%
-!!Aristocrat!!,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,79.0%
-CRASH,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,77.8%
-Ryan,18,5,5,40.0%,40.0%,0.0%,20.0%,2.0,75.8%
-LLoh7,18,5,5,20.0%,60.0%,0.0%,20.0%,1.8,73.4%
-YokoEno,18,5,5,20.0%,60.0%,0.0%,20.0%,1.8,74.4%
-rackam,18,4,4,50.0%,0.0%,25.0%,25.0%,1.75,73.5%
-patrick,18,5,5,0.0%,80.0%,0.0%,20.0%,1.6,64.0%
-MonseurMaiDra,18,4,4,25.0%,25.0%,25.0%,25.0%,1.5,72.0%
-alphaster17,18,3,3,0.0%,66.7%,0.0%,33.3%,1.33,51.3%
+LLoh7,18,6,6,33.3%,50.0%,0.0%,16.7%,2.0,77.8%
+brocaleb,18,6,6,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+rackam,18,5,5,60.0%,0.0%,20.0%,20.0%,2.0,78.8%
+Roodies Raiders,18,6,6,50.0%,16.7%,0.0%,33.3%,1.83,66.0%
+Brad,18,6,6,50.0%,16.7%,0.0%,33.3%,1.83,65.2%
+Little Roodie!,18,6,6,50.0%,16.7%,0.0%,33.3%,1.83,66.0%
+Juliet,18,6,6,50.0%,16.7%,0.0%,33.3%,1.83,65.2%
+!!Aristocrat!!,18,6,6,50.0%,16.7%,0.0%,33.3%,1.83,65.8%
+MonseurMaiDra,18,5,5,40.0%,20.0%,20.0%,20.0%,1.8,77.6%
+Ryan,18,6,6,33.3%,33.3%,0.0%,33.3%,1.67,63.2%
+YokoEno,18,6,6,16.7%,50.0%,0.0%,33.3%,1.5,62.0%
+patrick,18,6,6,0.0%,66.7%,0.0%,33.3%,1.33,53.3%
+alphaster17,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,38.5%
 
 CWL Season: April 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 FIRE DRAGON,LOSS,36,42,94.9%,98.9%,15v15,04/03/2026
 Ceifadores,LOSS,38,39,94.1%,97.5%,15v15,04/04/2026
 Clan Imperial,LOSS,37,39,93.4%,93.1%,15v15,04/06/2026
-Die Recrewten,IN_PROGRESS,41,40,96.7%,95.9%,15v15,04/07/2026
-BABA YORGUN,IN_PROGRESS,0,0,0.0%,0.0%,15v15,04/08/2026
+Die Recrewten,WIN,41,40,96.7%,95.9%,15v15,04/07/2026
+BABA YORGUN,IN_PROGRESS,14,6,32.7%,13.3%,15v15,04/08/2026
+ROCKET KILLERZ,IN_PROGRESS,0,0,0.0%,0.0%,15v15,04/09/2026
 
 CWL Season: April 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -90,15 +91,30 @@ Die Recrewten,Brad,18,Fabian,18,3,100.0%,1:48
 BABA YORGUN,Ryan,18,Missed,0,0,0.0%,
 BABA YORGUN,Little Roodie!,18,Missed,0,0,0.0%,
 BABA YORGUN,Roodies Raiders,18,Missed,0,0,0.0%,
-BABA YORGUN,LLoh7,18,Missed,0,0,0.0%,
 BABA YORGUN,brocaleb,18,Missed,0,0,0.0%,
 BABA YORGUN,YokoEno,18,Missed,0,0,0.0%,
 BABA YORGUN,!!Aristocrat!!,18,Missed,0,0,0.0%,
-BABA YORGUN,CRASH,18,Missed,0,0,0.0%,
 BABA YORGUN,patrick,18,Missed,0,0,0.0%,
-BABA YORGUN,MonseurMaiDra,18,Missed,0,0,0.0%,
-BABA YORGUN,rackam,18,Missed,0,0,0.0%,
-BABA YORGUN,babyacorns,18,Missed,0,0,0.0%,
 BABA YORGUN,Brad,18,Missed,0,0,0.0%,
 BABA YORGUN,alphaster17,18,Missed,0,0,0.0%,
 BABA YORGUN,Juliet,18,Missed,0,0,0.0%,
+BABA YORGUN,babyacorns,18,FLEXİROC,18,2,91.0%,3:00
+BABA YORGUN,MonseurMaiDra,18,A-Z-R-A-İ-L,18,3,100.0%,2:32
+BABA YORGUN,CRASH,18,-AZRAİL-,18,3,100.0%,2:29
+BABA YORGUN,rackam,18,Orhan,18,3,100.0%,2:33
+BABA YORGUN,LLoh7,18,Aşık Genç,18,3,100.0%,1:46
+ROCKET KILLERZ,Ryan,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,Roodies Raiders,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,Little Roodie!,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,YokoEno,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,brocaleb,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,LLoh7,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,!!Aristocrat!!,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,CRASH,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,rackam,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,patrick,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,MonseurMaiDra,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,babyacorns,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,Brad,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,alphaster17,18,Missed,0,0,0.0%,
+ROCKET KILLERZ,Juliet,18,Missed,0,0,0.0%,
