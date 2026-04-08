@@ -2,7 +2,9 @@ CWL Season: April 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 brocaleb,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 babyacorns,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,84.4%
+CRASH,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,84.1%
 Juliet,18,5,5,60.0%,20.0%,20.0%,0.0%,2.4,96.2%
+Ryan,18,7,7,57.1%,28.6%,0.0%,14.3%,2.29,82.7%
 rackam,18,6,6,66.7%,0.0%,16.7%,16.7%,2.17,82.3%
 LLoh7,18,7,7,42.9%,42.9%,0.0%,14.3%,2.14,81.0%
 YokoEno,18,7,7,42.9%,42.9%,0.0%,14.3%,2.14,81.7%
@@ -10,9 +12,7 @@ Roodies Raiders,18,7,7,57.1%,14.3%,0.0%,28.6%,2.0,70.9%
 Brad,18,7,7,57.1%,14.3%,0.0%,28.6%,2.0,70.1%
 Little Roodie!,18,7,7,57.1%,14.3%,0.0%,28.6%,2.0,70.9%
 MonseurMaiDra,18,6,6,50.0%,16.7%,16.7%,16.7%,2.0,81.3%
-CRASH,18,7,7,57.1%,14.3%,0.0%,28.6%,2.0,69.9%
 !!Aristocrat!!,18,7,7,42.9%,28.6%,0.0%,28.6%,1.86,64.9%
-Ryan,18,7,7,42.9%,28.6%,0.0%,28.6%,1.86,68.4%
 Trumpy,18,6,6,16.7%,66.7%,0.0%,16.7%,1.83,74.7%
 patrick,18,7,7,0.0%,85.7%,0.0%,14.3%,1.71,70.6%
 alphaster17,18,5,5,0.0%,80.0%,0.0%,20.0%,1.6,67.6%
@@ -24,7 +24,7 @@ Ceifadores,LOSS,38,39,94.1%,97.5%,15v15,04/04/2026
 Clan Imperial,LOSS,37,39,93.4%,93.1%,15v15,04/06/2026
 Die Recrewten,WIN,41,40,96.7%,95.9%,15v15,04/07/2026
 BABA YORGUN,LOSS,39,40,94.5%,98.2%,15v15,04/08/2026
-ROCKET KILLERZ,IN_PROGRESS,24,6,58.2%,13.3%,15v15,04/09/2026
+ROCKET KILLERZ,IN_PROGRESS,30,9,71.5%,20.0%,15v15,04/09/2026
 LEGENDARY,IN_PROGRESS,0,0,0.0%,0.0%,15v15,04/10/2026
 
 CWL Season: April 2026 - Individual Attacks
@@ -104,11 +104,9 @@ BABA YORGUN,Roodies Raiders,18,⭐Oz@n©pn10⭐,18,3,100.0%,2:53
 BABA YORGUN,Little Roodie!,18,ŞEREF TOPÇU,18,3,100.0%,1:49
 BABA YORGUN,Ryan,18,EPİROC,18,3,100.0%,2:03
 BABA YORGUN,Juliet,18,patron,18,1,90.0%,2:46
-ROCKET KILLERZ,Ryan,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,Roodies Raiders,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,Little Roodie!,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,!!Aristocrat!!,18,Missed,0,0,0.0%,
-ROCKET KILLERZ,CRASH,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,Brad,18,Missed,0,0,0.0%,
 ROCKET KILLERZ,MonseurMaiDra,18,Peterson,18,3,100.0%,2:49
 ROCKET KILLERZ,rackam,18,GøLD,18,3,100.0%,1:43
@@ -119,6 +117,8 @@ ROCKET KILLERZ,alphaster17,18,warlord Z,18,2,93.0%,2:51
 ROCKET KILLERZ,YokoEno,18,vîpërツKîñg,18,3,100.0%,2:11
 ROCKET KILLERZ,patrick,18,їT'z Mє✨PяєM✨,18,2,88.0%,2:44
 ROCKET KILLERZ,Trumpy,18,DONI 29,18,2,92.0%,3:00
+ROCKET KILLERZ,Ryan,18,Stephen,18,3,100.0%,2:23
+ROCKET KILLERZ,CRASH,18,VIRAT ANAND 47,18,3,100.0%,2:32
 LEGENDARY,Ryan,18,Missed,0,0,0.0%,
 LEGENDARY,Little Roodie!,18,Missed,0,0,0.0%,
 LEGENDARY,Roodies Raiders,18,Missed,0,0,0.0%,
