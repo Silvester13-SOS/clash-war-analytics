@@ -1,34 +1,31 @@
 CWL Season: May 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
+Roodies Raiders,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 joshu,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 alphaster17,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 babyacorns,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+ben,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 brocaleb,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+YokoEno,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 MonseurMaiDra,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 CRASH,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 rackam,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 LLoh7,18,1,1,0.0%,0.0%,100.0%,0.0%,1.0,82.0%
-Roodies Raiders,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 jay,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Brad,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Little Roodie!,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Juliet,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-ben,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-YokoEno,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Ryan,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: May 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
-اسود الحرب,IN_PROGRESS,22,12,52.1%,28.6%,15v15,05/03/2026
+اسود الحرب,IN_PROGRESS,31,12,72.1%,28.6%,15v15,05/03/2026
 SWE-WARRIORS,IN_PROGRESS,0,0,0.0%,0.0%,15v15,05/04/2026
 
 CWL Season: May 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
 اسود الحرب,Ryan,18,Missed,0,0,0.0%,
-اسود الحرب,Roodies Raiders,18,Missed,0,0,0.0%,
-اسود الحرب,YokoEno,18,Missed,0,0,0.0%,
 اسود الحرب,Little Roodie!,18,Missed,0,0,0.0%,
-اسود الحرب,ben,18,Missed,0,0,0.0%,
 اسود الحرب,Brad,18,Missed,0,0,0.0%,
 اسود الحرب,Juliet,18,Missed,0,0,0.0%,
 اسود الحرب,joshu,18,النجم,18,3,100.0%,2:30
@@ -39,6 +36,9 @@ War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Durati
 اسود الحرب,LLoh7,18,soltani,18,1,82.0%,1:47
 اسود الحرب,brocaleb,18,RoRo*QueeN,18,3,100.0%,2:01
 اسود الحرب,alphaster17,18,lion,18,3,100.0%,1:55
+اسود الحرب,YokoEno,18,ahmed,18,3,100.0%,2:06
+اسود الحرب,ben,18,أبومحمد,18,3,100.0%,2:05
+اسود الحرب,Roodies Raiders,18,ilegend,18,3,100.0%,2:26
 SWE-WARRIORS,Ryan,18,Missed,0,0,0.0%,
 SWE-WARRIORS,Roodies Raiders,18,Missed,0,0,0.0%,
 SWE-WARRIORS,Little Roodie!,18,Missed,0,0,0.0%,
