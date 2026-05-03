@@ -1,6 +1,7 @@
 CWL Season: May 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 joshu,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+babyacorns,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 CRASH,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 rackam,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 Roodies Raiders,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
@@ -8,7 +9,6 @@ LLoh7,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Brad,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Little Roodie!,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 alphaster17,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-babyacorns,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Juliet,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 ben,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 brocaleb,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
@@ -18,7 +18,7 @@ Ryan,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: May 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
-اسود الحرب,IN_PROGRESS,9,7,20.0%,15.7%,15v15,05/03/2026
+اسود الحرب,IN_PROGRESS,12,10,26.7%,22.3%,15v15,05/03/2026
 SWE-WARRIORS,IN_PROGRESS,0,0,0.0%,0.0%,15v15,05/04/2026
 
 CWL Season: May 2026 - Individual Attacks
@@ -32,12 +32,12 @@ War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Durati
 اسود الحرب,ben,18,Missed,0,0,0.0%,
 اسود الحرب,MonseurMaiDra,18,Missed,0,0,0.0%,
 اسود الحرب,alphaster17,18,Missed,0,0,0.0%,
-اسود الحرب,babyacorns,18,Missed,0,0,0.0%,
 اسود الحرب,Brad,18,Missed,0,0,0.0%,
 اسود الحرب,Juliet,18,Missed,0,0,0.0%,
 اسود الحرب,joshu,18,النجم,18,3,100.0%,2:30
 اسود الحرب,CRASH,18,عاد لينتقم,18,3,100.0%,2:30
 اسود الحرب,rackam,18,احمد اللورد,18,3,100.0%,1:53
+اسود الحرب,babyacorns,18,نمر,18,3,100.0%,2:02
 SWE-WARRIORS,Ryan,18,Missed,0,0,0.0%,
 SWE-WARRIORS,Roodies Raiders,18,Missed,0,0,0.0%,
 SWE-WARRIORS,Little Roodie!,18,Missed,0,0,0.0%,
