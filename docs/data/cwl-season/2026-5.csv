@@ -2,26 +2,27 @@ CWL Season: May 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 Roodies Raiders,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 Little Roodie!,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
-joshu,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Brad,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-alphaster17,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-babyacorns,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Juliet,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-ben,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-brocaleb,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-YokoEno,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-MonseurMaiDra,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-CRASH,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-rackam,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Ryan,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,48.5%
-LLoh7,18,2,2,0.0%,0.0%,50.0%,50.0%,0.5,41.0%
-jay,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-kat,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+joshu,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+Brad,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+alphaster17,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+babyacorns,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+Juliet,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+ben,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+brocaleb,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+YokoEno,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+MonseurMaiDra,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+CRASH,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+rackam,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+Ryan,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,32.3%
+LLoh7,18,3,3,0.0%,0.0%,33.3%,66.7%,0.33,27.3%
+jay,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+kat,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: May 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
-اسود الحرب,IN_PROGRESS,42,33,98.6%,86.1%,15v15,05/03/2026
+اسود الحرب,WIN,42,33,98.6%,86.1%,15v15,05/03/2026
 SWE-WARRIORS,IN_PROGRESS,0,0,0.0%,0.0%,15v15,05/04/2026
+clan 3°,IN_PROGRESS,0,0,0.0%,0.0%,15v15,05/05/2026
 
 CWL Season: May 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -55,3 +56,18 @@ SWE-WARRIORS,alphaster17,18,Missed,0,0,0.0%,
 SWE-WARRIORS,Brad,18,Missed,0,0,0.0%,
 SWE-WARRIORS,Juliet,18,Missed,0,0,0.0%,
 SWE-WARRIORS,joshu,18,Missed,0,0,0.0%,
+clan 3°,Ryan,18,Missed,0,0,0.0%,
+clan 3°,YokoEno,18,Missed,0,0,0.0%,
+clan 3°,LLoh7,18,Missed,0,0,0.0%,
+clan 3°,brocaleb,18,Missed,0,0,0.0%,
+clan 3°,CRASH,18,Missed,0,0,0.0%,
+clan 3°,jay,18,Missed,0,0,0.0%,
+clan 3°,kat,18,Missed,0,0,0.0%,
+clan 3°,rackam,18,Missed,0,0,0.0%,
+clan 3°,ben,18,Missed,0,0,0.0%,
+clan 3°,MonseurMaiDra,18,Missed,0,0,0.0%,
+clan 3°,babyacorns,18,Missed,0,0,0.0%,
+clan 3°,alphaster17,18,Missed,0,0,0.0%,
+clan 3°,Brad,18,Missed,0,0,0.0%,
+clan 3°,Juliet,18,Missed,0,0,0.0%,
+clan 3°,joshu,18,Missed,0,0,0.0%,
