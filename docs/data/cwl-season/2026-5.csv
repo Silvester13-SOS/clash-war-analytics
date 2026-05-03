@@ -3,6 +3,7 @@ Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction
 Roodies Raiders,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 Little Roodie!,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 joshu,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+Brad,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 alphaster17,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 babyacorns,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 ben,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
@@ -11,22 +12,19 @@ YokoEno,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 MonseurMaiDra,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 CRASH,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 rackam,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+Ryan,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,48.5%
 LLoh7,18,2,2,0.0%,0.0%,50.0%,50.0%,0.5,41.0%
 jay,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-Brad,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Juliet,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 kat,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-Ryan,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: May 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
-اسود الحرب,IN_PROGRESS,34,15,78.8%,35.3%,15v15,05/03/2026
+اسود الحرب,IN_PROGRESS,39,23,91.9%,54.9%,15v15,05/03/2026
 SWE-WARRIORS,IN_PROGRESS,0,0,0.0%,0.0%,15v15,05/04/2026
 
 CWL Season: May 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
-اسود الحرب,Ryan,18,Missed,0,0,0.0%,
-اسود الحرب,Brad,18,Missed,0,0,0.0%,
 اسود الحرب,Juliet,18,Missed,0,0,0.0%,
 اسود الحرب,joshu,18,النجم,18,3,100.0%,2:30
 اسود الحرب,CRASH,18,عاد لينتقم,18,3,100.0%,2:30
@@ -40,6 +38,8 @@ War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Durati
 اسود الحرب,ben,18,أبومحمد,18,3,100.0%,2:05
 اسود الحرب,Roodies Raiders,18,ilegend,18,3,100.0%,2:26
 اسود الحرب,Little Roodie!,18,mahmoud.darwesh,18,3,100.0%,2:07
+اسود الحرب,Brad,18,Amrlord,18,3,100.0%,1:36
+اسود الحرب,Ryan,18,حسين3,18,2,97.0%,3:00
 SWE-WARRIORS,Ryan,18,Missed,0,0,0.0%,
 SWE-WARRIORS,YokoEno,18,Missed,0,0,0.0%,
 SWE-WARRIORS,LLoh7,18,Missed,0,0,0.0%,
