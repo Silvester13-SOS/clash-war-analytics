@@ -2,10 +2,10 @@ CWL Season: May 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 joshu,18,9,9,88.9%,0.0%,0.0%,11.1%,2.67,88.9%
 babyacorns,18,9,9,88.9%,0.0%,0.0%,11.1%,2.67,88.9%
+brocaleb,18,9,9,88.9%,0.0%,0.0%,11.1%,2.67,88.9%
 MonseurMaiDra,18,9,9,88.9%,0.0%,0.0%,11.1%,2.67,88.9%
 rackam,18,9,9,88.9%,0.0%,0.0%,11.1%,2.67,88.9%
 kat,18,8,8,87.5%,0.0%,0.0%,12.5%,2.63,87.5%
-brocaleb,18,9,9,77.8%,0.0%,0.0%,22.2%,2.33,77.8%
 LLoh7,18,7,7,71.4%,0.0%,14.3%,14.3%,2.29,83.1%
 Brad,18,8,8,62.5%,12.5%,0.0%,25.0%,2.13,74.6%
 YokoEno,18,8,8,62.5%,12.5%,0.0%,25.0%,2.13,74.3%
@@ -28,7 +28,7 @@ Qeshm,WIN,21,0,51.4%,0.0%,15v15,05/07/2026
 Qeshm,LOSS,41,43,97.7%,97.5%,15v15,05/07/2026
 clan ugijar,TIE,0,0,0.0%,0.0%,15v15,05/08/2026
 clan ugijar,WIN,44,43,99.6%,99.1%,15v15,05/08/2026
-KC Chiefs 2.0,IN_PROGRESS,22,17,52.4%,39.9%,15v15,05/09/2026
+KC Chiefs 2.0,IN_PROGRESS,25,25,59.1%,59.8%,15v15,05/09/2026
 
 CWL Season: May 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -155,7 +155,6 @@ clan ugijar,CRASH,18,R47PRO 2,18,3,100.0%,1:57
 KC Chiefs 2.0,Ryan,18,Missed,0,0,0.0%,
 KC Chiefs 2.0,Little Roodie!,18,Missed,0,0,0.0%,
 KC Chiefs 2.0,Roodies Raiders,18,Missed,0,0,0.0%,
-KC Chiefs 2.0,brocaleb,18,Missed,0,0,0.0%,
 KC Chiefs 2.0,jay,18,Missed,0,0,0.0%,
 KC Chiefs 2.0,ben,18,Missed,0,0,0.0%,
 KC Chiefs 2.0,Juliet,18,Missed,0,0,0.0%,
@@ -167,3 +166,4 @@ KC Chiefs 2.0,LLoh7,18,tsmith,18,3,100.0%,2:43
 KC Chiefs 2.0,alphaster17,18,Richie,18,1,86.0%,3:00
 KC Chiefs 2.0,MonseurMaiDra,18,dannyhick,18,3,100.0%,2:28
 KC Chiefs 2.0,babyacorns,18,Rob,18,3,100.0%,1:53
+KC Chiefs 2.0,brocaleb,18,Tsmith,18,3,100.0%,2:49
