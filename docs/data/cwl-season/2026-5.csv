@@ -11,12 +11,12 @@ ben,18,9,9,77.8%,0.0%,0.0%,22.2%,2.33,77.8%
 LLoh7,18,7,7,71.4%,0.0%,14.3%,14.3%,2.29,83.1%
 Roodies Raiders,18,8,8,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
 Little Roodie!,18,8,8,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
+Juliet,18,6,6,50.0%,33.3%,0.0%,16.7%,2.17,76.8%
 Brad,18,8,8,62.5%,12.5%,0.0%,25.0%,2.13,74.6%
 YokoEno,18,8,8,62.5%,12.5%,0.0%,25.0%,2.13,74.3%
 CRASH,18,8,8,62.5%,12.5%,0.0%,25.0%,2.13,72.0%
-Juliet,18,6,6,50.0%,16.7%,0.0%,33.3%,1.83,64.5%
 alphaster17,18,6,6,33.3%,0.0%,66.7%,0.0%,1.67,90.2%
-Ryan,18,6,6,0.0%,33.3%,16.7%,50.0%,0.83,46.5%
+Ryan,18,6,6,0.0%,50.0%,16.7%,33.3%,1.17,59.8%
 
 CWL Season: May 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
@@ -28,7 +28,7 @@ Qeshm,WIN,21,0,51.4%,0.0%,15v15,05/07/2026
 Qeshm,LOSS,41,43,97.7%,97.5%,15v15,05/07/2026
 clan ugijar,TIE,0,0,0.0%,0.0%,15v15,05/08/2026
 clan ugijar,WIN,44,43,99.6%,99.1%,15v15,05/08/2026
-KC Chiefs 2.0,IN_PROGRESS,37,36,85.7%,90.5%,15v15,05/09/2026
+KC Chiefs 2.0,IN_PROGRESS,41,39,96.0%,97.1%,15v15,05/09/2026
 
 CWL Season: May 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -152,8 +152,6 @@ clan ugijar,Little Roodie!,18,El Güegüense,18,3,100.0%,2:10
 clan ugijar,ben,18,Antón,18,3,100.0%,2:35
 clan ugijar,Juliet,18,─═हई╬LINKIN╬ईह═,18,3,100.0%,2:22
 clan ugijar,CRASH,18,R47PRO 2,18,3,100.0%,1:57
-KC Chiefs 2.0,Ryan,18,Missed,0,0,0.0%,
-KC Chiefs 2.0,Juliet,18,Missed,0,0,0.0%,
 KC Chiefs 2.0,joshu,18,-+Matistuta+-II,18,3,100.0%,2:21
 KC Chiefs 2.0,Brad,18,tChillest,18,3,100.0%,2:47
 KC Chiefs 2.0,rackam,18,Yeast Ghost,18,3,100.0%,1:53
@@ -167,3 +165,5 @@ KC Chiefs 2.0,jay,18,Dryhopper,18,3,100.0%,2:32
 KC Chiefs 2.0,ben,18,coc insider,18,3,100.0%,1:59
 KC Chiefs 2.0,Little Roodie!,18,Eric Church,18,3,100.0%,2:13
 KC Chiefs 2.0,Roodies Raiders,18,TheIceCreamMan,18,3,100.0%,2:00
+KC Chiefs 2.0,Juliet,18,-+Matistuta+-,18,2,74.0%,3:00
+KC Chiefs 2.0,Ryan,18,King William II,18,2,80.0%,2:09
