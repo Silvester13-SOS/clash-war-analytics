@@ -1,5 +1,7 @@
 CWL Season: June 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
+Roodies Raiders,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,70.0%
+joshu,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,82.0%
 jay,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 Brad,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 Little Roodie!,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
@@ -9,16 +11,16 @@ brocaleb,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 YokoEno,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 MonseurMaiDra,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 rackam,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Roodies Raiders,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,35.0%
 LLoh7,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,45.0%
-joshu,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,41.0%
 ben,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,47.5%
 CRASH,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,46.5%
 Ryan,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,45.0%
+alphaster17,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+Juliet,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: June 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
-PALADINOS,IN_PROGRESS,39,25,94.7%,66.8%,15v15,06/04/2026
+PALADINOS,IN_PROGRESS,39,28,94.7%,73.5%,15v15,06/04/2026
 kranti 2,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/05/2026
 
 CWL Season: June 2026 - Individual Attacks
@@ -41,7 +43,6 @@ PALADINOS,Brad,18,MTS* É O TREEM,18,3,100.0%,2:37
 kranti 2,Ryan,18,Missed,0,0,0.0%,
 kranti 2,YokoEno,18,Missed,0,0,0.0%,
 kranti 2,brocaleb,18,Missed,0,0,0.0%,
-kranti 2,Roodies Raiders,18,Missed,0,0,0.0%,
 kranti 2,Little Roodie!,18,Missed,0,0,0.0%,
 kranti 2,LLoh7,18,Missed,0,0,0.0%,
 kranti 2,CRASH,18,Missed,0,0,0.0%,
@@ -50,6 +51,7 @@ kranti 2,jay,18,Missed,0,0,0.0%,
 kranti 2,rackam,18,Missed,0,0,0.0%,
 kranti 2,MonseurMaiDra,18,Missed,0,0,0.0%,
 kranti 2,ben,18,Missed,0,0,0.0%,
+kranti 2,alphaster17,18,Missed,0,0,0.0%,
 kranti 2,babyacorns,18,Missed,0,0,0.0%,
 kranti 2,Brad,18,Missed,0,0,0.0%,
-kranti 2,joshu,18,Missed,0,0,0.0%,
+kranti 2,Juliet,18,Missed,0,0,0.0%,
