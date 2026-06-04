@@ -2,26 +2,27 @@ CWL Season: June 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 Roodies Raiders,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,70.0%
 joshu,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,82.0%
-jay,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Brad,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Little Roodie!,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-babyacorns,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-kat,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-brocaleb,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-YokoEno,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-MonseurMaiDra,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-rackam,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-LLoh7,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,45.0%
-ben,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,47.5%
-CRASH,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,46.5%
-Ryan,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,45.0%
-alphaster17,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-Juliet,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+rackam,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+jay,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,57.7%
+ben,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,65.0%
+brocaleb,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,64.0%
+Juliet,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+Brad,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+Little Roodie!,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+alphaster17,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,49.0%
+babyacorns,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+kat,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+YokoEno,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+MonseurMaiDra,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+LLoh7,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,30.0%
+CRASH,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,31.0%
+Ryan,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,30.0%
 
 CWL Season: June 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
-PALADINOS,IN_PROGRESS,39,31,94.7%,80.1%,15v15,06/04/2026
-kranti 2,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/05/2026
+PALADINOS,WIN,39,37,94.7%,93.5%,15v15,06/04/2026
+kranti 2,IN_PROGRESS,15,19,37.5%,44.9%,15v15,06/05/2026
+Sudan B.Knights,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/06/2026
 
 CWL Season: June 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -42,16 +43,31 @@ PALADINOS,Roodies Raiders,18,Eli,18,2,70.0%,1:47
 PALADINOS,Brad,18,MTS* É O TREEM,18,3,100.0%,2:37
 kranti 2,Ryan,18,Missed,0,0,0.0%,
 kranti 2,YokoEno,18,Missed,0,0,0.0%,
-kranti 2,brocaleb,18,Missed,0,0,0.0%,
 kranti 2,Little Roodie!,18,Missed,0,0,0.0%,
 kranti 2,LLoh7,18,Missed,0,0,0.0%,
 kranti 2,CRASH,18,Missed,0,0,0.0%,
 kranti 2,kat,18,Missed,0,0,0.0%,
-kranti 2,jay,18,Missed,0,0,0.0%,
-kranti 2,rackam,18,Missed,0,0,0.0%,
 kranti 2,MonseurMaiDra,18,Missed,0,0,0.0%,
-kranti 2,ben,18,Missed,0,0,0.0%,
-kranti 2,alphaster17,18,Missed,0,0,0.0%,
 kranti 2,babyacorns,18,Missed,0,0,0.0%,
 kranti 2,Brad,18,Missed,0,0,0.0%,
-kranti 2,Juliet,18,Missed,0,0,0.0%,
+kranti 2,rackam,18,sheabeaux,18,3,100.0%,1:34
+kranti 2,Juliet,18,iLose,16,3,100.0%,1:49
+kranti 2,brocaleb,18,Omen™,18,2,92.0%,3:00
+kranti 2,ben,18,CroNoZ,18,3,100.0%,2:13
+kranti 2,alphaster17,18,Jacky4241,18,2,98.0%,3:00
+kranti 2,jay,18,༂ༀ A7medᴳᵒᵈ ༀ༂,18,2,73.0%,1:43
+Sudan B.Knights,Ryan,18,Missed,0,0,0.0%,
+Sudan B.Knights,brocaleb,18,Missed,0,0,0.0%,
+Sudan B.Knights,YokoEno,18,Missed,0,0,0.0%,
+Sudan B.Knights,Little Roodie!,18,Missed,0,0,0.0%,
+Sudan B.Knights,LLoh7,18,Missed,0,0,0.0%,
+Sudan B.Knights,CRASH,18,Missed,0,0,0.0%,
+Sudan B.Knights,kat,18,Missed,0,0,0.0%,
+Sudan B.Knights,jay,18,Missed,0,0,0.0%,
+Sudan B.Knights,rackam,18,Missed,0,0,0.0%,
+Sudan B.Knights,MonseurMaiDra,18,Missed,0,0,0.0%,
+Sudan B.Knights,ben,18,Missed,0,0,0.0%,
+Sudan B.Knights,alphaster17,18,Missed,0,0,0.0%,
+Sudan B.Knights,babyacorns,18,Missed,0,0,0.0%,
+Sudan B.Knights,Brad,18,Missed,0,0,0.0%,
+Sudan B.Knights,Juliet,18,Missed,0,0,0.0%,
