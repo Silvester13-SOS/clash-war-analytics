@@ -1,28 +1,28 @@
 CWL Season: June 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
+kat,18,3,3,66.7%,33.3%,0.0%,0.0%,2.67,93.0%
 jay,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,86.5%
 Brad,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
 Little Roodie!,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
 babyacorns,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
 MonseurMaiDra,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
 rackam,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
-kat,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,69.8%
+ben,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,73.8%
 brocaleb,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,73.0%
 YokoEno,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,72.5%
-Ryan,18,2,2,0.0%,100.0%,0.0%,0.0%,2.0,86.5%
 LLoh7,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,69.3%
 Roodies Raiders,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,56.7%
 joshu,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,60.7%
 alphaster17,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,66.0%
 Juliet,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,63.0%
-ben,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,48.8%
+Ryan,18,3,3,0.0%,66.7%,0.0%,33.3%,1.33,57.7%
 CRASH,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,47.0%
 
 CWL Season: June 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 PALADINOS,WIN,39,37,94.7%,93.5%,15v15,06/04/2026
 kranti 2,LOSS,39,41,95.4%,94.9%,15v15,06/05/2026
-Sudan B.Knights,IN_PROGRESS,36,25,83.7%,64.4%,15v15,06/06/2026
+Sudan B.Knights,IN_PROGRESS,39,25,90.3%,64.4%,15v15,06/06/2026
 Da Corner Hutz,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/07/2026
 
 CWL Season: June 2026 - Individual Attacks
@@ -58,7 +58,6 @@ kranti 2,Ryan,18,Tahsin_BabaYaga,18,2,83.0%,2:06
 kranti 2,LLoh7,18,KordellClash,18,3,100.0%,1:59
 kranti 2,CRASH,18,Jitens99,18,2,95.0%,3:00
 Sudan B.Knights,CRASH,18,Missed,0,0,0.0%,
-Sudan B.Knights,ben,18,Missed,0,0,0.0%,
 Sudan B.Knights,babyacorns,18,Vip,18,3,100.0%,1:53
 Sudan B.Knights,brocaleb,18,sherko,18,3,100.0%,2:40
 Sudan B.Knights,alphaster17,18,Mandila ♛ ᴹᵃˣ,18,3,100.0%,2:58
@@ -72,6 +71,8 @@ Sudan B.Knights,rackam,18,1U٭Aboud乄,18,3,100.0%,1:34
 Sudan B.Knights,Juliet,18,عَديـﮯ الأميـﮯر,18,2,89.0%,3:00
 Sudan B.Knights,Roodies Raiders,18,м̃̾ṱ♣️⚡ấĺм̃̾ấŝấ,18,3,100.0%,2:11
 Sudan B.Knights,Little Roodie!,18,yşøöry Alböşş,18,3,100.0%,2:01
+Sudan B.Knights,ben,18,مونكي دي لوفي,18,3,100.0%,2:04
+Da Corner Hutz,Ryan,18,Missed,0,0,0.0%,
 Da Corner Hutz,brocaleb,18,Missed,0,0,0.0%,
 Da Corner Hutz,YokoEno,18,Missed,0,0,0.0%,
 Da Corner Hutz,Roodies Raiders,18,Missed,0,0,0.0%,
@@ -79,7 +80,6 @@ Da Corner Hutz,Little Roodie!,18,Missed,0,0,0.0%,
 Da Corner Hutz,LLoh7,18,Missed,0,0,0.0%,
 Da Corner Hutz,CRASH,18,Missed,0,0,0.0%,
 Da Corner Hutz,rackam,18,Missed,0,0,0.0%,
-Da Corner Hutz,kat,18,Missed,0,0,0.0%,
 Da Corner Hutz,MonseurMaiDra,18,Missed,0,0,0.0%,
 Da Corner Hutz,ben,18,Missed,0,0,0.0%,
 Da Corner Hutz,alphaster17,18,Missed,0,0,0.0%,
