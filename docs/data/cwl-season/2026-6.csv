@@ -1,28 +1,29 @@
 CWL Season: June 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 jay,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,86.5%
-Brad,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-Little Roodie!,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-babyacorns,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-kat,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-MonseurMaiDra,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+babyacorns,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
+MonseurMaiDra,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
+brocaleb,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,73.0%
+YokoEno,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,72.5%
 Ryan,18,2,2,0.0%,100.0%,0.0%,0.0%,2.0,86.5%
-rackam,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-LLoh7,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,63.3%
-ben,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,65.0%
-brocaleb,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,64.0%
-YokoEno,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,63.3%
-Juliet,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-CRASH,18,3,3,0.0%,66.7%,0.0%,33.3%,1.33,62.7%
-Roodies Raiders,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,35.0%
-joshu,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,41.0%
-alphaster17,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,49.0%
+LLoh7,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,69.3%
+joshu,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,60.7%
+alphaster17,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,66.0%
+Brad,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+Little Roodie!,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+kat,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+rackam,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+ben,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,48.8%
+Juliet,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+CRASH,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,47.0%
+Roodies Raiders,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,23.3%
 
 CWL Season: June 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 PALADINOS,WIN,39,37,94.7%,93.5%,15v15,06/04/2026
 kranti 2,LOSS,39,41,95.4%,94.9%,15v15,06/05/2026
-Sudan B.Knights,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/06/2026
+Sudan B.Knights,IN_PROGRESS,20,10,45.8%,25.7%,15v15,06/06/2026
+Da Corner Hutz,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/07/2026
 
 CWL Season: June 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -56,18 +57,33 @@ kranti 2,babyacorns,18,nathan,18,3,100.0%,2:32
 kranti 2,Ryan,18,Tahsin_BabaYaga,18,2,83.0%,2:06
 kranti 2,LLoh7,18,KordellClash,18,3,100.0%,1:59
 kranti 2,CRASH,18,Jitens99,18,2,95.0%,3:00
-Sudan B.Knights,brocaleb,18,Missed,0,0,0.0%,
-Sudan B.Knights,YokoEno,18,Missed,0,0,0.0%,
 Sudan B.Knights,Roodies Raiders,18,Missed,0,0,0.0%,
 Sudan B.Knights,Little Roodie!,18,Missed,0,0,0.0%,
-Sudan B.Knights,LLoh7,18,Missed,0,0,0.0%,
 Sudan B.Knights,CRASH,18,Missed,0,0,0.0%,
 Sudan B.Knights,kat,18,Missed,0,0,0.0%,
 Sudan B.Knights,rackam,18,Missed,0,0,0.0%,
-Sudan B.Knights,MonseurMaiDra,18,Missed,0,0,0.0%,
 Sudan B.Knights,ben,18,Missed,0,0,0.0%,
-Sudan B.Knights,alphaster17,18,Missed,0,0,0.0%,
-Sudan B.Knights,babyacorns,18,Missed,0,0,0.0%,
 Sudan B.Knights,Brad,18,Missed,0,0,0.0%,
 Sudan B.Knights,Juliet,18,Missed,0,0,0.0%,
-Sudan B.Knights,joshu,18,Missed,0,0,0.0%,
+Sudan B.Knights,babyacorns,18,Vip,18,3,100.0%,1:53
+Sudan B.Knights,brocaleb,18,sherko,18,3,100.0%,2:40
+Sudan B.Knights,alphaster17,18,Mandila ♛ ᴹᵃˣ,18,3,100.0%,2:58
+Sudan B.Knights,LLoh7,18,Wael ♛ ᴹᵃˣ,18,2,87.0%,1:44
+Sudan B.Knights,joshu,18,Mæ♥️ŗbeła ♛ ᴹᵃˣ,18,3,100.0%,2:25
+Sudan B.Knights,YokoEno,18,MAD,18,3,100.0%,2:05
+Sudan B.Knights,MonseurMaiDra,18,O M A R Osman ♛,18,3,100.0%,2:33
+Da Corner Hutz,brocaleb,18,Missed,0,0,0.0%,
+Da Corner Hutz,YokoEno,18,Missed,0,0,0.0%,
+Da Corner Hutz,Roodies Raiders,18,Missed,0,0,0.0%,
+Da Corner Hutz,Little Roodie!,18,Missed,0,0,0.0%,
+Da Corner Hutz,LLoh7,18,Missed,0,0,0.0%,
+Da Corner Hutz,CRASH,18,Missed,0,0,0.0%,
+Da Corner Hutz,rackam,18,Missed,0,0,0.0%,
+Da Corner Hutz,kat,18,Missed,0,0,0.0%,
+Da Corner Hutz,MonseurMaiDra,18,Missed,0,0,0.0%,
+Da Corner Hutz,ben,18,Missed,0,0,0.0%,
+Da Corner Hutz,alphaster17,18,Missed,0,0,0.0%,
+Da Corner Hutz,babyacorns,18,Missed,0,0,0.0%,
+Da Corner Hutz,Brad,18,Missed,0,0,0.0%,
+Da Corner Hutz,Juliet,18,Missed,0,0,0.0%,
+Da Corner Hutz,joshu,18,Missed,0,0,0.0%,
