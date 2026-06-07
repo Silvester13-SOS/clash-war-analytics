@@ -1,29 +1,29 @@
 CWL Season: June 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-kat,18,3,3,66.7%,33.3%,0.0%,0.0%,2.67,93.0%
 Brad,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
 Little Roodie!,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
 babyacorns,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
 MonseurMaiDra,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
 rackam,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
-LLoh7,18,3,3,33.3%,66.7%,0.0%,0.0%,2.33,92.3%
+joshu,18,3,3,33.3%,66.7%,0.0%,0.0%,2.33,90.0%
+CRASH,18,4,4,25.0%,75.0%,0.0%,0.0%,2.25,92.3%
 ben,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,79.0%
+brocaleb,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,78.4%
 Roodies Raiders,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,67.5%
 jay,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,68.3%
 alphaster17,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,74.5%
+Juliet,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,72.3%
+kat,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,69.8%
 YokoEno,18,5,5,40.0%,40.0%,0.0%,20.0%,2.0,75.8%
-CRASH,18,5,5,20.0%,60.0%,0.0%,20.0%,1.8,73.8%
-joshu,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,67.5%
-brocaleb,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,58.4%
-Juliet,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,47.3%
-Ryan,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,43.3%
+LLoh7,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,69.3%
+Ryan,18,4,4,0.0%,75.0%,0.0%,25.0%,1.5,65.8%
 
 CWL Season: June 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 PALADINOS,WIN,39,37,94.7%,93.5%,15v15,06/04/2026
 kranti 2,LOSS,39,41,95.4%,94.9%,15v15,06/05/2026
 Sudan B.Knights,WIN,42,33,97.0%,82.3%,15v15,06/06/2026
-Da Corner Hutz,IN_PROGRESS,33,39,77.2%,89.4%,15v15,06/07/2026
+Da Corner Hutz,IN_PROGRESS,41,42,96.5%,96.1%,15v15,06/07/2026
 Son of a Witch!,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/08/2026
 
 CWL Season: June 2026 - Individual Attacks
@@ -73,9 +73,6 @@ Sudan B.Knights,Roodies Raiders,18,м̃̾ṱ♣️⚡ấĺм̃̾ấŝấ,18,3,10
 Sudan B.Knights,Little Roodie!,18,yşøöry Alböşş,18,3,100.0%,2:01
 Sudan B.Knights,ben,18,مونكي دي لوفي,18,3,100.0%,2:04
 Sudan B.Knights,CRASH,18,lastfiddler,18,3,100.0%,2:22
-Da Corner Hutz,Ryan,18,Missed,0,0,0.0%,
-Da Corner Hutz,brocaleb,18,Missed,0,0,0.0%,
-Da Corner Hutz,Juliet,18,Missed,0,0,0.0%,
 Da Corner Hutz,babyacorns,18,SR☣PŘIÑČË ✨,18,3,100.0%,1:55
 Da Corner Hutz,jay,18,Alexa,18,3,100.0%,2:04
 Da Corner Hutz,MonseurMaiDra,18,+tTrOoPbEnDeR *,18,3,100.0%,2:43
@@ -88,13 +85,17 @@ Da Corner Hutz,ben,18,JAKDCITY,18,3,100.0%,2:26
 Da Corner Hutz,Little Roodie!,18,Manimal,18,3,100.0%,2:06
 Da Corner Hutz,Roodies Raiders,18,sir haasto,18,3,100.0%,2:02
 Da Corner Hutz,Brad,18,Big Mike,18,3,100.0%,2:23
+Da Corner Hutz,Juliet,18,Jerb,18,3,100.0%,2:55
+Da Corner Hutz,Ryan,18,SUB-ZERO,18,2,90.0%,1:46
+Da Corner Hutz,brocaleb,18,Alex,18,3,100.0%,2:05
 Son of a Witch!,Ryan,18,Missed,0,0,0.0%,
 Son of a Witch!,brocaleb,18,Missed,0,0,0.0%,
 Son of a Witch!,YokoEno,18,Missed,0,0,0.0%,
 Son of a Witch!,Little Roodie!,18,Missed,0,0,0.0%,
 Son of a Witch!,Roodies Raiders,18,Missed,0,0,0.0%,
-Son of a Witch!,CRASH,18,Missed,0,0,0.0%,
+Son of a Witch!,LLoh7,18,Missed,0,0,0.0%,
 Son of a Witch!,rackam,18,Missed,0,0,0.0%,
+Son of a Witch!,kat,18,Missed,0,0,0.0%,
 Son of a Witch!,jay,18,Missed,0,0,0.0%,
 Son of a Witch!,MonseurMaiDra,18,Missed,0,0,0.0%,
 Son of a Witch!,ben,18,Missed,0,0,0.0%,
@@ -102,4 +103,3 @@ Son of a Witch!,alphaster17,18,Missed,0,0,0.0%,
 Son of a Witch!,babyacorns,18,Missed,0,0,0.0%,
 Son of a Witch!,Brad,18,Missed,0,0,0.0%,
 Son of a Witch!,Juliet,18,Missed,0,0,0.0%,
-Son of a Witch!,joshu,18,Missed,0,0,0.0%,
