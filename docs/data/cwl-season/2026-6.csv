@@ -1,6 +1,7 @@
 CWL Season: June 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 rackam,18,5,5,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
+babyacorns,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 MonseurMaiDra,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 Juliet,18,4,4,50.0%,50.0%,0.0%,0.0%,2.5,93.0%
 brocaleb,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,84.6%
@@ -9,7 +10,6 @@ kat,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,79.8%
 alphaster17,18,6,6,50.0%,33.3%,0.0%,16.7%,2.17,82.8%
 Brad,18,7,7,71.4%,0.0%,0.0%,28.6%,2.14,71.4%
 Little Roodie!,18,7,7,71.4%,0.0%,0.0%,28.6%,2.14,71.4%
-babyacorns,18,7,7,71.4%,0.0%,0.0%,28.6%,2.14,71.4%
 YokoEno,18,7,7,42.9%,42.9%,0.0%,14.3%,2.14,81.1%
 LLoh7,18,6,6,33.3%,50.0%,0.0%,16.7%,2.0,78.2%
 joshu,18,5,5,40.0%,40.0%,0.0%,20.0%,2.0,74.0%
@@ -25,7 +25,7 @@ kranti 2,LOSS,39,41,95.4%,94.9%,15v15,06/05/2026
 Sudan B.Knights,WIN,42,33,97.0%,82.3%,15v15,06/06/2026
 Da Corner Hutz,LOSS,41,42,96.5%,96.1%,15v15,06/07/2026
 Son of a Witch!,WIN,44,43,98.9%,99.3%,15v15,06/08/2026
-kings,IN_PROGRESS,21,20,52.0%,46.6%,15v15,06/09/2026
+kings,IN_PROGRESS,24,42,58.7%,98.3%,15v15,06/09/2026
 ✨KURDSTAN✨,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/10/2026
 
 CWL Season: June 2026 - Individual Attacks
@@ -110,7 +110,6 @@ kings,Little Roodie!,18,Missed,0,0,0.0%,
 kings,Roodies Raiders,18,Missed,0,0,0.0%,
 kings,CRASH,18,Missed,0,0,0.0%,
 kings,ben,18,Missed,0,0,0.0%,
-kings,babyacorns,18,Missed,0,0,0.0%,
 kings,Brad,18,Missed,0,0,0.0%,
 kings,alphaster17,18,ṔŔΘΘƑҼŠΘΘҐ,18,2,99.0%,3:00
 kings,joshu,18,ميليـــ ـــوداس,18,3,100.0%,2:18
@@ -120,6 +119,7 @@ kings,kat,18,⚔️الشمري⚔️2,18,3,100.0%,1:57
 kings,YokoEno,18,dxb,18,2,89.0%,3:00
 kings,LLoh7,18,GOOD CRAZY,18,2,92.0%,3:00
 kings,MonseurMaiDra,18,k7a10di₁,18,3,100.0%,2:33
+kings,babyacorns,18,§ Â1-ßãRäÆ §,18,3,100.0%,1:49
 ✨KURDSTAN✨,Ryan,18,Missed,0,0,0.0%,
 ✨KURDSTAN✨,brocaleb,18,Missed,0,0,0.0%,
 ✨KURDSTAN✨,YokoEno,18,Missed,0,0,0.0%,
