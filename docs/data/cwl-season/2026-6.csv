@@ -1,6 +1,7 @@
 CWL Season: June 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 MonseurMaiDra,18,9,9,88.9%,0.0%,0.0%,11.1%,2.67,88.9%
+rackam,18,8,8,87.5%,0.0%,0.0%,12.5%,2.63,87.5%
 brocaleb,18,9,9,77.8%,11.1%,0.0%,11.1%,2.56,88.0%
 jay,18,8,8,75.0%,12.5%,0.0%,12.5%,2.5,84.1%
 LLoh7,18,5,5,40.0%,60.0%,0.0%,0.0%,2.4,93.8%
@@ -11,7 +12,6 @@ CRASH,18,6,6,33.3%,66.7%,0.0%,0.0%,2.33,93.2%
 joshu,18,7,7,57.1%,28.6%,0.0%,14.3%,2.29,81.4%
 alphaster17,18,8,8,50.0%,37.5%,0.0%,12.5%,2.25,84.1%
 YokoEno,18,8,8,50.0%,37.5%,0.0%,12.5%,2.25,83.5%
-rackam,18,8,8,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
 Brad,18,9,9,66.7%,11.1%,0.0%,22.2%,2.22,76.2%
 ben,18,9,9,66.7%,11.1%,0.0%,22.2%,2.22,77.2%
 Roodies Raiders,18,8,8,62.5%,12.5%,0.0%,25.0%,2.13,71.3%
@@ -27,7 +27,7 @@ Da Corner Hutz,LOSS,41,42,96.5%,96.1%,15v15,06/07/2026
 Son of a Witch!,WIN,44,43,98.9%,99.3%,15v15,06/08/2026
 kings,WIN,42,42,98.7%,98.3%,15v15,06/09/2026
 ✨KURDSTAN✨,WIN,42,35,97.4%,88.7%,15v15,06/10/2026
-master,IN_PROGRESS,22,19,51.1%,46.1%,15v15,06/19/2026
+master,IN_PROGRESS,25,22,57.7%,52.8%,15v15,06/19/2026
 Latin Power,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/20/2026
 
 CWL Season: June 2026 - Individual Attacks
@@ -139,7 +139,6 @@ kings,Ryan,18,king saadi,18,3,100.0%,1:24
 ✨KURDSTAN✨,Ryan,18,A K R A M,18,3,100.0%,2:07
 master,Little Roodie!,18,Missed,0,0,0.0%,
 master,Roodies Raiders,18,Missed,0,0,0.0%,
-master,rackam,18,Missed,0,0,0.0%,
 master,ben,18,Missed,0,0,0.0%,
 master,babyacorns,18,Missed,0,0,0.0%,
 master,Brad,18,Missed,0,0,0.0%,
@@ -152,6 +151,7 @@ master,brocaleb,18,sanjay,18,3,100.0%,2:26
 master,YokoEno,18,OF INCOGNITO,18,3,100.0%,2:18
 master,jay,18,AMAN PAL,18,3,100.0%,2:41
 master,kat,18,DS Slyqzi,18,3,100.0%,2:03
+master,rackam,18,⚔️ʀǟɦʊʟ乂ᴵᵂ♨️™⋆˙,18,3,100.0%,1:39
 Latin Power,Ryan,18,Missed,0,0,0.0%,
 Latin Power,brocaleb,18,Missed,0,0,0.0%,
 Latin Power,YokoEno,18,Missed,0,0,0.0%,
