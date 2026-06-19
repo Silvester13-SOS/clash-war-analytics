@@ -1,22 +1,22 @@
 CWL Season: June 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-Little Roodie!,18,10,10,90.0%,0.0%,0.0%,10.0%,2.7,90.0%
-MonseurMaiDra,18,10,10,90.0%,0.0%,0.0%,10.0%,2.7,90.0%
-rackam,18,9,9,88.9%,0.0%,0.0%,11.1%,2.67,88.9%
-brocaleb,18,10,10,80.0%,10.0%,0.0%,10.0%,2.6,89.2%
 alphaster17,18,7,7,57.1%,42.9%,0.0%,0.0%,2.57,96.1%
-joshu,18,8,8,62.5%,25.0%,0.0%,12.5%,2.38,83.8%
+Little Roodie!,18,12,12,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
+MonseurMaiDra,18,12,12,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
+rackam,18,11,11,81.8%,0.0%,0.0%,18.2%,2.45,81.8%
+brocaleb,18,12,12,75.0%,8.3%,0.0%,16.7%,2.42,82.7%
 Juliet,18,6,6,50.0%,33.3%,16.7%,0.0%,2.33,92.0%
-YokoEno,18,9,9,55.6%,33.3%,0.0%,11.1%,2.33,85.3%
-Brad,18,10,10,70.0%,10.0%,0.0%,20.0%,2.3,78.6%
-babyacorns,18,10,10,70.0%,10.0%,0.0%,20.0%,2.3,78.2%
-ben,18,10,10,70.0%,10.0%,0.0%,20.0%,2.3,79.5%
-jay,18,9,9,66.7%,11.1%,0.0%,22.2%,2.22,74.8%
-CRASH,18,8,8,37.5%,50.0%,0.0%,12.5%,2.13,82.4%
-Roodies Raiders,18,9,9,55.6%,22.2%,0.0%,22.2%,2.11,73.2%
-kat,18,9,9,55.6%,22.2%,0.0%,22.2%,2.11,73.8%
-Ryan,18,9,9,33.3%,44.4%,0.0%,22.2%,1.89,72.6%
-LLoh7,18,7,7,28.6%,42.9%,0.0%,28.6%,1.71,67.0%
+joshu,18,10,10,60.0%,20.0%,0.0%,20.0%,2.2,77.0%
+YokoEno,18,11,11,54.5%,27.3%,0.0%,18.2%,2.18,78.9%
+CRASH,18,10,10,40.0%,40.0%,0.0%,20.0%,2.0,75.9%
+Brad,18,12,12,58.3%,8.3%,0.0%,33.3%,1.92,65.5%
+babyacorns,18,12,12,58.3%,8.3%,0.0%,33.3%,1.92,65.2%
+ben,18,12,12,58.3%,8.3%,0.0%,33.3%,1.92,66.3%
+jay,18,11,11,54.5%,9.1%,0.0%,36.4%,1.82,61.2%
+Roodies Raiders,18,11,11,45.5%,18.2%,0.0%,36.4%,1.73,59.9%
+kat,18,11,11,45.5%,18.2%,0.0%,36.4%,1.73,60.4%
+Ryan,18,11,11,27.3%,36.4%,0.0%,36.4%,1.55,59.4%
+LLoh7,18,9,9,22.2%,33.3%,0.0%,44.4%,1.33,52.1%
 
 CWL Season: June 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
@@ -29,6 +29,8 @@ kings,WIN,42,42,98.7%,98.3%,15v15,06/09/2026
 ✨KURDSTAN✨,WIN,42,35,97.4%,88.7%,15v15,06/10/2026
 master,LOSS,39,43,94.5%,99.5%,15v15,06/19/2026
 Latin Power,IN_PROGRESS,21,23,46.7%,52.4%,15v15,06/20/2026
+Latin Power,IN_PROGRESS,21,26,46.7%,59.1%,15v15,06/20/2026
+كلان الورد,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/21/2026
 كلان الورد,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/21/2026
 
 CWL Season: June 2026 - Individual Attacks
@@ -168,6 +170,36 @@ Latin Power,rackam,18,Drdeam,18,3,100.0%,2:27
 Latin Power,brocaleb,18,Omar LP,18,3,100.0%,2:40
 Latin Power,Little Roodie!,18,AMBITION LP⚜️,18,3,100.0%,2:09
 Latin Power,YokoEno,18,BeNi,18,3,100.0%,2:06
+Latin Power,Ryan,18,Missed,0,0,0.0%,
+Latin Power,Roodies Raiders,18,Missed,0,0,0.0%,
+Latin Power,LLoh7,18,Missed,0,0,0.0%,
+Latin Power,kat,18,Missed,0,0,0.0%,
+Latin Power,jay,18,Missed,0,0,0.0%,
+Latin Power,ben,18,Missed,0,0,0.0%,
+Latin Power,babyacorns,18,Missed,0,0,0.0%,
+Latin Power,Brad,18,Missed,0,0,0.0%,
+Latin Power,joshu,18,Tom9494,18,3,100.0%,2:11
+Latin Power,CRASH,18,GAQUI LP⚜️,18,3,100.0%,2:35
+Latin Power,MonseurMaiDra,18,Nͥi̇nͣj̇aͫ LP⚜️,18,3,100.0%,2:26
+Latin Power,rackam,18,Drdeam,18,3,100.0%,2:27
+Latin Power,brocaleb,18,Omar LP,18,3,100.0%,2:40
+Latin Power,Little Roodie!,18,AMBITION LP⚜️,18,3,100.0%,2:09
+Latin Power,YokoEno,18,BeNi,18,3,100.0%,2:06
+كلان الورد,Ryan,18,Missed,0,0,0.0%,
+كلان الورد,brocaleb,18,Missed,0,0,0.0%,
+كلان الورد,YokoEno,18,Missed,0,0,0.0%,
+كلان الورد,Little Roodie!,18,Missed,0,0,0.0%,
+كلان الورد,Roodies Raiders,18,Missed,0,0,0.0%,
+كلان الورد,LLoh7,18,Missed,0,0,0.0%,
+كلان الورد,kat,18,Missed,0,0,0.0%,
+كلان الورد,jay,18,Missed,0,0,0.0%,
+كلان الورد,rackam,18,Missed,0,0,0.0%,
+كلان الورد,CRASH,18,Missed,0,0,0.0%,
+كلان الورد,ben,18,Missed,0,0,0.0%,
+كلان الورد,MonseurMaiDra,18,Missed,0,0,0.0%,
+كلان الورد,babyacorns,18,Missed,0,0,0.0%,
+كلان الورد,Brad,18,Missed,0,0,0.0%,
+كلان الورد,joshu,18,Missed,0,0,0.0%,
 كلان الورد,Ryan,18,Missed,0,0,0.0%,
 كلان الورد,brocaleb,18,Missed,0,0,0.0%,
 كلان الورد,YokoEno,18,Missed,0,0,0.0%,
