@@ -1,22 +1,22 @@
 CWL Season: June 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-Little Roodie!,18,12,12,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
-MonseurMaiDra,18,12,12,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
-rackam,18,11,11,81.8%,0.0%,0.0%,18.2%,2.45,81.8%
-brocaleb,18,12,12,75.0%,8.3%,0.0%,16.7%,2.42,82.7%
-Juliet,18,6,6,50.0%,33.3%,16.7%,0.0%,2.33,92.0%
+Little Roodie!,18,13,13,76.9%,0.0%,0.0%,23.1%,2.31,76.9%
+MonseurMaiDra,18,13,13,76.9%,0.0%,0.0%,23.1%,2.31,76.9%
+joshu,18,11,11,63.6%,18.2%,0.0%,18.2%,2.27,79.1%
 babyacorns,18,11,11,63.6%,18.2%,0.0%,18.2%,2.27,79.2%
-alphaster17,18,8,8,50.0%,37.5%,0.0%,12.5%,2.25,84.1%
-joshu,18,10,10,60.0%,20.0%,0.0%,20.0%,2.2,77.0%
-YokoEno,18,11,11,54.5%,27.3%,0.0%,18.2%,2.18,78.9%
-Brad,18,12,12,66.7%,8.3%,0.0%,25.0%,2.17,73.8%
-ben,18,12,12,66.7%,8.3%,0.0%,25.0%,2.17,74.6%
-Roodies Raiders,18,11,11,54.5%,18.2%,0.0%,27.3%,2.0,69.0%
-CRASH,18,10,10,40.0%,40.0%,0.0%,20.0%,2.0,75.9%
-jay,18,11,11,54.5%,9.1%,0.0%,36.4%,1.82,61.2%
-Ryan,18,11,11,36.4%,36.4%,0.0%,27.3%,1.82,68.5%
-kat,18,11,11,45.5%,18.2%,0.0%,36.4%,1.73,60.4%
-LLoh7,18,9,9,33.3%,33.3%,0.0%,33.3%,1.67,63.2%
+YokoEno,18,12,12,58.3%,25.0%,0.0%,16.7%,2.25,80.7%
+rackam,18,12,12,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
+brocaleb,18,13,13,69.2%,7.7%,0.0%,23.1%,2.23,76.3%
+alphaster17,18,9,9,44.4%,44.4%,0.0%,11.1%,2.22,85.0%
+jay,18,12,12,66.7%,8.3%,0.0%,25.0%,2.17,72.8%
+kat,18,10,10,50.0%,30.0%,0.0%,20.0%,2.1,75.2%
+Brad,18,13,13,61.5%,7.7%,0.0%,30.8%,2.0,68.2%
+ben,18,13,13,61.5%,7.7%,0.0%,30.8%,2.0,68.8%
+Roodies Raiders,18,12,12,50.0%,16.7%,0.0%,33.3%,1.83,63.3%
+CRASH,18,11,11,36.4%,36.4%,0.0%,27.3%,1.82,69.0%
+Juliet,18,8,8,37.5%,25.0%,12.5%,25.0%,1.75,69.0%
+Ryan,18,12,12,33.3%,33.3%,0.0%,33.3%,1.67,62.8%
+LLoh7,18,10,10,30.0%,30.0%,0.0%,40.0%,1.5,56.9%
 
 CWL Season: June 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
@@ -28,10 +28,11 @@ Son of a Witch!,WIN,44,43,98.9%,99.3%,15v15,06/08/2026
 kings,WIN,42,42,98.7%,98.3%,15v15,06/09/2026
 ✨KURDSTAN✨,WIN,42,35,97.4%,88.7%,15v15,06/10/2026
 master,LOSS,39,43,94.5%,99.5%,15v15,06/19/2026
-Latin Power,IN_PROGRESS,21,23,46.7%,52.4%,15v15,06/20/2026
-Latin Power,IN_PROGRESS,38,38,85.9%,90.0%,15v15,06/20/2026
+Latin Power,LOSS,21,23,46.7%,52.4%,15v15,06/20/2026
+Latin Power,WIN,43,38,98.5%,90.0%,15v15,06/20/2026
 كلان الورد,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/21/2026
-كلان الورد,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/21/2026
+كلان الورد,IN_PROGRESS,11,6,26.1%,13.3%,15v15,06/21/2026
+آودان مهاباد,IN_PROGRESS,0,0,0.0%,0.0%,15v15,06/22/2026
 
 CWL Season: June 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -170,8 +171,6 @@ Latin Power,rackam,18,Drdeam,18,3,100.0%,2:27
 Latin Power,brocaleb,18,Omar LP,18,3,100.0%,2:40
 Latin Power,Little Roodie!,18,AMBITION LP⚜️,18,3,100.0%,2:09
 Latin Power,YokoEno,18,BeNi,18,3,100.0%,2:06
-Latin Power,kat,18,Missed,0,0,0.0%,
-Latin Power,jay,18,Missed,0,0,0.0%,
 Latin Power,joshu,18,Tom9494,18,3,100.0%,2:11
 Latin Power,CRASH,18,GAQUI LP⚜️,18,3,100.0%,2:35
 Latin Power,MonseurMaiDra,18,Nͥi̇nͣj̇aͫ LP⚜️,18,3,100.0%,2:26
@@ -185,6 +184,8 @@ Latin Power,Roodies Raiders,18,Tommm,18,3,100.0%,2:32
 Latin Power,ben,18,Dasper LP⚜️,18,3,100.0%,2:44
 Latin Power,babyacorns,18,Jefe LP⚜️,18,2,89.0%,2:43
 Latin Power,Ryan,18,C ☣ B A N £ R,18,3,100.0%,1:37
+Latin Power,jay,18,ro,18,3,100.0%,2:53
+Latin Power,kat,18,GALEO LP⚜️,18,2,88.0%,2:42
 كلان الورد,Ryan,18,Missed,0,0,0.0%,
 كلان الورد,brocaleb,18,Missed,0,0,0.0%,
 كلان الورد,YokoEno,18,Missed,0,0,0.0%,
@@ -202,16 +203,31 @@ Latin Power,Ryan,18,C ☣ B A N £ R,18,3,100.0%,1:37
 كلان الورد,joshu,18,Missed,0,0,0.0%,
 كلان الورد,Ryan,18,Missed,0,0,0.0%,
 كلان الورد,brocaleb,18,Missed,0,0,0.0%,
-كلان الورد,YokoEno,18,Missed,0,0,0.0%,
 كلان الورد,Little Roodie!,18,Missed,0,0,0.0%,
 كلان الورد,Roodies Raiders,18,Missed,0,0,0.0%,
 كلان الورد,LLoh7,18,Missed,0,0,0.0%,
-كلان الورد,kat,18,Missed,0,0,0.0%,
-كلان الورد,jay,18,Missed,0,0,0.0%,
 كلان الورد,rackam,18,Missed,0,0,0.0%,
 كلان الورد,CRASH,18,Missed,0,0,0.0%,
 كلان الورد,ben,18,Missed,0,0,0.0%,
 كلان الورد,MonseurMaiDra,18,Missed,0,0,0.0%,
-كلان الورد,alphaster17,18,Missed,0,0,0.0%,
 كلان الورد,Brad,18,Missed,0,0,0.0%,
-كلان الورد,joshu,18,Missed,0,0,0.0%,
+كلان الورد,Juliet,18,Missed,0,0,0.0%,
+كلان الورد,joshu,18,abu hassan,18,3,100.0%,2:20
+كلان الورد,alphaster17,18,Gladiator,18,2,92.0%,3:00
+كلان الورد,jay,18,kdosh_12,18,3,100.0%,2:46
+كلان الورد,YokoEno,18,مالوووك,18,3,100.0%,2:39
+آودان مهاباد,Ryan,18,Missed,0,0,0.0%,
+آودان مهاباد,brocaleb,18,Missed,0,0,0.0%,
+آودان مهاباد,YokoEno,18,Missed,0,0,0.0%,
+آودان مهاباد,Little Roodie!,18,Missed,0,0,0.0%,
+آودان مهاباد,Roodies Raiders,18,Missed,0,0,0.0%,
+آودان مهاباد,LLoh7,18,Missed,0,0,0.0%,
+آودان مهاباد,jay,18,Missed,0,0,0.0%,
+آودان مهاباد,rackam,18,Missed,0,0,0.0%,
+آودان مهاباد,CRASH,18,Missed,0,0,0.0%,
+آودان مهاباد,ben,18,Missed,0,0,0.0%,
+آودان مهاباد,MonseurMaiDra,18,Missed,0,0,0.0%,
+آودان مهاباد,alphaster17,18,Missed,0,0,0.0%,
+آودان مهاباد,Brad,18,Missed,0,0,0.0%,
+آودان مهاباد,joshu,18,Missed,0,0,0.0%,
+آودان مهاباد,Juliet,18,Missed,0,0,0.0%,
