@@ -1,9 +1,9 @@
 CWL Season: July 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
+ben,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 LLoh7,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 joshu,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 jay,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-ben,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 kat,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 brocaleb,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 YokoEno,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
@@ -13,6 +13,7 @@ CRASH,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,34.5%
 Roodies Raiders,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Brad,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Little Roodie!,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+alphaster17,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Juliet,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Ryan,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
@@ -49,7 +50,7 @@ loyalty,rackam,18,Missed,0,0,0.0%,
 loyalty,kat,18,Missed,0,0,0.0%,
 loyalty,CRASH,18,Missed,0,0,0.0%,
 loyalty,MonseurMaiDra,18,Missed,0,0,0.0%,
-loyalty,ben,18,Missed,0,0,0.0%,
+loyalty,alphaster17,18,Missed,0,0,0.0%,
 loyalty,Brad,18,Missed,0,0,0.0%,
 loyalty,joshu,18,Missed,0,0,0.0%,
 loyalty,Juliet,18,Missed,0,0,0.0%,
