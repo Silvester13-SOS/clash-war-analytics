@@ -6,12 +6,12 @@ jay,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 kat,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 brocaleb,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 YokoEno,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+rackam,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 Roodies Raiders,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 LLoh7,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 Brad,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 Little Roodie!,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 Juliet,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-rackam,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 MonseurMaiDra,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,28.3%
 CRASH,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,23.0%
 Ryan,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,33.0%
@@ -20,7 +20,7 @@ alphaster17,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 CWL Season: July 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 MAKINISTA V2. O,WIN,42,41,96.9%,96.5%,15v15,07/04/2026
-loyalty,IN_PROGRESS,15,8,33.3%,19.3%,15v15,07/05/2026
+loyalty,IN_PROGRESS,18,9,40.0%,24.2%,15v15,07/05/2026
 """WELL DONE""",IN_PROGRESS,0,0,0.0%,0.0%,15v15,07/06/2026
 
 CWL Season: July 2026 - Individual Attacks
@@ -44,7 +44,6 @@ loyalty,Ryan,18,Missed,0,0,0.0%,
 loyalty,Little Roodie!,18,Missed,0,0,0.0%,
 loyalty,Roodies Raiders,18,Missed,0,0,0.0%,
 loyalty,LLoh7,18,Missed,0,0,0.0%,
-loyalty,rackam,18,Missed,0,0,0.0%,
 loyalty,CRASH,18,Missed,0,0,0.0%,
 loyalty,MonseurMaiDra,18,Missed,0,0,0.0%,
 loyalty,alphaster17,18,Missed,0,0,0.0%,
@@ -55,6 +54,7 @@ loyalty,brocaleb,18,Linda,18,3,100.0%,2:14
 loyalty,YokoEno,18,iCEⓂ️AN,18,3,100.0%,2:04
 loyalty,kat,18,Fredward,18,3,100.0%,1:49
 loyalty,jay,18,2Raw,18,3,100.0%,1:52
+loyalty,rackam,18,Yaim,18,3,100.0%,2:27
 """WELL DONE""",Ryan,18,Missed,0,0,0.0%,
 """WELL DONE""",brocaleb,18,Missed,0,0,0.0%,
 """WELL DONE""",YokoEno,18,Missed,0,0,0.0%,
