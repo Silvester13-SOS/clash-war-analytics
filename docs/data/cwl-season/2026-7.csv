@@ -2,16 +2,16 @@ CWL Season: July 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 ben,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 Roodies Raiders,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+LLoh7,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 joshu,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 jay,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 kat,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 brocaleb,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 YokoEno,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 rackam,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+Little Roodie!,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,65.7%
 CRASH,18,3,3,0.0%,66.7%,0.0%,33.3%,1.33,51.7%
-LLoh7,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 Brad,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-Little Roodie!,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 Juliet,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 MonseurMaiDra,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,28.3%
 Ryan,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,33.0%
@@ -20,7 +20,7 @@ alphaster17,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 CWL Season: July 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 MAKINISTA V2. O,WIN,42,41,96.9%,96.5%,15v15,07/04/2026
-loyalty,IN_PROGRESS,23,17,52.4%,43.4%,15v15,07/05/2026
+loyalty,IN_PROGRESS,28,17,65.5%,43.4%,15v15,07/05/2026
 """WELL DONE""",IN_PROGRESS,0,0,0.0%,0.0%,15v15,07/06/2026
 
 CWL Season: July 2026 - Individual Attacks
@@ -41,8 +41,6 @@ MAKINISTA V2. O,Brad,18,jeff#0625,18,3,100.0%,2:16
 MAKINISTA V2. O,Ryan,18,Iron Man 23,18,2,99.0%,3:00
 MAKINISTA V2. O,Juliet,18,Lord Vader,18,3,100.0%,1:47
 loyalty,Ryan,18,Missed,0,0,0.0%,
-loyalty,Little Roodie!,18,Missed,0,0,0.0%,
-loyalty,LLoh7,18,Missed,0,0,0.0%,
 loyalty,MonseurMaiDra,18,Missed,0,0,0.0%,
 loyalty,alphaster17,18,Missed,0,0,0.0%,
 loyalty,Brad,18,Missed,0,0,0.0%,
@@ -55,6 +53,8 @@ loyalty,jay,18,2Raw,18,3,100.0%,1:52
 loyalty,rackam,18,Yaim,18,3,100.0%,2:27
 loyalty,Roodies Raiders,18,DillyDilly,18,3,100.0%,2:04
 loyalty,CRASH,18,lando-El,18,2,86.0%,2:35
+loyalty,Little Roodie!,18,WhiteKid77,18,2,97.0%,2:07
+loyalty,LLoh7,18,Miss Lexi,18,3,100.0%,2:18
 """WELL DONE""",Ryan,18,Missed,0,0,0.0%,
 """WELL DONE""",brocaleb,18,Missed,0,0,0.0%,
 """WELL DONE""",YokoEno,18,Missed,0,0,0.0%,
