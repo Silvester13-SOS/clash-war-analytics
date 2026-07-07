@@ -3,6 +3,7 @@ Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction
 ben,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 Roodies Raiders,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
 joshu,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
+Juliet,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
 kat,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
 brocaleb,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
 YokoEno,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
@@ -11,11 +12,10 @@ LLoh7,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,78.3%
 jay,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,79.5%
 Little Roodie!,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,82.8%
 MonseurMaiDra,18,6,6,50.0%,33.3%,0.0%,16.7%,2.17,76.0%
-Juliet,18,6,6,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 Brad,18,6,6,50.0%,16.7%,0.0%,33.3%,1.83,65.2%
+Ryan,18,6,6,33.3%,33.3%,0.0%,33.3%,1.67,65.0%
 CRASH,18,6,6,16.7%,50.0%,0.0%,33.3%,1.5,58.5%
 alphaster17,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,48.0%
-Ryan,18,6,6,16.7%,33.3%,0.0%,50.0%,1.17,48.3%
 babyacorns,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: July 2026 - War Results
@@ -24,7 +24,7 @@ MAKINISTA V2. O,WIN,42,41,96.9%,96.5%,15v15,07/04/2026
 loyalty,LOSS,38,40,91.0%,96.7%,15v15,07/05/2026
 """WELL DONE""",LOSS,36,38,82.9%,91.7%,15v15,07/06/2026
 ⚔️الاردن⭐اولا⚔️,WIN,45,36,100.0%,89.9%,15v15,07/07/2026
-CAN U BEAT US,IN_PROGRESS,31,17,70.9%,39.5%,15v15,07/08/2026
+CAN U BEAT US,IN_PROGRESS,37,28,84.2%,66.0%,15v15,07/08/2026
 El-classico,IN_PROGRESS,0,0,0.0%,0.0%,15v15,07/09/2026
 
 CWL Season: July 2026 - Individual Attacks
@@ -89,10 +89,8 @@ loyalty,Ryan,18,CORTEX,18,2,91.0%,3:00
 ⚔️الاردن⭐اولا⚔️,CRASH,18,⚔️⭐ALOUCH10⭐⚔️,18,3,100.0%,2:34
 ⚔️الاردن⭐اولا⚔️,Juliet,18,Dr. Mustafa,18,3,100.0%,1:40
 ⚔️الاردن⭐اولا⚔️,Ryan,18,⚔️ عرين ⭐ اسود⚔,18,3,100.0%,1:51
-CAN U BEAT US,Ryan,18,Missed,0,0,0.0%,
 CAN U BEAT US,CRASH,18,Missed,0,0,0.0%,
 CAN U BEAT US,Brad,18,Missed,0,0,0.0%,
-CAN U BEAT US,Juliet,18,Missed,0,0,0.0%,
 CAN U BEAT US,joshu,18,丂么•ＨＡＣＫＥＲ,18,3,100.0%,2:40
 CAN U BEAT US,kat,18,princejr,18,3,100.0%,1:57
 CAN U BEAT US,brocaleb,18,Sar,18,3,100.0%,2:19
@@ -104,6 +102,8 @@ CAN U BEAT US,rackam,18,mhel,18,3,100.0%,1:59
 CAN U BEAT US,LLoh7,18,Super Raf,18,3,100.0%,1:39
 CAN U BEAT US,Roodies Raiders,18,Admiral Raf,18,3,100.0%,2:16
 CAN U BEAT US,Little Roodie!,18,Emperor Raf,18,3,100.0%,1:39
+CAN U BEAT US,Juliet,18,Omar,18,3,100.0%,1:49
+CAN U BEAT US,Ryan,18,Alfie M'25),18,3,100.0%,2:15
 El-classico,Ryan,18,Missed,0,0,0.0%,
 El-classico,brocaleb,18,Missed,0,0,0.0%,
 El-classico,YokoEno,18,Missed,0,0,0.0%,
