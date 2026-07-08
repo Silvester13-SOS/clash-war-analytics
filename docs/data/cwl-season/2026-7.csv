@@ -9,10 +9,10 @@ YokoEno,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 rackam,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 LLoh7,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,81.4%
 jay,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,82.4%
+Brad,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,84.4%
 Little Roodie!,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,85.3%
 MonseurMaiDra,18,7,7,57.1%,28.6%,0.0%,14.3%,2.29,79.4%
 Juliet,18,7,7,71.4%,0.0%,0.0%,28.6%,2.14,71.4%
-Brad,18,7,7,57.1%,14.3%,0.0%,28.6%,2.0,70.1%
 CRASH,18,7,7,14.3%,71.4%,0.0%,14.3%,1.86,76.1%
 alphaster17,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,58.4%
 Ryan,18,7,7,28.6%,28.6%,0.0%,42.9%,1.43,55.7%
@@ -25,7 +25,7 @@ loyalty,LOSS,38,40,91.0%,96.7%,15v15,07/05/2026
 """WELL DONE""",LOSS,36,38,82.9%,91.7%,15v15,07/06/2026
 ⚔️الاردن⭐اولا⚔️,WIN,45,36,100.0%,89.9%,15v15,07/07/2026
 CAN U BEAT US,WIN,42,41,96.8%,98.5%,15v15,07/08/2026
-El-classico,IN_PROGRESS,35,37,79.5%,85.5%,15v15,07/09/2026
+El-classico,IN_PROGRESS,38,37,86.2%,85.5%,15v15,07/09/2026
 XT,IN_PROGRESS,0,0,0.0%,0.0%,15v15,07/10/2026
 
 CWL Season: July 2026 - Individual Attacks
@@ -106,7 +106,6 @@ CAN U BEAT US,Ryan,18,Alfie M'25),18,3,100.0%,2:15
 CAN U BEAT US,CRASH,18,JOHNFRANCO,18,2,89.0%,3:00
 CAN U BEAT US,Brad,18,ツReNz™,18,3,100.0%,1:48
 El-classico,Ryan,18,Missed,0,0,0.0%,
-El-classico,Brad,18,Missed,0,0,0.0%,
 El-classico,Juliet,18,Missed,0,0,0.0%,
 El-classico,joshu,18,PATLEMA,18,3,100.0%,2:26
 El-classico,LLoh7,18,Kapten Perang01,18,3,100.0%,1:41
@@ -120,6 +119,7 @@ El-classico,alphaster17,18,Roger,18,3,100.0%,2:24
 El-classico,CRASH,18,THE VILLAIN,18,2,93.0%,3:00
 El-classico,Little Roodie!,18,WD’SYAFIX,18,3,100.0%,2:00
 El-classico,Roodies Raiders,18,My Name Is Rafi,18,3,100.0%,1:35
+El-classico,Brad,18,"kang maz""e",18,3,100.0%,2:00
 XT,Ryan,18,Missed,0,0,0.0%,
 XT,brocaleb,18,Missed,0,0,0.0%,
 XT,YokoEno,18,Missed,0,0,0.0%,
