@@ -1,20 +1,20 @@
 CWL Season: July 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
+joshu,18,7,7,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
 ben,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
+kat,18,7,7,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
+jay,18,7,7,85.7%,14.3%,0.0%,0.0%,2.86,96.7%
+YokoEno,18,7,7,85.7%,14.3%,0.0%,0.0%,2.86,99.9%
 Roodies Raiders,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
-joshu,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 Juliet,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
-kat,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 brocaleb,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
-YokoEno,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 rackam,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 LLoh7,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,81.4%
-jay,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,82.4%
 Brad,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,84.4%
 Little Roodie!,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,85.3%
 MonseurMaiDra,18,7,7,57.1%,28.6%,0.0%,14.3%,2.29,79.4%
+alphaster17,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,78.4%
 CRASH,18,7,7,14.3%,71.4%,0.0%,14.3%,1.86,76.1%
-alphaster17,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,58.4%
 Ryan,18,7,7,28.6%,28.6%,14.3%,28.6%,1.57,67.3%
 babyacorns,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
@@ -25,8 +25,8 @@ loyalty,LOSS,38,40,91.0%,96.7%,15v15,07/05/2026
 """WELL DONE""",LOSS,36,38,82.9%,91.7%,15v15,07/06/2026
 ⚔️الاردن⭐اولا⚔️,WIN,45,36,100.0%,89.9%,15v15,07/07/2026
 CAN U BEAT US,WIN,42,41,96.8%,98.5%,15v15,07/08/2026
-El-classico,IN_PROGRESS,42,37,98.3%,85.5%,15v15,07/09/2026
-XT,IN_PROGRESS,0,0,0.0%,0.0%,15v15,07/10/2026
+El-classico,LOSS,42,43,98.3%,98.8%,15v15,07/09/2026
+XT,IN_PROGRESS,14,12,33.3%,26.7%,15v15,07/10/2026
 
 CWL Season: July 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -122,16 +122,16 @@ El-classico,Ryan,18,ANDROS AZKA,18,1,81.0%,2:48
 El-classico,Juliet,18,Chief×Meong☘️,18,3,100.0%,1:21
 XT,Ryan,18,Missed,0,0,0.0%,
 XT,brocaleb,18,Missed,0,0,0.0%,
-XT,YokoEno,18,Missed,0,0,0.0%,
 XT,Little Roodie!,18,Missed,0,0,0.0%,
 XT,Roodies Raiders,18,Missed,0,0,0.0%,
 XT,LLoh7,18,Missed,0,0,0.0%,
-XT,jay,18,Missed,0,0,0.0%,
 XT,rackam,18,Missed,0,0,0.0%,
-XT,kat,18,Missed,0,0,0.0%,
 XT,CRASH,18,Missed,0,0,0.0%,
 XT,MonseurMaiDra,18,Missed,0,0,0.0%,
-XT,alphaster17,18,Missed,0,0,0.0%,
 XT,Brad,18,Missed,0,0,0.0%,
-XT,joshu,18,Missed,0,0,0.0%,
 XT,Juliet,18,Missed,0,0,0.0%,
+XT,alphaster17,18,$Monster$,18,3,100.0%,1:46
+XT,kat,18,The Villager,18,3,100.0%,1:47
+XT,jay,18,JAYESH,18,3,100.0%,2:21
+XT,YokoEno,18,tanu30,18,2,99.0%,3:00
+XT,joshu,18,//× ĐJ ×//,18,3,100.0%,2:23
