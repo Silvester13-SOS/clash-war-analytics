@@ -1,28 +1,29 @@
 CWL Season: August 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 rackam,18,1,1,100.0%,0.0%,0.0%,0.0%,3.0,100.0%
-joshu,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
-jay,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
-Brad,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
-kat,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
-brocaleb,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
-YokoEno,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
-Roodies Raiders,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,73.5%
-LLoh7,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,71.8%
-Little Roodie!,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,73.3%
-alphaster17,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,72.8%
-ben,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,73.3%
-CRASH,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-Juliet,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,69.0%
-MonseurMaiDra,18,4,4,25.0%,25.0%,25.0%,25.0%,1.5,64.5%
-Ryan,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,47.5%
+joshu,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
+jay,18,5,5,60.0%,0.0%,0.0%,40.0%,1.8,60.0%
+Brad,18,5,5,60.0%,0.0%,0.0%,40.0%,1.8,60.0%
+kat,18,5,5,60.0%,0.0%,0.0%,40.0%,1.8,60.0%
+brocaleb,18,5,5,60.0%,0.0%,0.0%,40.0%,1.8,60.0%
+YokoEno,18,5,5,60.0%,0.0%,0.0%,40.0%,1.8,60.0%
+Roodies Raiders,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,58.8%
+LLoh7,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,57.4%
+Little Roodie!,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,58.6%
+alphaster17,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,58.2%
+ben,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,58.6%
+CRASH,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+Juliet,18,5,5,20.0%,40.0%,0.0%,40.0%,1.4,55.2%
+MonseurMaiDra,18,5,5,20.0%,20.0%,20.0%,40.0%,1.2,51.6%
+Ryan,18,5,5,0.0%,40.0%,0.0%,60.0%,0.8,38.0%
 
 CWL Season: August 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 ✌️ابطال الحروب✌,LOSS,37,43,89.9%,98.9%,15v15,08/03/2026
 NEW cLaN,WIN,40,39,96.1%,94.1%,15v15,08/04/2026
-⭐️SPARTA CWL⭐️,IN_PROGRESS,43,35,99.4%,87.4%,15v15,08/05/2026
-MB WAR LEAGUE,IN_PROGRESS,0,0,0.0%,0.0%,15v15,08/06/2026
+⭐️SPARTA CWL⭐️,WIN,43,35,99.4%,87.4%,15v15,08/05/2026
+MB WAR LEAGUE,IN_PROGRESS,3,12,6.7%,32.7%,15v15,08/06/2026
+Active City 2.0,IN_PROGRESS,0,0,0.0%,0.0%,15v15,08/08/2026
 
 CWL Season: August 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -84,5 +85,20 @@ MB WAR LEAGUE,kat,18,Missed,0,0,0.0%,
 MB WAR LEAGUE,MonseurMaiDra,18,Missed,0,0,0.0%,
 MB WAR LEAGUE,alphaster17,18,Missed,0,0,0.0%,
 MB WAR LEAGUE,CRASH,18,Missed,0,0,0.0%,
-MB WAR LEAGUE,joshu,18,Missed,0,0,0.0%,
 MB WAR LEAGUE,Juliet,18,Missed,0,0,0.0%,
+MB WAR LEAGUE,joshu,18,"""'*pedro*""'",18,3,100.0%,2:21
+Active City 2.0,Little Roodie!,18,Missed,0,0,0.0%,
+Active City 2.0,Roodies Raiders,18,Missed,0,0,0.0%,
+Active City 2.0,YokoEno,18,Missed,0,0,0.0%,
+Active City 2.0,brocaleb,18,Missed,0,0,0.0%,
+Active City 2.0,LLoh7,18,Missed,0,0,0.0%,
+Active City 2.0,Ryan,18,Missed,0,0,0.0%,
+Active City 2.0,Brad,18,Missed,0,0,0.0%,
+Active City 2.0,ben,18,Missed,0,0,0.0%,
+Active City 2.0,jay,18,Missed,0,0,0.0%,
+Active City 2.0,kat,18,Missed,0,0,0.0%,
+Active City 2.0,MonseurMaiDra,18,Missed,0,0,0.0%,
+Active City 2.0,alphaster17,18,Missed,0,0,0.0%,
+Active City 2.0,CRASH,18,Missed,0,0,0.0%,
+Active City 2.0,joshu,18,Missed,0,0,0.0%,
+Active City 2.0,Juliet,18,Missed,0,0,0.0%,
