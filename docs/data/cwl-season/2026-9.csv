@@ -1,25 +1,26 @@
 CWL Season: September 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-joshu,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Roodies Raiders,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-LLoh7,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-jay,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-Brad,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-Little Roodie!,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-alphaster17,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-lloh8,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-ben,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-kat,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-brocaleb,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-YokoEno,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-MonseurMaiDra,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-CRASH,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-rackam,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+joshu,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+lloh8,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+MonseurMaiDra,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+rackam,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+LLoh7,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,31.0%
+Roodies Raiders,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+jay,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+Brad,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+Little Roodie!,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+alphaster17,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+ben,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+kat,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+brocaleb,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+YokoEno,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+CRASH,18,3,3,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: September 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 Liga dos Noobs,IN_PROGRESS,0,0,0.0%,0.0%,15v15,09/03/2026
-Liga dos Noobs,IN_PROGRESS,3,0,6.7%,0.0%,15v15,09/03/2026
+Liga dos Noobs,IN_PROGRESS,14,8,32.9%,21.7%,15v15,09/03/2026
+CROWN,IN_PROGRESS,0,0,0.0%,0.0%,15v15,09/04/2026
 
 CWL Season: September 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -38,18 +39,33 @@ Liga dos Noobs,alphaster17,18,Missed,0,0,0.0%,
 Liga dos Noobs,MonseurMaiDra,18,Missed,0,0,0.0%,
 Liga dos Noobs,lloh8,18,Missed,0,0,0.0%,
 Liga dos Noobs,CRASH,18,Missed,0,0,0.0%,
-Liga dos Noobs,LLoh7,18,Missed,0,0,0.0%,
 Liga dos Noobs,brocaleb,18,Missed,0,0,0.0%,
 Liga dos Noobs,YokoEno,18,Missed,0,0,0.0%,
 Liga dos Noobs,Roodies Raiders,18,Missed,0,0,0.0%,
 Liga dos Noobs,Little Roodie!,18,Missed,0,0,0.0%,
 Liga dos Noobs,ben,18,Missed,0,0,0.0%,
-Liga dos Noobs,rackam,18,Missed,0,0,0.0%,
 Liga dos Noobs,kat,18,Missed,0,0,0.0%,
 Liga dos Noobs,jay,18,Missed,0,0,0.0%,
 Liga dos Noobs,Brad,18,Missed,0,0,0.0%,
 Liga dos Noobs,alphaster17,18,Missed,0,0,0.0%,
-Liga dos Noobs,MonseurMaiDra,18,Missed,0,0,0.0%,
-Liga dos Noobs,lloh8,18,Missed,0,0,0.0%,
 Liga dos Noobs,CRASH,18,Missed,0,0,0.0%,
 Liga dos Noobs,joshu,18,Kevin,18,3,100.0%,1:55
+Liga dos Noobs,rackam,18,Galuguf,18,3,100.0%,2:07
+Liga dos Noobs,lloh8,18,Miguel Carmo,18,3,100.0%,1:54
+Liga dos Noobs,LLoh7,18,Sergio Carmo,18,2,93.0%,1:48
+Liga dos Noobs,MonseurMaiDra,18,GAS,18,3,100.0%,1:31
+CROWN,LLoh7,18,Missed,0,0,0.0%,
+CROWN,brocaleb,18,Missed,0,0,0.0%,
+CROWN,YokoEno,18,Missed,0,0,0.0%,
+CROWN,Roodies Raiders,18,Missed,0,0,0.0%,
+CROWN,Little Roodie!,18,Missed,0,0,0.0%,
+CROWN,ben,18,Missed,0,0,0.0%,
+CROWN,rackam,18,Missed,0,0,0.0%,
+CROWN,kat,18,Missed,0,0,0.0%,
+CROWN,jay,18,Missed,0,0,0.0%,
+CROWN,joshu,18,Missed,0,0,0.0%,
+CROWN,Brad,18,Missed,0,0,0.0%,
+CROWN,alphaster17,18,Missed,0,0,0.0%,
+CROWN,MonseurMaiDra,18,Missed,0,0,0.0%,
+CROWN,lloh8,18,Missed,0,0,0.0%,
+CROWN,CRASH,18,Missed,0,0,0.0%,
