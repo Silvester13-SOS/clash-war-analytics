@@ -1,22 +1,22 @@
 CWL Season: September 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
+Juliet,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+RAMBO,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 lloh8,18,5,5,60.0%,0.0%,0.0%,40.0%,1.8,60.0%
-joshu,18,6,6,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Juliet,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-RAMBO,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-brocaleb,18,6,6,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-YokoEno,18,6,6,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-MonseurMaiDra,18,6,6,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-rackam,18,6,6,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-LLoh7,18,6,6,16.7%,33.3%,0.0%,50.0%,1.17,47.7%
-Roodies Raiders,18,6,6,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-jay,18,6,6,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-Brad,18,6,6,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-Little Roodie!,18,6,6,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-alphaster17,18,6,6,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+joshu,18,7,7,57.1%,0.0%,0.0%,42.9%,1.71,57.1%
+rackam,18,7,7,57.1%,0.0%,0.0%,42.9%,1.71,57.1%
+LLoh7,18,7,7,28.6%,28.6%,0.0%,42.9%,1.43,55.1%
+alphaster17,18,7,7,42.9%,0.0%,0.0%,57.1%,1.29,42.9%
+brocaleb,18,7,7,42.9%,0.0%,0.0%,57.1%,1.29,42.9%
+YokoEno,18,7,7,42.9%,0.0%,0.0%,57.1%,1.29,42.9%
+MonseurMaiDra,18,7,7,42.9%,0.0%,0.0%,57.1%,1.29,42.9%
 ben,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,41.0%
-CRASH,18,6,6,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-kat,18,5,5,0.0%,20.0%,0.0%,80.0%,0.4,16.4%
+Roodies Raiders,18,7,7,28.6%,0.0%,0.0%,71.4%,0.86,28.6%
+jay,18,7,7,28.6%,0.0%,0.0%,71.4%,0.86,28.6%
+Brad,18,7,7,28.6%,0.0%,0.0%,71.4%,0.86,28.6%
+Little Roodie!,18,7,7,28.6%,0.0%,0.0%,71.4%,0.86,28.6%
+CRASH,18,7,7,28.6%,0.0%,0.0%,71.4%,0.86,28.6%
+kat,18,6,6,0.0%,16.7%,0.0%,83.3%,0.33,13.7%
 
 CWL Season: September 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
@@ -25,7 +25,8 @@ Liga dos Noobs,WIN,22,19,51.7%,48.2%,15v15,09/03/2026
 Liga dos Noobs,WIN,42,39,97.1%,94.1%,15v15,09/03/2026
 CROWN,TIE,0,0,0.0%,0.0%,15v15,09/04/2026
 CROWN,WIN,45,0,100.0%,0.0%,15v15,09/04/2026
-جيش سليمان,IN_PROGRESS,0,0,0.0%,0.0%,15v15,09/06/2026
+جيش سليمان,IN_PROGRESS,18,0,40.0%,0.0%,15v15,09/06/2026
+ROGWar,IN_PROGRESS,0,0,0.0%,0.0%,15v15,09/07/2026
 
 CWL Season: September 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -104,18 +105,33 @@ CROWN,Brad,18,Mg Lay,18,3,100.0%,2:15
 CROWN,Little Roodie!,18,CR72,18,3,100.0%,1:48
 CROWN,CRASH,18,Mg Lay 3,18,3,100.0%,2:33
 CROWN,Juliet,18,Mg Lay 2,18,3,100.0%,1:39
-جيش سليمان,LLoh7,18,Missed,0,0,0.0%,
 جيش سليمان,brocaleb,18,Missed,0,0,0.0%,
 جيش سليمان,YokoEno,18,Missed,0,0,0.0%,
 جيش سليمان,Roodies Raiders,18,Missed,0,0,0.0%,
 جيش سليمان,Little Roodie!,18,Missed,0,0,0.0%,
-جيش سليمان,rackam,18,Missed,0,0,0.0%,
 جيش سليمان,kat,18,Missed,0,0,0.0%,
 جيش سليمان,jay,18,Missed,0,0,0.0%,
-جيش سليمان,joshu,18,Missed,0,0,0.0%,
 جيش سليمان,Brad,18,Missed,0,0,0.0%,
-جيش سليمان,alphaster17,18,Missed,0,0,0.0%,
 جيش سليمان,MonseurMaiDra,18,Missed,0,0,0.0%,
 جيش سليمان,CRASH,18,Missed,0,0,0.0%,
-جيش سليمان,Juliet,18,Missed,0,0,0.0%,
-جيش سليمان,RAMBO,18,Missed,0,0,0.0%,
+جيش سليمان,rackam,18,☆♡HonorOfWar♡☆,18,3,100.0%,2:52
+جيش سليمان,joshu,18,the punsher,18,3,100.0%,1:38
+جيش سليمان,RAMBO,18,Mahmoud Tamimi,18,3,100.0%,1:34
+جيش سليمان,LLoh7,18,☆♡QueenOfClan♡☆,18,3,100.0%,2:53
+جيش سليمان,alphaster17,18,☆♡StormOfWar♡☆,18,3,100.0%,2:11
+جيش سليمان,Juliet,18,☆♡LordOfWar♡☆,18,3,100.0%,1:48
+ROGWar,Roodies Raiders,18,Missed,0,0,0.0%,
+ROGWar,LLoh7,18,Missed,0,0,0.0%,
+ROGWar,Little Roodie!,18,Missed,0,0,0.0%,
+ROGWar,brocaleb,18,Missed,0,0,0.0%,
+ROGWar,YokoEno,18,Missed,0,0,0.0%,
+ROGWar,rackam,18,Missed,0,0,0.0%,
+ROGWar,jay,18,Missed,0,0,0.0%,
+ROGWar,kat,18,Missed,0,0,0.0%,
+ROGWar,joshu,18,Missed,0,0,0.0%,
+ROGWar,Brad,18,Missed,0,0,0.0%,
+ROGWar,alphaster17,18,Missed,0,0,0.0%,
+ROGWar,MonseurMaiDra,18,Missed,0,0,0.0%,
+ROGWar,CRASH,18,Missed,0,0,0.0%,
+ROGWar,Juliet,18,Missed,0,0,0.0%,
+ROGWar,RAMBO,18,Missed,0,0,0.0%,
