@@ -2,21 +2,22 @@ CWL Season: September 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 Juliet,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 RAMBO,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-lloh8,18,5,5,60.0%,0.0%,0.0%,40.0%,1.8,60.0%
 joshu,18,7,7,57.1%,0.0%,0.0%,42.9%,1.71,57.1%
 brocaleb,18,7,7,57.1%,0.0%,0.0%,42.9%,1.71,57.1%
 YokoEno,18,7,7,57.1%,0.0%,0.0%,42.9%,1.71,57.1%
 rackam,18,7,7,57.1%,0.0%,0.0%,42.9%,1.71,57.1%
 MonseurMaiDra,18,7,7,42.9%,14.3%,0.0%,42.9%,1.57,56.6%
+lloh8,18,6,6,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 LLoh7,18,7,7,28.6%,28.6%,0.0%,42.9%,1.43,55.1%
+Roodies Raiders,18,6,6,33.3%,16.7%,0.0%,50.0%,1.33,46.3%
 jay,18,7,7,42.9%,0.0%,0.0%,57.1%,1.29,42.9%
 alphaster17,18,7,7,42.9%,0.0%,0.0%,57.1%,1.29,42.9%
 CRASH,18,7,7,42.9%,0.0%,0.0%,57.1%,1.29,42.9%
-Roodies Raiders,18,7,7,28.6%,14.3%,0.0%,57.1%,1.14,39.7%
+Brad,18,6,6,33.3%,0.0%,16.7%,50.0%,1.17,44.7%
 Little Roodie!,18,7,7,28.6%,14.3%,0.0%,57.1%,1.14,41.6%
-Brad,18,7,7,28.6%,0.0%,14.3%,57.1%,1.0,38.3%
 ben,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,41.0%
 kat,18,6,6,16.7%,16.7%,0.0%,66.7%,0.83,30.3%
+Ryan,18,1,1,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: September 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
@@ -120,17 +121,17 @@ CROWN,Juliet,18,Mg Lay 2,18,3,100.0%,1:39
 جيش سليمان,Brad,18,☆♡PrinceOfWar♡☆,18,1,68.0%,1:43
 جيش سليمان,CRASH,18,♥️QueenSun♥️,18,3,100.0%,2:37
 جيش سليمان,MonseurMaiDra,18,☆♡QueenHeart♡☆,18,2,96.0%,2:14
-ROGWar,Roodies Raiders,18,Missed,0,0,0.0%,
 ROGWar,LLoh7,18,Missed,0,0,0.0%,
 ROGWar,Little Roodie!,18,Missed,0,0,0.0%,
 ROGWar,brocaleb,18,Missed,0,0,0.0%,
 ROGWar,YokoEno,18,Missed,0,0,0.0%,
+ROGWar,Ryan,18,Missed,0,0,0.0%,
 ROGWar,rackam,18,Missed,0,0,0.0%,
 ROGWar,jay,18,Missed,0,0,0.0%,
 ROGWar,kat,18,Missed,0,0,0.0%,
 ROGWar,joshu,18,Missed,0,0,0.0%,
-ROGWar,Brad,18,Missed,0,0,0.0%,
 ROGWar,alphaster17,18,Missed,0,0,0.0%,
+ROGWar,lloh8,18,Missed,0,0,0.0%,
 ROGWar,MonseurMaiDra,18,Missed,0,0,0.0%,
 ROGWar,CRASH,18,Missed,0,0,0.0%,
 ROGWar,Juliet,18,Missed,0,0,0.0%,
