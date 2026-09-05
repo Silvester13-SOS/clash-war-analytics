@@ -1,7 +1,7 @@
 CWL Season: September 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
+lloh8,18,5,5,60.0%,0.0%,0.0%,40.0%,1.8,60.0%
 joshu,18,6,6,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-lloh8,18,6,6,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 Juliet,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 RAMBO,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 brocaleb,18,6,6,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
@@ -16,15 +16,15 @@ Little Roodie!,18,6,6,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 alphaster17,18,6,6,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 ben,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,41.0%
 CRASH,18,6,6,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-kat,18,4,4,0.0%,25.0%,0.0%,75.0%,0.5,20.5%
+kat,18,5,5,0.0%,20.0%,0.0%,80.0%,0.4,16.4%
 
 CWL Season: September 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 Liga dos Noobs,TIE,0,0,0.0%,0.0%,15v15,09/03/2026
 Liga dos Noobs,WIN,22,19,51.7%,48.2%,15v15,09/03/2026
 Liga dos Noobs,WIN,42,39,97.1%,94.1%,15v15,09/03/2026
-CROWN,IN_PROGRESS,0,0,0.0%,0.0%,15v15,09/04/2026
-CROWN,IN_PROGRESS,45,0,100.0%,0.0%,15v15,09/04/2026
+CROWN,TIE,0,0,0.0%,0.0%,15v15,09/04/2026
+CROWN,WIN,45,0,100.0%,0.0%,15v15,09/04/2026
 جيش سليمان,IN_PROGRESS,0,0,0.0%,0.0%,15v15,09/06/2026
 
 CWL Season: September 2026 - Individual Attacks
@@ -110,11 +110,11 @@ CROWN,Juliet,18,Mg Lay 2,18,3,100.0%,1:39
 جيش سليمان,Roodies Raiders,18,Missed,0,0,0.0%,
 جيش سليمان,Little Roodie!,18,Missed,0,0,0.0%,
 جيش سليمان,rackam,18,Missed,0,0,0.0%,
+جيش سليمان,kat,18,Missed,0,0,0.0%,
 جيش سليمان,jay,18,Missed,0,0,0.0%,
 جيش سليمان,joshu,18,Missed,0,0,0.0%,
 جيش سليمان,Brad,18,Missed,0,0,0.0%,
 جيش سليمان,alphaster17,18,Missed,0,0,0.0%,
-جيش سليمان,lloh8,18,Missed,0,0,0.0%,
 جيش سليمان,MonseurMaiDra,18,Missed,0,0,0.0%,
 جيش سليمان,CRASH,18,Missed,0,0,0.0%,
 جيش سليمان,Juliet,18,Missed,0,0,0.0%,
