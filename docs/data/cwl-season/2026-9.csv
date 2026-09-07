@@ -5,18 +5,18 @@ RAMBO,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,73.8%
 joshu,18,9,9,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 brocaleb,18,9,9,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 YokoEno,18,9,9,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+Ryan,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 MonseurMaiDra,18,9,9,55.6%,11.1%,0.0%,33.3%,1.89,66.2%
 rackam,18,9,9,55.6%,11.1%,0.0%,33.3%,1.89,64.1%
 lloh8,18,8,8,62.5%,0.0%,0.0%,37.5%,1.88,62.5%
+LLoh7,18,9,9,33.3%,33.3%,0.0%,33.3%,1.67,64.3%
 jay,18,9,9,55.6%,0.0%,0.0%,44.4%,1.67,55.6%
 alphaster17,18,9,9,44.4%,11.1%,0.0%,44.4%,1.56,54.8%
+CRASH,18,9,9,44.4%,11.1%,0.0%,44.4%,1.56,54.8%
 Little Roodie!,18,7,7,28.6%,28.6%,0.0%,42.9%,1.43,53.9%
-LLoh7,18,9,9,22.2%,33.3%,0.0%,44.4%,1.33,53.2%
+Roodies Raiders,18,8,8,37.5%,12.5%,0.0%,50.0%,1.38,47.3%
 kat,18,8,8,25.0%,25.0%,0.0%,50.0%,1.25,46.9%
-CRASH,18,9,9,33.3%,11.1%,0.0%,55.6%,1.22,43.7%
-Roodies Raiders,18,8,8,25.0%,12.5%,0.0%,62.5%,1.0,34.8%
 ben,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,41.0%
-Ryan,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
 Brad,18,8,8,25.0%,0.0%,12.5%,62.5%,0.88,33.5%
 
 CWL Season: September 2026 - War Results
@@ -28,7 +28,7 @@ CROWN,TIE,0,0,0.0%,0.0%,15v15,09/04/2026
 CROWN,WIN,45,0,100.0%,0.0%,15v15,09/04/2026
 جيش سليمان,LOSS,40,44,95.5%,99.8%,15v15,09/06/2026
 ROGWar,WIN,39,38,95.8%,97.7%,15v15,09/07/2026
-natty sound,IN_PROGRESS,28,24,63.1%,58.5%,15v15,09/08/2026
+natty sound,IN_PROGRESS,40,32,89.7%,77.2%,15v15,09/08/2026
 TÜRK SANCAĞI,IN_PROGRESS,0,0,0.0%,0.0%,15v15,09/09/2026
 
 CWL Season: September 2026 - Individual Attacks
@@ -138,11 +138,7 @@ ROGWar,Little Roodie!,18,sascha,18,2,86.0%,2:14
 ROGWar,Ryan,18,Cram,18,3,100.0%,1:44
 ROGWar,Juliet,18,NNIF,18,2,79.0%,1:55
 ROGWar,MonseurMaiDra,18,Kabin,18,3,100.0%,2:04
-natty sound,LLoh7,18,Missed,0,0,0.0%,
-natty sound,Roodies Raiders,18,Missed,0,0,0.0%,
-natty sound,Ryan,18,Missed,0,0,0.0%,
 natty sound,Brad,18,Missed,0,0,0.0%,
-natty sound,CRASH,18,Missed,0,0,0.0%,
 natty sound,rackam,18,owitapemoa,18,2,77.0%,2:32
 natty sound,joshu,18,Tito,18,3,100.0%,1:36
 natty sound,alphaster17,18,k7,18,3,100.0%,2:04
@@ -153,6 +149,10 @@ natty sound,brocaleb,18,Alex Sunrise,18,3,100.0%,2:09
 natty sound,lloh8,18,jim le fou,18,3,100.0%,1:32
 natty sound,MonseurMaiDra,18,Nono,18,3,100.0%,2:00
 natty sound,RAMBO,18,natty coco,18,2,69.0%,3:00
+natty sound,LLoh7,18,steu,18,3,100.0%,2:08
+natty sound,CRASH,18,roro,18,3,100.0%,2:18
+natty sound,Roodies Raiders,18,Lichamax,18,3,100.0%,1:45
+natty sound,Ryan,18,owdav,18,3,100.0%,1:51
 TÜRK SANCAĞI,LLoh7,18,Missed,0,0,0.0%,
 TÜRK SANCAĞI,Roodies Raiders,18,Missed,0,0,0.0%,
 TÜRK SANCAĞI,brocaleb,18,Missed,0,0,0.0%,
