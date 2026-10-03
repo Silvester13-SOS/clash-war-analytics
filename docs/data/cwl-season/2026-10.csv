@@ -1,6 +1,7 @@
 CWL Season: October 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 joshu,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+lloh8,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 brocaleb,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 YokoEno,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
 MonseurMaiDra,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
@@ -11,14 +12,13 @@ jay,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Brad,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 Little Roodie!,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 alphaster17,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-lloh8,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 ben,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 kat,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 rackam,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
 
 CWL Season: October 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
-Mature English,IN_PROGRESS,15,13,33.3%,33.0%,15v15,10/04/2026
+Mature English,IN_PROGRESS,18,13,40.0%,33.0%,15v15,10/04/2026
 KH Superior,IN_PROGRESS,0,0,0.0%,0.0%,15v15,10/05/2026
 
 CWL Season: October 2026 - Individual Attacks
@@ -32,12 +32,12 @@ Mature English,kat,18,Missed,0,0,0.0%,
 Mature English,jay,18,Missed,0,0,0.0%,
 Mature English,Brad,18,Missed,0,0,0.0%,
 Mature English,alphaster17,18,Missed,0,0,0.0%,
-Mature English,lloh8,18,Missed,0,0,0.0%,
 Mature English,MonseurMaiDra,18,ZipMyJacket,18,3,100.0%,2:15
 Mature English,brocaleb,18,Ariadne,18,3,100.0%,1:41
 Mature English,joshu,18,joe,18,3,100.0%,1:51
 Mature English,CRASH,18,☢️ Fresh ☢️,18,3,100.0%,2:22
 Mature English,YokoEno,18,Athena,18,3,100.0%,1:58
+Mature English,lloh8,18,Ben,18,3,100.0%,2:21
 KH Superior,brocaleb,18,Missed,0,0,0.0%,
 KH Superior,YokoEno,18,Missed,0,0,0.0%,
 KH Superior,LLoh7,18,Missed,0,0,0.0%,
