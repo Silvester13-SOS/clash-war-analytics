@@ -1,29 +1,30 @@
 CWL Season: October 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-Roodies Raiders,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,94.0%
-LLoh7,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,85.0%
-joshu,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-alphaster17,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,90.0%
-lloh8,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-brocaleb,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-YokoEno,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-MonseurMaiDra,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-rackam,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-Little Roodie!,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,62.3%
-CRASH,18,3,3,33.3%,33.3%,0.0%,33.3%,1.67,65.0%
-Ryan,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-jay,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-Brad,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-Juliet,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,40.5%
-ben,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
-adanac10,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,47.0%
-kat,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,23.7%
+Brad,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,93.0%
+rackam,18,4,4,75.0%,0.0%,0.0%,25.0%,2.25,75.0%
+Juliet,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,81.0%
+lloh8,18,4,4,50.0%,0.0%,25.0%,25.0%,1.75,70.8%
+joshu,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+ben,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+brocaleb,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+YokoEno,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+MonseurMaiDra,18,4,4,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+Little Roodie!,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,46.8%
+CRASH,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,48.8%
+kat,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,35.5%
+Ryan,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+jay,18,4,4,25.0%,0.0%,0.0%,75.0%,0.75,25.0%
+Roodies Raiders,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,31.3%
+LLoh7,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,28.3%
+alphaster17,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,30.0%
+adanac10,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,31.3%
 
 CWL Season: October 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
 Mature English,WIN,36,33,84.6%,83.9%,15v15,10/04/2026
-KH Superior,IN_PROGRESS,34,37,81.9%,90.9%,15v15,10/05/2026
-Butt Snorkelers,IN_PROGRESS,0,0,0.0%,0.0%,15v15,10/06/2026
+KH Superior,LOSS,39,40,94.3%,97.5%,15v15,10/05/2026
+Butt Snorkelers,IN_PROGRESS,4,0,12.2%,0.0%,15v15,10/06/2026
+Did we win yet?,IN_PROGRESS,0,0,0.0%,0.0%,15v15,10/07/2026
 
 CWL Season: October 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -42,8 +43,6 @@ Mature English,ben,18,Mini Me,18,3,100.0%,2:18
 Mature English,alphaster17,18,Bmoney,18,2,90.0%,3:00
 Mature English,Roodies Raiders,18,小Huey,18,2,94.0%,2:09
 Mature English,Little Roodie!,18,McGrizzly,18,3,100.0%,2:08
-KH Superior,ben,18,Missed,0,0,0.0%,
-KH Superior,Brad,18,Missed,0,0,0.0%,
 KH Superior,adanac10,18,KPT•KoyyJakk,18,2,94.0%,2:10
 KH Superior,rackam,18,CEO ❌ HEA RAA,18,3,100.0%,2:30
 KH Superior,joshu,18,Sothan 89,18,3,100.0%,1:52
@@ -57,18 +56,35 @@ KH Superior,CRASH,18,khmer angkor,18,2,95.0%,2:52
 KH Superior,Ryan,18,BigDaddy,18,3,100.0%,2:10
 KH Superior,Juliet,18,KING OF SAMKOK,18,2,81.0%,1:55
 KH Superior,Little Roodie!,18,NaNa KH,18,2,87.0%,1:57
+KH Superior,Brad,18,CHEAVIN,18,2,86.0%,2:43
+KH Superior,ben,18,B BATH CAMBODIA,18,3,100.0%,2:17
 Butt Snorkelers,brocaleb,18,Missed,0,0,0.0%,
+Butt Snorkelers,LLoh7,18,Missed,0,0,0.0%,
 Butt Snorkelers,YokoEno,18,Missed,0,0,0.0%,
+Butt Snorkelers,Roodies Raiders,18,Missed,0,0,0.0%,
 Butt Snorkelers,Little Roodie!,18,Missed,0,0,0.0%,
 Butt Snorkelers,Ryan,18,Missed,0,0,0.0%,
 Butt Snorkelers,ben,18,Missed,0,0,0.0%,
-Butt Snorkelers,rackam,18,Missed,0,0,0.0%,
-Butt Snorkelers,kat,18,Missed,0,0,0.0%,
 Butt Snorkelers,jay,18,Missed,0,0,0.0%,
 Butt Snorkelers,joshu,18,Missed,0,0,0.0%,
-Butt Snorkelers,Brad,18,Missed,0,0,0.0%,
+Butt Snorkelers,alphaster17,18,Missed,0,0,0.0%,
 Butt Snorkelers,CRASH,18,Missed,0,0,0.0%,
-Butt Snorkelers,lloh8,18,Missed,0,0,0.0%,
 Butt Snorkelers,MonseurMaiDra,18,Missed,0,0,0.0%,
-Butt Snorkelers,Juliet,18,Missed,0,0,0.0%,
 Butt Snorkelers,adanac10,18,Missed,0,0,0.0%,
+Butt Snorkelers,rackam,18,williethegreat,18,3,100.0%,2:47
+Butt Snorkelers,lloh8,18,Baby Toe,18,1,83.0%,2:41
+Did we win yet?,brocaleb,18,Missed,0,0,0.0%,
+Did we win yet?,LLoh7,18,Missed,0,0,0.0%,
+Did we win yet?,YokoEno,18,Missed,0,0,0.0%,
+Did we win yet?,Roodies Raiders,18,Missed,0,0,0.0%,
+Did we win yet?,Little Roodie!,18,Missed,0,0,0.0%,
+Did we win yet?,Ryan,18,Missed,0,0,0.0%,
+Did we win yet?,rackam,18,Missed,0,0,0.0%,
+Did we win yet?,ben,18,Missed,0,0,0.0%,
+Did we win yet?,jay,18,Missed,0,0,0.0%,
+Did we win yet?,joshu,18,Missed,0,0,0.0%,
+Did we win yet?,alphaster17,18,Missed,0,0,0.0%,
+Did we win yet?,CRASH,18,Missed,0,0,0.0%,
+Did we win yet?,lloh8,18,Missed,0,0,0.0%,
+Did we win yet?,MonseurMaiDra,18,Missed,0,0,0.0%,
+Did we win yet?,adanac10,18,Missed,0,0,0.0%,
