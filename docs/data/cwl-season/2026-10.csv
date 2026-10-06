@@ -2,6 +2,7 @@ CWL Season: October 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
 LLoh7,18,2,2,50.0%,50.0%,0.0%,0.0%,2.5,92.5%
 joshu,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
+ben,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
 brocaleb,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
 YokoEno,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
 MonseurMaiDra,18,5,5,80.0%,0.0%,0.0%,20.0%,2.4,80.0%
@@ -11,7 +12,6 @@ Roodies Raiders,18,2,2,0.0%,100.0%,0.0%,0.0%,2.0,87.0%
 CRASH,18,5,5,40.0%,40.0%,0.0%,20.0%,2.0,74.6%
 adanac10,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,73.5%
 lloh8,18,5,5,40.0%,20.0%,20.0%,20.0%,1.8,75.2%
-ben,18,5,5,60.0%,0.0%,0.0%,40.0%,1.8,60.0%
 Brad,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,46.5%
 Ryan,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,48.8%
 jay,18,5,5,40.0%,0.0%,0.0%,60.0%,1.2,40.0%
@@ -24,7 +24,7 @@ Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team S
 Mature English,WIN,36,33,84.6%,83.9%,15v15,10/04/2026
 KH Superior,LOSS,39,40,94.3%,97.5%,15v15,10/05/2026
 Butt Snorkelers,LOSS,38,43,90.5%,98.5%,15v15,10/06/2026
-Did we win yet?,IN_PROGRESS,25,41,58.1%,97.5%,15v15,10/07/2026
+Did we win yet?,IN_PROGRESS,28,41,64.7%,97.5%,15v15,10/07/2026
 Os Incriveis,IN_PROGRESS,0,0,0.0%,0.0%,15v15,10/08/2026
 
 CWL Season: October 2026 - Individual Attacks
@@ -75,7 +75,6 @@ Butt Snorkelers,ben,18,Poot,18,3,100.0%,2:45
 Butt Snorkelers,adanac10,18,Kreme Pie Guy,18,3,100.0%,1:51
 Butt Snorkelers,Ryan,18,lil baby taint,18,2,95.0%,1:53
 Did we win yet?,Ryan,18,Missed,0,0,0.0%,
-Did we win yet?,ben,18,Missed,0,0,0.0%,
 Did we win yet?,kat,18,Missed,0,0,0.0%,
 Did we win yet?,jay,18,Missed,0,0,0.0%,
 Did we win yet?,Brad,18,Missed,0,0,0.0%,
@@ -89,6 +88,7 @@ Did we win yet?,Little Roodie!,18,BALAJI=CR7,18,3,100.0%,1:34
 Did we win yet?,rackam,18,starshine,18,3,100.0%,2:42
 Did we win yet?,adanac10,18,HELLBOi,18,3,100.0%,2:41
 Did we win yet?,CRASH,18,King Deuce,18,2,78.0%,2:36
+Did we win yet?,ben,18,FROstbyt 2,18,3,100.0%,2:42
 Os Incriveis,brocaleb,18,Missed,0,0,0.0%,
 Os Incriveis,YokoEno,18,Missed,0,0,0.0%,
 Os Incriveis,Little Roodie!,18,Missed,0,0,0.0%,
