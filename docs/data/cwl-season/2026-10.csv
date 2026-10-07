@@ -4,6 +4,7 @@ joshu,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
 brocaleb,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
 YokoEno,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
 CRASH,18,4,4,50.0%,50.0%,0.0%,0.0%,2.5,93.3%
+rackam,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
 Ryan,18,3,3,33.3%,66.7%,0.0%,0.0%,2.33,92.3%
 Little Roodie!,18,6,6,50.0%,33.3%,0.0%,16.7%,2.17,78.7%
 MonseurMaiDra,18,6,6,66.7%,0.0%,16.7%,16.7%,2.17,82.7%
@@ -11,13 +12,12 @@ LLoh7,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,71.3%
 Brad,18,3,3,33.3%,33.3%,33.3%,0.0%,2.0,93.0%
 lloh8,18,6,6,50.0%,16.7%,16.7%,16.7%,2.0,79.3%
 ben,18,6,6,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
-rackam,18,6,6,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 Roodies Raiders,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,68.5%
+jay,18,6,6,33.3%,33.3%,0.0%,33.3%,1.67,59.8%
 adanac10,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,58.8%
-jay,18,6,6,33.3%,16.7%,0.0%,50.0%,1.33,46.7%
+alphaster17,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,47.5%
 Juliet,18,4,4,0.0%,50.0%,0.0%,50.0%,1.0,42.3%
 kat,18,5,5,0.0%,40.0%,0.0%,60.0%,0.8,33.6%
-alphaster17,18,4,4,0.0%,25.0%,0.0%,75.0%,0.5,22.5%
 
 CWL Season: October 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
@@ -25,7 +25,7 @@ Mature English,WIN,36,33,84.6%,83.9%,15v15,10/04/2026
 KH Superior,LOSS,39,40,94.3%,97.5%,15v15,10/05/2026
 Butt Snorkelers,LOSS,38,43,90.5%,98.5%,15v15,10/06/2026
 Did we win yet?,LOSS,37,41,94.1%,97.5%,15v15,10/07/2026
-Os Incriveis,IN_PROGRESS,21,21,52.1%,46.7%,15v15,10/08/2026
+Os Incriveis,IN_PROGRESS,29,34,70.7%,77.3%,15v15,10/08/2026
 WORLD FISH,IN_PROGRESS,0,0,0.0%,0.0%,15v15,10/09/2026
 
 CWL Season: October 2026 - Individual Attacks
@@ -90,11 +90,8 @@ Did we win yet?,Ryan,18,aiem 5292,18,2,82.0%,3:00
 Did we win yet?,Juliet,18,ADI,18,2,88.0%,1:41
 Did we win yet?,kat,18,Asterix,18,2,97.0%,2:32
 Did we win yet?,Brad,18,Mamat_,18,1,93.0%,2:51
-Os Incriveis,rackam,18,Missed,0,0,0.0%,
 Os Incriveis,ben,18,Missed,0,0,0.0%,
 Os Incriveis,kat,18,Missed,0,0,0.0%,
-Os Incriveis,jay,18,Missed,0,0,0.0%,
-Os Incriveis,alphaster17,18,Missed,0,0,0.0%,
 Os Incriveis,adanac10,18,Missed,0,0,0.0%,
 Os Incriveis,Juliet,18,Missed,0,0,0.0%,
 Os Incriveis,brocaleb,18,Itz Prodigy,18,3,100.0%,1:56
@@ -105,6 +102,9 @@ Os Incriveis,LLoh7,18,Tiago® Enart™,18,3,100.0%,2:06
 Os Incriveis,MonseurMaiDra,18,SHING,18,1,96.0%,3:00
 Os Incriveis,Roodies Raiders,18,ASUOS SOTNAS,18,3,100.0%,2:18
 Os Incriveis,Little Roodie!,18,GentlemanPedro,18,2,85.0%,1:59
+Os Incriveis,jay,18,Eddy o profano,18,2,79.0%,2:34
+Os Incriveis,rackam,18,☢ξηλᴙτ☣,18,3,100.0%,2:37
+Os Incriveis,alphaster17,18,PaiDoSeuNenem@1,18,3,100.0%,2:43
 WORLD FISH,brocaleb,18,Missed,0,0,0.0%,
 WORLD FISH,LLoh7,18,Missed,0,0,0.0%,
 WORLD FISH,YokoEno,18,Missed,0,0,0.0%,
