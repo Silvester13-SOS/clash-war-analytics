@@ -1,23 +1,23 @@
 CWL Season: October 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-joshu,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
-ben,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
-brocaleb,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
-YokoEno,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
-CRASH,18,4,4,50.0%,50.0%,0.0%,0.0%,2.5,93.3%
-rackam,18,6,6,83.3%,0.0%,0.0%,16.7%,2.5,83.3%
+MonseurMaiDra,18,5,5,80.0%,0.0%,20.0%,0.0%,2.6,99.2%
+joshu,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
+brocaleb,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
+YokoEno,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
+rackam,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,84.1%
 Ryan,18,3,3,33.3%,66.7%,0.0%,0.0%,2.33,92.3%
-Little Roodie!,18,6,6,50.0%,33.3%,0.0%,16.7%,2.17,78.7%
-MonseurMaiDra,18,6,6,66.7%,0.0%,16.7%,16.7%,2.17,82.7%
-LLoh7,18,4,4,50.0%,25.0%,0.0%,25.0%,2.0,71.3%
-Brad,18,3,3,33.3%,33.3%,33.3%,0.0%,2.0,93.0%
-lloh8,18,6,6,50.0%,16.7%,16.7%,16.7%,2.0,79.3%
-adanac10,18,5,5,40.0%,40.0%,0.0%,20.0%,2.0,77.6%
-Roodies Raiders,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,68.5%
-Juliet,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,67.3%
-jay,18,6,6,33.3%,33.3%,0.0%,33.3%,1.67,59.8%
-alphaster17,18,4,4,25.0%,25.0%,0.0%,50.0%,1.25,47.5%
-kat,18,5,5,0.0%,60.0%,0.0%,40.0%,1.2,50.8%
+ben,18,7,7,71.4%,0.0%,0.0%,28.6%,2.14,71.4%
+jay,18,5,5,40.0%,40.0%,0.0%,20.0%,2.0,71.8%
+Little Roodie!,18,7,7,42.9%,28.6%,0.0%,28.6%,1.86,67.4%
+Brad,18,5,5,40.0%,20.0%,20.0%,20.0%,1.8,75.8%
+lloh8,18,7,7,42.9%,14.3%,14.3%,28.6%,1.71,68.0%
+CRASH,18,6,6,33.3%,33.3%,0.0%,33.3%,1.67,62.2%
+adanac10,18,6,6,33.3%,33.3%,0.0%,33.3%,1.67,64.7%
+LLoh7,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,57.0%
+kat,18,6,6,16.7%,50.0%,0.0%,33.3%,1.5,59.0%
+Roodies Raiders,18,5,5,20.0%,40.0%,0.0%,40.0%,1.4,54.8%
+Juliet,18,5,5,20.0%,40.0%,0.0%,40.0%,1.4,53.8%
+alphaster17,18,5,5,20.0%,20.0%,0.0%,60.0%,1.0,38.0%
 
 CWL Season: October 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
@@ -25,8 +25,9 @@ Mature English,WIN,36,33,84.6%,83.9%,15v15,10/04/2026
 KH Superior,LOSS,39,40,94.3%,97.5%,15v15,10/05/2026
 Butt Snorkelers,LOSS,38,43,90.5%,98.5%,15v15,10/06/2026
 Did we win yet?,LOSS,37,41,94.1%,97.5%,15v15,10/07/2026
-Os Incriveis,IN_PROGRESS,39,43,96.0%,97.3%,15v15,10/08/2026
-WORLD FISH,IN_PROGRESS,0,0,0.0%,0.0%,15v15,10/09/2026
+Os Incriveis,LOSS,39,43,96.0%,97.3%,15v15,10/08/2026
+WORLD FISH,IN_PROGRESS,17,14,39.3%,38.5%,15v15,10/09/2026
+القوات اليمنيه,IN_PROGRESS,0,0,0.0%,0.0%,15v15,10/10/2026
 
 CWL Season: October 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
@@ -105,18 +106,33 @@ Os Incriveis,adanac10,18,"""INV""*DIDI*",18,2,94.0%,2:17
 Os Incriveis,ben,18,PEDRO RX,18,3,100.0%,2:30
 Os Incriveis,Juliet,18,Davyzinhoh,18,3,100.0%,1:22
 Os Incriveis,kat,18,Ang3l❤,18,2,86.0%,1:53
-WORLD FISH,brocaleb,18,Missed,0,0,0.0%,
 WORLD FISH,LLoh7,18,Missed,0,0,0.0%,
-WORLD FISH,YokoEno,18,Missed,0,0,0.0%,
 WORLD FISH,Roodies Raiders,18,Missed,0,0,0.0%,
 WORLD FISH,Little Roodie!,18,Missed,0,0,0.0%,
-WORLD FISH,rackam,18,Missed,0,0,0.0%,
 WORLD FISH,ben,18,Missed,0,0,0.0%,
-WORLD FISH,kat,18,Missed,0,0,0.0%,
-WORLD FISH,jay,18,Missed,0,0,0.0%,
-WORLD FISH,joshu,18,Missed,0,0,0.0%,
 WORLD FISH,alphaster17,18,Missed,0,0,0.0%,
+WORLD FISH,CRASH,18,Missed,0,0,0.0%,
 WORLD FISH,lloh8,18,Missed,0,0,0.0%,
-WORLD FISH,MonseurMaiDra,18,Missed,0,0,0.0%,
 WORLD FISH,adanac10,18,Missed,0,0,0.0%,
 WORLD FISH,Juliet,18,Missed,0,0,0.0%,
+WORLD FISH,rackam,18,『WF』⚔️★R4VE★⚔️,18,2,89.0%,2:45
+WORLD FISH,joshu,18,- kurama -,18,3,100.0%,1:43
+WORLD FISH,brocaleb,18,『WF』⚔️★Eisei★⚔️,18,3,100.0%,2:01
+WORLD FISH,kat,18,『WF』⚔️★TRES13★⚔,18,3,100.0%,1:52
+WORLD FISH,YokoEno,18,『WF』⚔️★MAUIE★⚔️,18,3,100.0%,2:39
+WORLD FISH,Brad,18,PP9⚔️D!RT'3⚔️,18,3,100.0%,2:08
+القوات اليمنيه,brocaleb,18,Missed,0,0,0.0%,
+القوات اليمنيه,LLoh7,18,Missed,0,0,0.0%,
+القوات اليمنيه,YokoEno,18,Missed,0,0,0.0%,
+القوات اليمنيه,Roodies Raiders,18,Missed,0,0,0.0%,
+القوات اليمنيه,Little Roodie!,18,Missed,0,0,0.0%,
+القوات اليمنيه,rackam,18,Missed,0,0,0.0%,
+القوات اليمنيه,ben,18,Missed,0,0,0.0%,
+القوات اليمنيه,kat,18,Missed,0,0,0.0%,
+القوات اليمنيه,joshu,18,Missed,0,0,0.0%,
+القوات اليمنيه,Brad,18,Missed,0,0,0.0%,
+القوات اليمنيه,alphaster17,18,Missed,0,0,0.0%,
+القوات اليمنيه,CRASH,18,Missed,0,0,0.0%,
+القوات اليمنيه,lloh8,18,Missed,0,0,0.0%,
+القوات اليمنيه,adanac10,18,Missed,0,0,0.0%,
+القوات اليمنيه,Juliet,18,Missed,0,0,0.0%,
