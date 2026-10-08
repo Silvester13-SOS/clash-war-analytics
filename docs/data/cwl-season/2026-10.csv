@@ -7,14 +7,14 @@ YokoEno,18,7,7,85.7%,0.0%,0.0%,14.3%,2.57,85.7%
 Roodies Raiders,18,4,4,50.0%,50.0%,0.0%,0.0%,2.5,93.5%
 rackam,18,7,7,71.4%,14.3%,0.0%,14.3%,2.43,84.1%
 Ryan,18,3,3,33.3%,66.7%,0.0%,0.0%,2.33,92.3%
+LLoh7,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,77.0%
 MonseurMaiDra,18,6,6,66.7%,0.0%,16.7%,16.7%,2.17,82.7%
 CRASH,18,6,6,50.0%,33.3%,0.0%,16.7%,2.17,78.8%
+adanac10,18,6,6,50.0%,33.3%,0.0%,16.7%,2.17,81.3%
 ben,18,7,7,71.4%,0.0%,0.0%,28.6%,2.14,71.4%
 Brad,18,5,5,40.0%,20.0%,20.0%,20.0%,1.8,75.8%
 lloh8,18,7,7,42.9%,14.3%,14.3%,28.6%,1.71,68.0%
 jay,18,6,6,33.3%,33.3%,0.0%,33.3%,1.67,59.8%
-adanac10,18,6,6,33.3%,33.3%,0.0%,33.3%,1.67,64.7%
-LLoh7,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,57.0%
 alphaster17,18,5,5,40.0%,20.0%,0.0%,40.0%,1.6,58.0%
 kat,18,6,6,16.7%,50.0%,0.0%,33.3%,1.5,59.0%
 Juliet,18,5,5,20.0%,40.0%,0.0%,40.0%,1.4,53.8%
@@ -26,7 +26,7 @@ KH Superior,LOSS,39,40,94.3%,97.5%,15v15,10/05/2026
 Butt Snorkelers,LOSS,38,43,90.5%,98.5%,15v15,10/06/2026
 Did we win yet?,LOSS,37,41,94.1%,97.5%,15v15,10/07/2026
 Os Incriveis,LOSS,39,43,96.0%,97.3%,15v15,10/08/2026
-WORLD FISH,IN_PROGRESS,29,35,65.9%,85.1%,15v15,10/09/2026
+WORLD FISH,IN_PROGRESS,35,35,79.3%,85.1%,15v15,10/09/2026
 القوات اليمنيه,IN_PROGRESS,0,0,0.0%,0.0%,15v15,10/10/2026
 
 CWL Season: October 2026 - Individual Attacks
@@ -106,10 +106,8 @@ Os Incriveis,adanac10,18,"""INV""*DIDI*",18,2,94.0%,2:17
 Os Incriveis,ben,18,PEDRO RX,18,3,100.0%,2:30
 Os Incriveis,Juliet,18,Davyzinhoh,18,3,100.0%,1:22
 Os Incriveis,kat,18,Ang3l❤,18,2,86.0%,1:53
-WORLD FISH,LLoh7,18,Missed,0,0,0.0%,
 WORLD FISH,ben,18,Missed,0,0,0.0%,
 WORLD FISH,lloh8,18,Missed,0,0,0.0%,
-WORLD FISH,adanac10,18,Missed,0,0,0.0%,
 WORLD FISH,Juliet,18,Missed,0,0,0.0%,
 WORLD FISH,rackam,18,『WF』⚔️★R4VE★⚔️,18,2,89.0%,2:45
 WORLD FISH,joshu,18,- kurama -,18,3,100.0%,1:43
@@ -121,6 +119,8 @@ WORLD FISH,Roodies Raiders,18,『WF』⚔️★KING J★,18,3,100.0%,1:22
 WORLD FISH,Little Roodie!,18,『WF』⚔️★Emm★⚔️,18,3,100.0%,1:42
 WORLD FISH,alphaster17,18,jerbet12,18,3,100.0%,2:27
 WORLD FISH,CRASH,18,『WF』⚔️★CUTIE★⚔️,18,3,100.0%,2:08
+WORLD FISH,adanac10,18,Collie herb man,18,3,100.0%,2:21
+WORLD FISH,LLoh7,18,『WF』⚔️★BARLO★⚔️,18,3,100.0%,1:51
 القوات اليمنيه,brocaleb,18,Missed,0,0,0.0%,
 القوات اليمنيه,LLoh7,18,Missed,0,0,0.0%,
 القوات اليمنيه,YokoEno,18,Missed,0,0,0.0%,
