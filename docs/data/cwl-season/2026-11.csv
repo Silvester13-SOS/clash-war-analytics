@@ -1,30 +1,31 @@
 CWL Season: November 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
-Roodies Raiders,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-joshu,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Little Roodie!,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-ben,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-brocaleb,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-YokoEno,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-MonseurMaiDra,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-Ryan,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-rackam,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-adanac10,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
-LLoh7,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,48.0%
-jay,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,44.0%
-kat,18,2,2,0.0%,50.0%,0.0%,50.0%,1.0,43.5%
-Brad,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
-CRASH,18,2,2,0.0%,0.0%,0.0%,100.0%,0.0,0.0%
+joshu,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+jay,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,88.0%
+kat,18,1,1,0.0%,100.0%,0.0%,0.0%,2.0,87.0%
+rackam,18,3,3,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+alphaster17,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+lloh8,18,2,2,50.0%,0.0%,0.0%,50.0%,1.5,50.0%
+Roodies Raiders,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+Brad,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+Little Roodie!,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+ben,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+brocaleb,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+YokoEno,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+MonseurMaiDra,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+CRASH,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+Ryan,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+adanac10,18,3,3,33.3%,0.0%,0.0%,66.7%,1.0,33.3%
+LLoh7,18,3,3,0.0%,33.3%,0.0%,66.7%,0.67,32.0%
 
 CWL Season: November 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
-نجوم العسكري,IN_PROGRESS,36,39,84.7%,90.3%,15v15,11/04/2026
-Azkaban,IN_PROGRESS,0,0,0.0%,0.0%,15v15,11/05/2026
+نجوم العسكري,WIN,42,42,98.1%,96.9%,15v15,11/04/2026
+Azkaban,IN_PROGRESS,12,0,26.7%,0.0%,15v15,11/05/2026
+China~华夏✨三戰,IN_PROGRESS,0,0,0.0%,0.0%,15v15,11/06/2026
 
 CWL Season: November 2026 - Individual Attacks
 War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Duration
-نجوم العسكري,Brad,18,Missed,0,0,0.0%,
-نجوم العسكري,CRASH,18,Missed,0,0,0.0%,
 نجوم العسكري,joshu,18,SCORPION 2,18,3,100.0%,1:46
 نجوم العسكري,rackam,18,SCORPION,18,3,100.0%,2:35
 نجوم العسكري,LLoh7,18,ᵛᶤᵖＢＯＳＥ,18,2,96.0%,2:55
@@ -38,18 +39,35 @@ War Opponent,Attacker,Attacker TH,Defender,Defender TH,Stars,Destruction%,Durati
 نجوم العسكري,Little Roodie!,18,حسن ملك,18,3,100.0%,1:26
 نجوم العسكري,Roodies Raiders,18,Ali Dawood,18,3,100.0%,1:46
 نجوم العسكري,ben,18,SUP-ZERO,18,3,100.0%,2:36
+نجوم العسكري,CRASH,18,محمد ابو ملاك,18,3,100.0%,2:19
+نجوم العسكري,Brad,18,Butterfly,18,3,100.0%,2:52
 Azkaban,brocaleb,18,Missed,0,0,0.0%,
 Azkaban,LLoh7,18,Missed,0,0,0.0%,
 Azkaban,Ryan,18,Missed,0,0,0.0%,
-Azkaban,rackam,18,Missed,0,0,0.0%,
 Azkaban,YokoEno,18,Missed,0,0,0.0%,
-Azkaban,jay,18,Missed,0,0,0.0%,
-Azkaban,kat,18,Missed,0,0,0.0%,
 Azkaban,ben,18,Missed,0,0,0.0%,
 Azkaban,Roodies Raiders,18,Missed,0,0,0.0%,
 Azkaban,Little Roodie!,18,Missed,0,0,0.0%,
-Azkaban,joshu,18,Missed,0,0,0.0%,
 Azkaban,Brad,18,Missed,0,0,0.0%,
 Azkaban,CRASH,18,Missed,0,0,0.0%,
 Azkaban,MonseurMaiDra,18,Missed,0,0,0.0%,
 Azkaban,adanac10,18,Missed,0,0,0.0%,
+Azkaban,alphaster17,18,Stroiter,18,3,100.0%,2:10
+Azkaban,rackam,18,WILHIAM,18,3,100.0%,2:16
+Azkaban,lloh8,18,Boss,18,3,100.0%,2:31
+Azkaban,joshu,18,Meu Lord,18,3,100.0%,1:38
+China~华夏✨三戰,brocaleb,18,Missed,0,0,0.0%,
+China~华夏✨三戰,LLoh7,18,Missed,0,0,0.0%,
+China~华夏✨三戰,Ryan,18,Missed,0,0,0.0%,
+China~华夏✨三戰,rackam,18,Missed,0,0,0.0%,
+China~华夏✨三戰,YokoEno,18,Missed,0,0,0.0%,
+China~华夏✨三戰,ben,18,Missed,0,0,0.0%,
+China~华夏✨三戰,Roodies Raiders,18,Missed,0,0,0.0%,
+China~华夏✨三戰,Little Roodie!,18,Missed,0,0,0.0%,
+China~华夏✨三戰,joshu,18,Missed,0,0,0.0%,
+China~华夏✨三戰,Brad,18,Missed,0,0,0.0%,
+China~华夏✨三戰,CRASH,18,Missed,0,0,0.0%,
+China~华夏✨三戰,alphaster17,18,Missed,0,0,0.0%,
+China~华夏✨三戰,MonseurMaiDra,18,Missed,0,0,0.0%,
+China~华夏✨三戰,lloh8,18,Missed,0,0,0.0%,
+China~华夏✨三戰,adanac10,18,Missed,0,0,0.0%,
