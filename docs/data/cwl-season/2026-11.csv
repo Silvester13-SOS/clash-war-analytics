@@ -1,12 +1,11 @@
 CWL Season: November 2026 - Player Performance
 Player,TH,Attacks,Wars,3-Star%,2-Star%,1-Star%,0-Star%,Avg Stars,Avg Destruction%
+rackam,18,8,8,75.0%,12.5%,0.0%,12.5%,2.5,86.3%
 joshu,18,9,9,77.8%,0.0%,0.0%,22.2%,2.33,77.8%
-jay,18,3,3,33.3%,66.7%,0.0%,0.0%,2.33,83.0%
-alphaster17,18,6,6,66.7%,16.7%,0.0%,16.7%,2.33,79.5%
-rackam,18,9,9,66.7%,11.1%,0.0%,22.2%,2.22,76.7%
 kat,18,5,5,60.0%,20.0%,0.0%,20.0%,2.2,77.4%
 lloh8,18,7,7,71.4%,0.0%,0.0%,28.6%,2.14,71.4%
 Little Roodie!,18,9,9,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
+alphaster17,18,7,7,57.1%,14.3%,0.0%,28.6%,2.0,68.1%
 brocaleb,18,9,9,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 YokoEno,18,9,9,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
 MonseurMaiDra,18,9,9,66.7%,0.0%,0.0%,33.3%,2.0,66.7%
@@ -15,8 +14,9 @@ Brad,18,9,9,55.6%,11.1%,0.0%,33.3%,1.89,66.2%
 ben,18,9,9,55.6%,11.1%,0.0%,33.3%,1.89,66.2%
 CRASH,18,9,9,55.6%,11.1%,0.0%,33.3%,1.89,65.4%
 Roodies Raiders,18,8,8,50.0%,12.5%,0.0%,37.5%,1.75,61.8%
+jay,18,4,4,25.0%,50.0%,0.0%,25.0%,1.75,62.3%
 adanac10,18,8,8,50.0%,12.5%,0.0%,37.5%,1.75,59.3%
-Ryan,18,8,8,12.5%,37.5%,0.0%,50.0%,1.13,45.4%
+Ryan,18,7,7,14.3%,57.1%,0.0%,28.6%,1.57,63.6%
 
 CWL Season: November 2026 - War Results
 Opponent,Result,Our Stars,Their Stars,Our Destruction%,Their Destruction%,Team Size,Date
@@ -27,7 +27,7 @@ China~华夏✨三戰,TIE,0,0,0.0%,0.0%,15v15,11/06/2026
 China~华夏✨三戰,WIN,43,38,97.9%,88.7%,15v15,11/06/2026
 جامعه بغداد,WIN,44,41,99.6%,98.1%,15v15,11/07/2026
 ارتش کردستان,LOSS,39,41,93.3%,92.7%,15v15,11/08/2026
-PEKKATORUM,IN_PROGRESS,41,39,92.7%,96.2%,15v15,11/09/2026
+PEKKATORUM,IN_PROGRESS,43,39,98.1%,96.2%,15v15,11/09/2026
 Icarus,IN_PROGRESS,0,0,0.0%,0.0%,15v15,11/10/2026
 
 CWL Season: November 2026 - Individual Attacks
@@ -137,7 +137,6 @@ China~华夏✨三戰,Ryan,18,呼啸山庄,18,2,95.0%,2:17
 ارتش کردستان,CRASH,18,himoهیمو,18,2,89.0%,2:58
 ارتش کردستان,Little Roodie!,18,اژدها,18,3,100.0%,1:48
 ارتش کردستان,Brad,18,karo khan,18,2,96.0%,3:00
-PEKKATORUM,Ryan,18,Missed,0,0,0.0%,
 PEKKATORUM,adanac10,18,IgoR,18,3,100.0%,1:38
 PEKKATORUM,joshu,18,EuJart,18,3,100.0%,1:59
 PEKKATORUM,rackam,18,ostrad,18,2,90.0%,2:26
@@ -152,11 +151,11 @@ PEKKATORUM,Brad,18,♊NEPTUNES♊,18,3,100.0%,1:50
 PEKKATORUM,CRASH,18,benedetto,18,3,100.0%,2:31
 PEKKATORUM,Roodies Raiders,18,M A S S A C R O,18,3,100.0%,2:13
 PEKKATORUM,ben,18,TuEL,18,3,100.0%,2:42
+PEKKATORUM,Ryan,18,christian,18,2,82.0%,1:52
 Icarus,brocaleb,18,Missed,0,0,0.0%,
 Icarus,LLoh7,18,Missed,0,0,0.0%,
-Icarus,Ryan,18,Missed,0,0,0.0%,
-Icarus,rackam,18,Missed,0,0,0.0%,
 Icarus,YokoEno,18,Missed,0,0,0.0%,
+Icarus,jay,18,Missed,0,0,0.0%,
 Icarus,kat,18,Missed,0,0,0.0%,
 Icarus,ben,18,Missed,0,0,0.0%,
 Icarus,Roodies Raiders,18,Missed,0,0,0.0%,
@@ -165,5 +164,6 @@ Icarus,joshu,18,Missed,0,0,0.0%,
 Icarus,Brad,18,Missed,0,0,0.0%,
 Icarus,CRASH,18,Missed,0,0,0.0%,
 Icarus,MonseurMaiDra,18,Missed,0,0,0.0%,
+Icarus,alphaster17,18,Missed,0,0,0.0%,
 Icarus,lloh8,18,Missed,0,0,0.0%,
 Icarus,adanac10,18,Missed,0,0,0.0%,
